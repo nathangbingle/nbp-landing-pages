@@ -4,138 +4,113 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Youth Sports Photography Charlotte | Nathan Bingle Photography</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--black:#0A0A0A;--white:#FFFFFF;--off-white:#F8F6F2;--gray:#6B6B6B;--light:#EBEBEB;--red:#C8372D}
-body{background:var(--white);color:var(--black);font-family:'Inter',sans-serif;overflow-x:hidden}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 2.5rem;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--light)}
-.nav-logo{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700}
-.nav-cta{background:var(--black);color:var(--white);font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.65rem 1.5rem;text-decoration:none;transition:background 0.2s}
+:root{--black:#111;--white:#fff;--off:#F5F5F3;--gray:#666;--light:#E5E5E5;--radius:12px}
+body{background:var(--white);color:var(--black);font-family:'Poppins',sans-serif;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 2rem;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,0.06)}
+.logo{font-family:'Josefin Sans',sans-serif;font-size:0.95rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase}
+.nav-cta{background:var(--black);color:#fff;font-family:'Josefin Sans',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:0.65rem 1.4rem;border-radius:50px;text-decoration:none}
 .nav-cta:hover{background:#333}
-
-/* HERO - full bleed sports action */
-.hero{height:100vh;position:relative;display:flex;align-items:center;overflow:hidden}
-.hero-img{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1547347298-4074fc3086f0?w=1600&q=80') center 30%/cover no-repeat}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.3) 60%,transparent 100%)}
-.hero-content{position:relative;z-index:2;padding:2rem 2.5rem;max-width:650px}
-.hero-tag{font-size:0.65rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;display:flex;align-items:center;gap:0.75rem}
-.hero-tag::before{content:'';display:block;width:2rem;height:2px;background:var(--red)}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,6.5rem);font-weight:900;color:#fff;line-height:0.95;letter-spacing:-0.02em;margin-bottom:1.5rem}
-.hero h1 em{font-style:italic;color:#fff}
-.hero-sub{font-size:1rem;color:rgba(255,255,255,0.75);max-width:440px;line-height:1.75;margin-bottom:2.5rem;font-weight:300}
-.hero-cta{background:#fff;color:var(--black);font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:1rem 2.25rem;text-decoration:none;display:inline-block;transition:all 0.2s;margin-right:1rem}
-.hero-cta:hover{background:var(--off-white)}
-.hero-stats{display:flex;gap:2.5rem;margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,0.15);flex-wrap:wrap}
-.hero-stat .n{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:#fff;line-height:1}
-.hero-stat .l{font-size:0.6rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:0.25rem}
-
-/* MARQUEE STRIP */
-.strip{background:var(--black);padding:1rem 0;overflow:hidden;white-space:nowrap}
-.strip-inner{display:inline-flex;gap:3rem;animation:marquee 20s linear infinite}
-.strip-item{font-size:0.65rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.4)}
-.strip-item span{color:rgba(255,255,255,0.15);margin-left:3rem}
-@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-
-/* MAGAZINE GRID */
-.grid-section{padding:5rem 2.5rem}
-.grid-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;border-bottom:1px solid var(--light);padding-bottom:1.75rem}
-.grid-header h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:900;letter-spacing:-0.02em;line-height:1.05}
-.grid-header p{font-size:0.85rem;color:var(--gray);max-width:300px;line-height:1.7;font-weight:300}
-.mag-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:auto auto;gap:1.5px;background:var(--light)}
-.mag-cell{background:var(--white)}
-.mag-cell-img{width:100%;height:100%;background-size:cover;background-position:center;min-height:300px}
-.cell-big{grid-row:span 2}
-.cell-big .mag-cell-img{background-image:url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&q=80');min-height:600px}
-.cell-1 .mag-cell-img{background-image:url('https://images.unsplash.com/photo-1598387993441-a364f854cdb2?w=600&q=80')}
-.cell-2 .mag-cell-img{background-image:url('https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&q=80')}
-.cell-3{padding:2.5rem}
-.cell-3 h3{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;margin-bottom:0.75rem}
-.cell-3 p{font-size:0.85rem;color:var(--gray);line-height:1.7;font-weight:300}
-.cell-4{padding:2.5rem;background:var(--off-white)}
-.cell-4 h3{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;margin-bottom:0.75rem}
-.cell-4 p{font-size:0.85rem;color:var(--gray);line-height:1.7;font-weight:300}
-
-/* PROCESS */
-.process{background:var(--off-white);padding:6rem 2.5rem}
-.process h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:900;letter-spacing:-0.02em;margin-bottom:3.5rem}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
-.step{position:relative}
-.step-num{font-size:0.6rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);margin-bottom:1rem}
-.step h3{font-size:0.9rem;font-weight:600;margin-bottom:0.5rem}
-.step p{font-size:0.8rem;color:var(--gray);line-height:1.65;font-weight:300}
-
-/* SPORTS LIST */
-.sports{padding:5rem 2.5rem;background:var(--white)}
-.sports h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:900;letter-spacing:-0.02em;margin-bottom:0.75rem}
-.sports-sub{font-size:0.9rem;color:var(--gray);margin-bottom:3rem;font-weight:300}
-.sports-list{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--light)}
+.hero{height:100vh;position:relative;overflow:hidden;display:flex;align-items:flex-end}
+.hero-bg{position:absolute;inset:0;background:url('https://drive.google.com/uc?export=view&id=1XfXUTfnLeBzgB6QAsSVRqgvVxCRO3awv') center/cover no-repeat}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.2) 50%,transparent 100%)}
+.hero-inner{position:relative;z-index:2;padding:3.5rem 2rem;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.2);border-radius:50px;padding:0.4rem 1rem;margin-bottom:1.5rem}
+.hero-badge span{width:8px;height:8px;background:#4ade80;border-radius:50%}
+.hero-badge p{font-family:'Josefin Sans',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.9)}
+.hero h1{font-family:'Josefin Sans',sans-serif;font-size:clamp(3rem,7vw,6rem);font-weight:700;color:#fff;line-height:0.95;letter-spacing:-0.02em;margin-bottom:1.25rem}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,0.75);max-width:480px;line-height:1.75;margin-bottom:2.5rem;font-weight:300}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-white{background:#fff;color:var(--black);font-family:'Josefin Sans',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.9rem 2rem;border-radius:50px;text-decoration:none;transition:background 0.2s}
+.btn-white:hover{background:#f0f0f0}
+.btn-outline{border:1px solid rgba(255,255,255,0.35);color:#fff;font-family:'Josefin Sans',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.9rem 2rem;border-radius:50px;text-decoration:none}
+.hero-stats{display:flex;gap:3rem;margin-top:3rem;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,0.12);flex-wrap:wrap}
+.hero-stat .n{font-family:'Josefin Sans',sans-serif;font-size:2.25rem;font-weight:700;color:#fff;line-height:1}
+.hero-stat .l{font-size:0.6rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-top:0.2rem}
+.section{padding:5rem 2rem}
+.section-tag{display:inline-block;background:var(--off);border-radius:50px;font-family:'Josefin Sans',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;padding:0.4rem 1rem;margin-bottom:1.5rem;color:var(--gray)}
+h2{font-family:'Josefin Sans',sans-serif;font-size:clamp(2rem,4vw,3.25rem);font-weight:700;line-height:1.08;letter-spacing:-0.01em;margin-bottom:1.25rem}
+.section-sub{font-size:0.95rem;color:var(--gray);line-height:1.75;max-width:520px;font-weight:300}
+.masonry{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:auto;gap:1rem;margin-top:3rem}
+.masonry-item{border-radius:var(--radius);overflow:hidden;background:#eee}
+.masonry-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s}
+.masonry-item:hover img{transform:scale(1.03)}
+.m-tall{aspect-ratio:3/4}
+.m-wide{aspect-ratio:16/9;grid-column:span 2}
+.m-sq{aspect-ratio:1/1}
+.marquee-wrap{background:var(--black);overflow:hidden;padding:1rem 0}
+.marquee{display:flex;gap:2rem;animation:scroll 18s linear infinite;width:max-content}
+.marquee span{font-family:'Josefin Sans',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.35);white-space:nowrap}
+.marquee span.dot{color:rgba(255,255,255,0.15)}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.process-section{background:var(--off);padding:5rem 2rem}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem}
+.process-card{background:var(--white);border-radius:var(--radius);padding:2rem}
+.process-num{font-family:'Josefin Sans',sans-serif;font-size:2.5rem;font-weight:700;color:var(--light);line-height:1;margin-bottom:1rem}
+.process-card h3{font-family:'Josefin Sans',sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.5rem}
+.process-card p{font-size:0.82rem;color:var(--gray);line-height:1.65;font-weight:300}
+.sports-grid-section{padding:5rem 2rem}
+.sports-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--light);border-radius:var(--radius);overflow:hidden;margin-top:3rem}
 .sport-item{padding:1.5rem;border-right:1px solid var(--light);border-bottom:1px solid var(--light)}
 .sport-item:nth-child(4n){border-right:none}
-.sport-name{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;margin-bottom:0.2rem}
-.sport-sub{font-size:0.7rem;color:var(--gray);font-weight:400;letter-spacing:0.05em}
-
-/* FORM */
-.form-section{background:var(--black);padding:6rem 2.5rem}
-.form-wrap{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
-.form-left h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.5rem);color:#fff;font-weight:900;line-height:1.05;margin-bottom:1.5rem;letter-spacing:-0.02em}
-.form-left p{font-size:0.95rem;color:rgba(255,255,255,0.5);line-height:1.8;font-weight:300;margin-bottom:2.5rem}
-.form-left ul{list-style:none;display:flex;flex-direction:column;gap:0.75rem}
-.form-left ul li{font-size:0.8rem;color:rgba(255,255,255,0.55);display:flex;gap:0.75rem}
+.sport-item:nth-last-child(-n+4){border-bottom:none}
+.sport-name{font-family:'Josefin Sans',sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:0.2rem}
+.sport-sub{font-size:0.7rem;color:var(--gray)}
+.form-section{padding:5rem 2rem;background:var(--black)}
+.form-wrap{display:grid;grid-template-columns:1fr 1fr;gap:5rem;max-width:1100px;margin:0 auto}
+.form-left h2{color:#fff;font-family:'Josefin Sans',sans-serif;font-size:clamp(1.8rem,3vw,2.75rem);font-weight:700;margin-bottom:1rem}
+.form-left p{font-size:0.9rem;color:rgba(255,255,255,0.5);line-height:1.75;font-weight:300;margin-bottom:2rem}
+.form-left ul{list-style:none;display:flex;flex-direction:column;gap:0.7rem}
+.form-left ul li{font-size:0.82rem;color:rgba(255,255,255,0.5);display:flex;gap:0.75rem;font-weight:300}
 .form-left ul li::before{content:'→';color:#fff;flex-shrink:0}
 form{display:flex;flex-direction:column;gap:0.85rem}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:0.85rem}
-input,select,textarea{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:#fff;font-family:'Inter',sans-serif;font-size:0.8rem;padding:0.9rem 1rem;width:100%;outline:none;transition:border-color 0.2s}
+input,select,textarea{background:rgba(255,255,255,0.07);border:1.5px solid rgba(255,255,255,0.1);color:#fff;font-family:'Poppins',sans-serif;font-size:0.82rem;padding:0.9rem 1.1rem;width:100%;outline:none;border-radius:8px;transition:border-color 0.2s;-webkit-appearance:none}
 input::placeholder,textarea::placeholder{color:rgba(255,255,255,0.3)}
-input:focus,select:focus,textarea:focus{border-color:rgba(255,255,255,0.5)}
-select{appearance:none;cursor:pointer}
+input:focus,select:focus,textarea:focus{border-color:rgba(255,255,255,0.4)}
+select{cursor:pointer}
 select option{background:#111}
 textarea{resize:vertical;min-height:110px}
-.submit-btn{background:#fff;color:var(--black);font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:1.1rem;border:none;cursor:pointer;transition:background 0.2s;margin-top:0.5rem}
+.submit-btn{background:#fff;color:var(--black);font-family:'Josefin Sans',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:1.1rem;border:none;cursor:pointer;border-radius:50px;transition:background 0.2s}
 .submit-btn:hover{background:#e5e5e5}
 .form-note{font-size:0.65rem;color:rgba(255,255,255,0.3);text-align:center}
-
-footer{background:var(--black);padding:1.75rem 2.5rem;border-top:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-footer p{font-size:0.65rem;color:rgba(255,255,255,0.3)}
-footer a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.65rem}
-
+footer{background:var(--black);padding:1.75rem 2rem;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+footer p{font-size:0.7rem;color:rgba(255,255,255,0.3);font-family:'Josefin Sans',sans-serif}
+footer a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.7rem;font-family:'Josefin Sans',sans-serif}
 @media(max-width:900px){
-  .mag-grid{grid-template-columns:1fr 1fr}
-  .cell-big{grid-row:span 1}
-  .cell-big .mag-cell-img{min-height:300px}
-  .steps{grid-template-columns:1fr 1fr}
-  .sports-list{grid-template-columns:repeat(2,1fr)}
-  .sport-item:nth-child(4n){border-right:1px solid var(--light)}
-  .sport-item:nth-child(2n){border-right:none}
+  .masonry{grid-template-columns:1fr 1fr}.m-wide{grid-column:span 2}
+  .process-grid{grid-template-columns:1fr 1fr}.sports-grid{grid-template-columns:repeat(2,1fr)}
+  .sport-item:nth-child(4n){border-right:1px solid var(--light)}.sport-item:nth-child(2n){border-right:none}
   .form-wrap{grid-template-columns:1fr;gap:3rem}
 }
 @media(max-width:600px){
-  nav{padding:1rem 1.25rem}
-  .hero-content{padding:2rem 1.25rem}
-  .grid-section,.process,.sports,.form-section{padding-left:1.25rem;padding-right:1.25rem}
-  .mag-grid{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr}
-  .sports-list{grid-template-columns:1fr 1fr}
-  .grid-header{flex-direction:column;align-items:flex-start;gap:0.75rem}
-  .form-row{grid-template-columns:1fr}
+  nav{padding:1rem 1.25rem}.section,.process-section,.sports-grid-section,.form-section{padding:3.5rem 1.25rem}
+  .masonry{grid-template-columns:1fr}.m-wide{grid-column:span 1;aspect-ratio:3/4}
+  .process-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}
+  .sports-grid{grid-template-columns:1fr 1fr}
   footer{padding:1.25rem;flex-direction:column;align-items:flex-start}
 }
 </style>
 </head>
 <body>
 <nav>
-  <div class="nav-logo">Nathan Bingle Photography</div>
+  <div class="logo">Nathan Bingle Photography</div>
   <a href="#contact" class="nav-cta">Get a Quote</a>
 </nav>
 
 <div class="hero">
-  <div class="hero-img"></div>
+  <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-tag">Youth Sports Photography · Charlotte Area</div>
-    <h1>Great<br>Photos.<br><em>Zero</em><br>Hassle.</h1>
-    <p class="hero-sub">Professional team and individual sports photography for youth leagues across the greater Charlotte area. Exceptional quality, seamless process.</p>
-    <a href="#contact" class="hero-cta">Get a Quote</a>
+  <div class="hero-inner">
+    <div class="hero-badge"><span></span><p>Youth Sports · Charlotte Area · 75mi Radius</p></div>
+    <h1>Great Photos.<br>Zero Hassle.</h1>
+    <p class="hero-sub">Professional team and individual sports photography for youth leagues across the greater Charlotte area.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-white">Get a Quote →</a>
+      <a href="#process" class="btn-outline">How It Works</a>
+    </div>
     <div class="hero-stats">
       <div class="hero-stat"><div class="n">75mi</div><div class="l">Service Radius</div></div>
       <div class="hero-stat"><div class="n">500+</div><div class="l">Teams Photographed</div></div>
@@ -144,75 +119,42 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.65rem}
   </div>
 </div>
 
-<div class="strip">
-  <div class="strip-inner">
-    <span class="strip-item">Baseball<span>·</span></span>
-    <span class="strip-item">Soccer<span>·</span></span>
-    <span class="strip-item">Football<span>·</span></span>
-    <span class="strip-item">Basketball<span>·</span></span>
-    <span class="strip-item">Lacrosse<span>·</span></span>
-    <span class="strip-item">Wrestling<span>·</span></span>
-    <span class="strip-item">Volleyball<span>·</span></span>
-    <span class="strip-item">Baseball<span>·</span></span>
-    <span class="strip-item">Soccer<span>·</span></span>
-    <span class="strip-item">Football<span>·</span></span>
-    <span class="strip-item">Basketball<span>·</span></span>
-    <span class="strip-item">Lacrosse<span>·</span></span>
-    <span class="strip-item">Wrestling<span>·</span></span>
-    <span class="strip-item">Volleyball<span>·</span></span>
+<div class="marquee-wrap">
+  <div class="marquee">
+    <span>Baseball</span><span class="dot">·</span><span>Soccer</span><span class="dot">·</span><span>Football</span><span class="dot">·</span><span>Basketball</span><span class="dot">·</span><span>Lacrosse</span><span class="dot">·</span><span>Wrestling</span><span class="dot">·</span><span>Volleyball</span><span class="dot">·</span><span>Softball</span><span class="dot">·</span>
+    <span>Baseball</span><span class="dot">·</span><span>Soccer</span><span class="dot">·</span><span>Football</span><span class="dot">·</span><span>Basketball</span><span class="dot">·</span><span>Lacrosse</span><span class="dot">·</span><span>Wrestling</span><span class="dot">·</span><span>Volleyball</span><span class="dot">·</span><span>Softball</span><span class="dot">·</span>
   </div>
 </div>
 
-<div class="grid-section">
-  <div class="grid-header">
-    <h2>Photos Worth<br>Keeping.</h2>
-    <p>Not the flat, uninspired team photos your athletes have gotten their whole lives. We shoot with professional lighting and real equipment.</p>
+<section class="section">
+  <div class="section-tag">Our Work</div>
+  <h2>Photos Worth Keeping.</h2>
+  <p class="section-sub">Not the flat, uninspired team photos your athletes have gotten their whole lives. Professional lighting, real equipment, real results.</p>
+  <div class="masonry">
+    <div class="masonry-item m-wide"><img src="https://drive.google.com/uc?export=view&id=1Y9npYN7lqGirOEpqhaFSOj7staTDXku_" alt="Sports team photo" loading="lazy"></div>
+    <div class="masonry-item m-tall"><img src="https://drive.google.com/uc?export=view&id=1WRwBDX7D6no7_ug1eKl6LI-9YC3U1kdB" alt="Athlete portrait" loading="lazy"></div>
+    <div class="masonry-item m-sq"><img src="https://drive.google.com/uc?export=view&id=1HNVcToYXwNnefq7gRCODQ6AWcJZuCU8U" alt="Athlete portrait" loading="lazy"></div>
+    <div class="masonry-item m-sq"><img src="https://drive.google.com/uc?export=view&id=1Bxe190elnc12v9J98WpvEYWa25BFUvso" alt="Team banner" loading="lazy"></div>
+    <div class="masonry-item m-wide"><img src="https://drive.google.com/uc?export=view&id=12KMuyz0KSuFJAmCXj_6CRmxrefXrrIy7" alt="Sports portrait" loading="lazy"></div>
   </div>
-  <div class="mag-grid">
-    <div class="mag-cell cell-big"><div class="mag-cell-img"></div></div>
-    <div class="mag-cell cell-1"><div class="mag-cell-img"></div></div>
-    <div class="mag-cell cell-2"><div class="mag-cell-img"></div></div>
-    <div class="mag-cell cell-3">
-      <h3>Team Photos That Stand Out</h3>
-      <p>Professional group shots with consistent framing and great light — the kind of quality that actually ends up on walls.</p>
-    </div>
-    <div class="mag-cell cell-4">
-      <h3>Individual Portraits</h3>
-      <p>Every player gets their own session. Gallery-ready images families can order easily online the same day.</p>
-    </div>
-  </div>
-</div>
+</section>
 
-<div class="process">
+<section class="process-section" id="process">
+  <div class="section-tag">How It Works</div>
   <h2>Built for Game Day Speed.</h2>
-  <div class="steps">
-    <div class="step">
-      <div class="step-num">Step 01</div>
-      <h3>Schedule Your Photo Day</h3>
-      <p>Reach out and we'll lock in a date that works around your league's existing schedule.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">Step 02</div>
-      <h3>We Handle Pre-Day Comms</h3>
-      <p>We provide materials for coaches to share with families before photo day — no scrambling.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">Step 03</div>
-      <h3>Smooth On-Site Execution</h3>
-      <p>We arrive early, set up fast, and move teams through efficiently. Team shots and individual portraits without the logjam.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">Step 04</div>
-      <h3>Gallery Live in 48hrs</h3>
-      <p>Private online gallery delivered within 48 hours. Families order from any device on their own time.</p>
-    </div>
+  <div class="process-grid">
+    <div class="process-card"><div class="process-num">01</div><h3>Schedule Photo Day</h3><p>Reach out and we'll lock in a date around your league's existing schedule.</p></div>
+    <div class="process-card"><div class="process-num">02</div><h3>Pre-Day Comms</h3><p>We provide ready-to-share materials for coaches so families know how to order before photo day.</p></div>
+    <div class="process-card"><div class="process-num">03</div><h3>Smooth Execution</h3><p>We arrive early and move teams through efficiently — team shots and individual portraits without the logjam.</p></div>
+    <div class="process-card"><div class="process-num">04</div><h3>Gallery in 48hrs</h3><p>Private online gallery live within 48 hours. Families order from any device on their own time.</p></div>
   </div>
-</div>
+</section>
 
-<div class="sports">
+<section class="sports-grid-section">
+  <div class="section-tag">Who We Serve</div>
   <h2>Every Sport. Any Age Group.</h2>
-  <p class="sports-sub">We serve youth leagues, club teams, recreational programs, and travel teams within 75 miles of Charlotte.</p>
-  <div class="sports-list">
+  <p class="section-sub">Youth leagues, club teams, recreational programs, and travel teams within 75 miles of Charlotte.</p>
+  <div class="sports-grid">
     <div class="sport-item"><div class="sport-name">Baseball</div><div class="sport-sub">T-Ball to Travel</div></div>
     <div class="sport-item"><div class="sport-name">Soccer</div><div class="sport-sub">Recreational & Club</div></div>
     <div class="sport-item"><div class="sport-name">Football</div><div class="sport-sub">Flag to Tackle</div></div>
@@ -222,13 +164,14 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.65rem}
     <div class="sport-item"><div class="sport-name">Volleyball</div><div class="sport-sub">Recreational & Club</div></div>
     <div class="sport-item"><div class="sport-name">Any Sport</div><div class="sport-sub">You Name It</div></div>
   </div>
-</div>
+</section>
 
 <section id="contact" class="form-section">
   <div class="form-wrap">
     <div class="form-left">
+      <div class="section-tag" style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.5)">Get a Quote</div>
       <h2>Book Your League's Photo Day.</h2>
-      <p>Fill out the form and we'll follow up within one business day with availability, pricing, and next steps.</p>
+      <p>Fill out the form and we'll follow up within one business day with availability and pricing.</p>
       <ul>
         <li>Serving all youth sports within 75 miles of Charlotte</li>
         <li>No upfront cost to the league</li>
@@ -245,20 +188,9 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.65rem}
       <input type="email" name="email" placeholder="Email Address" required>
       <input type="tel" name="phone" placeholder="Phone Number">
       <input type="text" name="league_org" placeholder="League / Organization Name" required>
-      <select name="sport">
-        <option value="" disabled selected>Sport / Activity</option>
-        <option>Baseball / Softball</option>
-        <option>Soccer</option><option>Football</option>
-        <option>Basketball</option><option>Lacrosse</option>
-        <option>Wrestling</option><option>Volleyball</option>
-        <option>Other</option>
-      </select>
-      <select name="team_count">
-        <option value="" disabled selected>Number of Teams</option>
-        <option>1–3 Teams</option><option>4–10 Teams</option>
-        <option>10–20 Teams</option><option>20+ Teams</option>
-      </select>
-      <textarea name="message" placeholder="Tell us about your league or ask any questions..."></textarea>
+      <select name="sport"><option value="" disabled selected>Sport</option><option>Baseball / Softball</option><option>Soccer</option><option>Football</option><option>Basketball</option><option>Lacrosse</option><option>Wrestling</option><option>Volleyball</option><option>Other</option></select>
+      <select name="team_count"><option value="" disabled selected>Number of Teams</option><option>1–3 Teams</option><option>4–10 Teams</option><option>10–20 Teams</option><option>20+ Teams</option></select>
+      <textarea name="message" placeholder="Tell us about your league..."></textarea>
       <button type="submit" class="submit-btn">Get My Quote →</button>
       <p class="form-note">We respond within 1 business day.</p>
     </form>

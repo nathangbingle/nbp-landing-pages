@@ -3,206 +3,181 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>School Photography for Charlotte-Area Schools | Nathan Bingle Photography</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>School Photography | Nathan Bingle Photography</title>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--black:#0A0A0A;--white:#FFFFFF;--off-white:#F8F6F2;--gray:#6B6B6B;--light:#EBEBEB;--accent:#1A1A1A}
-body{background:var(--white);color:var(--black);font-family:'Inter',sans-serif;overflow-x:hidden}
+:root{--black:#111;--white:#fff;--off:#F5F5F3;--gray:#666;--light:#E5E5E5;--radius:12px}
+body{background:var(--white);color:var(--black);font-family:'Poppins',sans-serif;overflow-x:hidden}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 2.5rem;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--light)}
-.nav-logo{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;letter-spacing:0.02em}
-.nav-cta{background:var(--black);color:var(--white);font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.65rem 1.5rem;text-decoration:none;transition:all 0.2s}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 2rem;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,0.06)}
+.logo{font-family:'Josefin Sans',sans-serif;font-size:0.95rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase}
+.nav-cta{background:var(--black);color:#fff;font-family:'Josefin Sans',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:0.65rem 1.4rem;border-radius:50px;text-decoration:none;transition:background 0.2s}
 .nav-cta:hover{background:#333}
 
 /* HERO */
-.hero{height:100vh;position:relative;display:flex;align-items:flex-end;overflow:hidden}
-.hero-img{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1577896851231-70ef18881754?w=1600&q=80') center/cover no-repeat}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.1) 60%,transparent 100%)}
-.hero-content{position:relative;z-index:2;padding:4rem 2.5rem;max-width:900px}
-.hero-tag{font-size:0.65rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:1.25rem}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,6rem);font-weight:900;color:#fff;line-height:1;margin-bottom:1.5rem;letter-spacing:-0.02em}
-.hero h1 em{font-style:italic;font-weight:700}
-.hero-sub{font-size:1rem;color:rgba(255,255,255,0.8);max-width:480px;line-height:1.7;margin-bottom:2.5rem;font-weight:300}
-.hero-cta{background:#fff;color:var(--black);font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:1rem 2.25rem;text-decoration:none;display:inline-block;transition:all 0.2s}
-.hero-cta:hover{background:var(--off-white)}
-.hero-scroll{position:absolute;bottom:2.5rem;right:2.5rem;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.5);writing-mode:vertical-rl}
+.hero{height:100vh;position:relative;overflow:hidden;display:flex;align-items:flex-end}
+.hero-bg{position:absolute;inset:0;background:url('https://drive.google.com/uc?export=view&id=1JaickDnDyykclkYDAo9c8WaEJiiyqNBs') center/cover no-repeat}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.15) 60%,transparent 100%)}
+.hero-inner{position:relative;z-index:2;padding:3.5rem 2rem;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.2);border-radius:50px;padding:0.4rem 1rem;margin-bottom:1.5rem}
+.hero-badge span{width:8px;height:8px;background:#4ade80;border-radius:50%;display:block}
+.hero-badge p{font-family:'Josefin Sans',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.9)}
+.hero h1{font-family:'Josefin Sans',sans-serif;font-size:clamp(2.8rem,6vw,5.5rem);font-weight:700;color:#fff;line-height:1.0;letter-spacing:-0.01em;margin-bottom:1.25rem;max-width:750px}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,0.75);max-width:480px;line-height:1.75;margin-bottom:2.5rem;font-weight:300}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.btn-white{background:#fff;color:var(--black);font-family:'Josefin Sans',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.9rem 2rem;border-radius:50px;text-decoration:none;display:inline-flex;align-items:center;gap:0.6rem;transition:all 0.2s}
+.btn-white:hover{background:#f0f0f0}
+.btn-outline{border:1px solid rgba(255,255,255,0.4);color:#fff;font-family:'Josefin Sans',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.9rem 2rem;border-radius:50px;text-decoration:none;transition:all 0.2s}
+.btn-outline:hover{background:rgba(255,255,255,0.1)}
 
-/* TRUST BAR */
-.trust{background:var(--black);padding:1.25rem 2.5rem;display:flex;gap:3rem;flex-wrap:wrap;align-items:center}
-.trust-item{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.5);display:flex;align-items:center;gap:0.6rem}
-.trust-item strong{color:#fff;font-size:0.85rem;letter-spacing:0}
+/* STATS BAR */
+.stats-bar{background:var(--black);padding:1.5rem 2rem;display:flex;justify-content:space-around;flex-wrap:wrap;gap:1rem}
+.stat{text-align:center}
+.stat-num{font-family:'Josefin Sans',sans-serif;font-size:1.75rem;font-weight:700;color:#fff;line-height:1}
+.stat-label{font-size:0.65rem;color:rgba(255,255,255,0.5);letter-spacing:0.1em;text-transform:uppercase;margin-top:0.25rem}
 
-/* EDITORIAL SPLIT */
-.split{display:grid;grid-template-columns:1fr 1fr;min-height:70vh}
-.split-img{background:url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=900&q=80') center/cover no-repeat}
-.split-content{padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;background:var(--off-white)}
-.eyebrow{font-size:0.6rem;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:var(--gray);margin-bottom:1.25rem}
-.split-content h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:700;line-height:1.1;margin-bottom:1.5rem;letter-spacing:-0.01em}
-.split-content p{font-size:0.95rem;color:var(--gray);line-height:1.8;max-width:420px;margin-bottom:2rem;font-weight:300}
-.text-link{font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--black);text-decoration:none;border-bottom:1px solid var(--black);padding-bottom:0.15rem}
+/* SECTIONS */
+.section{padding:5rem 2rem}
+.section-tag{display:inline-block;background:var(--off);border-radius:50px;font-family:'Josefin Sans',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;padding:0.4rem 1rem;margin-bottom:1.5rem;color:var(--gray)}
+h2{font-family:'Josefin Sans',sans-serif;font-size:clamp(2rem,4vw,3.25rem);font-weight:700;line-height:1.08;letter-spacing:-0.01em;margin-bottom:1.25rem}
+.section-sub{font-size:0.95rem;color:var(--gray);line-height:1.75;max-width:520px;font-weight:300}
+
+/* IMAGE GRID */
+.img-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:3rem}
+.img-cell{border-radius:var(--radius);overflow:hidden;aspect-ratio:3/4;background:#eee}
+.img-cell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s}
+.img-cell:hover img{transform:scale(1.03)}
+.img-cell.wide{grid-column:span 2;aspect-ratio:16/9}
 
 /* PROCESS */
-.process{padding:6rem 2.5rem;background:var(--white)}
-.process-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:4rem;border-bottom:1px solid var(--light);padding-bottom:2rem}
-.process-header h2{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:900;letter-spacing:-0.02em;line-height:1}
-.process-header p{font-size:0.9rem;color:var(--gray);max-width:300px;line-height:1.7;font-weight:300}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
-.step{padding-top:2rem;border-top:2px solid var(--light);transition:border-color 0.3s}
-.step:hover{border-top-color:var(--black)}
-.step-num{font-size:0.6rem;font-weight:600;letter-spacing:0.2em;color:var(--gray);margin-bottom:1rem;text-transform:uppercase}
-.step h3{font-family:'Playfair Display',serif;font-size:1.25rem;margin-bottom:0.75rem;font-weight:700}
-.step p{font-size:0.85rem;color:var(--gray);line-height:1.65;font-weight:300}
+.process-section{background:var(--off);padding:5rem 2rem}
+.process-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:3rem}
+.process-card{background:var(--white);border-radius:var(--radius);padding:2rem}
+.process-num{font-family:'Josefin Sans',sans-serif;font-size:2.5rem;font-weight:700;color:var(--light);line-height:1;margin-bottom:1rem}
+.process-card h3{font-family:'Josefin Sans',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.5rem;letter-spacing:0.02em}
+.process-card p{font-size:0.85rem;color:var(--gray);line-height:1.7;font-weight:300}
 
-/* FULL BLEED */
-.full-bleed{height:60vh;background:url('https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1600&q=80') center/cover no-repeat;position:relative;display:flex;align-items:center;justify-content:center}
-.full-bleed-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.45)}
-.full-bleed-content{position:relative;z-index:2;text-align:center}
-.full-bleed-content blockquote{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,3rem);color:#fff;font-style:italic;font-weight:700;max-width:700px;line-height:1.3;padding:0 2rem}
-
-/* STATS */
-.stats{background:var(--off-white);padding:5rem 2.5rem}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
-.stat{text-align:center;padding:2.5rem 1rem}
-.stat .num{font-family:'Playfair Display',serif;font-size:clamp(3rem,5vw,5rem);font-weight:900;line-height:1;margin-bottom:0.5rem;letter-spacing:-0.03em}
-.stat p{font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray)}
+/* SPLIT */
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:550px}
+.split-img{background-size:cover;background-position:center;border-radius:0}
+.split-content{padding:4rem 3rem;display:flex;flex-direction:column;justify-content:center;background:var(--black)}
+.split-content .section-tag{background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.6)}
+.split-content h2{color:#fff}
+.split-content .section-sub{color:rgba(255,255,255,0.6);max-width:100%}
+.check-list{list-style:none;margin-top:2rem;display:flex;flex-direction:column;gap:0.75rem}
+.check-list li{font-size:0.85rem;color:rgba(255,255,255,0.7);display:flex;gap:0.75rem;align-items:flex-start;font-weight:300}
+.check-list li::before{content:'✓';color:#fff;font-weight:700;flex-shrink:0}
 
 /* FORM */
-.form-section{background:var(--black);padding:6rem 2.5rem}
-.form-wrap{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
-.form-left h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.5rem);color:#fff;font-weight:900;line-height:1.05;margin-bottom:1.5rem;letter-spacing:-0.02em}
-.form-left p{font-size:0.95rem;color:rgba(255,255,255,0.5);line-height:1.8;font-weight:300;margin-bottom:2.5rem}
-.form-left ul{list-style:none;display:flex;flex-direction:column;gap:0.75rem}
-.form-left ul li{font-size:0.8rem;color:rgba(255,255,255,0.6);display:flex;gap:0.75rem;align-items:flex-start;letter-spacing:0.02em}
-.form-left ul li::before{content:'→';color:#fff;flex-shrink:0}
+.form-section{padding:5rem 2rem;background:var(--white)}
+.form-wrap{display:grid;grid-template-columns:1fr 1fr;gap:5rem;max-width:1100px;margin:0 auto}
+.form-intro h2{font-family:'Josefin Sans',sans-serif;font-size:clamp(1.8rem,3vw,2.75rem);font-weight:700;letter-spacing:-0.01em;margin-bottom:1rem}
+.form-intro p{font-size:0.9rem;color:var(--gray);line-height:1.75;font-weight:300}
 form{display:flex;flex-direction:column;gap:0.85rem}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:0.85rem}
-input,select,textarea{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:#fff;font-family:'Inter',sans-serif;font-size:0.8rem;padding:0.9rem 1rem;width:100%;outline:none;transition:border-color 0.2s}
-input::placeholder,textarea::placeholder{color:rgba(255,255,255,0.3)}
-input:focus,select:focus,textarea:focus{border-color:rgba(255,255,255,0.5)}
-select{appearance:none;cursor:pointer}
-select option{background:#111}
+input,select,textarea{background:var(--off);border:1.5px solid transparent;color:var(--black);font-family:'Poppins',sans-serif;font-size:0.82rem;padding:0.9rem 1.1rem;width:100%;outline:none;border-radius:8px;transition:border-color 0.2s;-webkit-appearance:none}
+input::placeholder,textarea::placeholder{color:#aaa}
+input:focus,select:focus,textarea:focus{border-color:var(--black);background:#fff}
+select{cursor:pointer}
 textarea{resize:vertical;min-height:110px}
-.submit-btn{background:#fff;color:var(--black);font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:1.1rem;border:none;cursor:pointer;transition:all 0.2s;margin-top:0.5rem}
-.submit-btn:hover{background:#e5e5e5}
-.form-note{font-size:0.65rem;color:rgba(255,255,255,0.3);text-align:center;letter-spacing:0.06em}
+.submit-btn{background:var(--black);color:#fff;font-family:'Josefin Sans',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:1.1rem;border:none;cursor:pointer;border-radius:50px;transition:background 0.2s;margin-top:0.25rem}
+.submit-btn:hover{background:#333}
+.form-note{font-size:0.65rem;color:#aaa;text-align:center}
 
-footer{background:var(--black);padding:1.75rem 2.5rem;border-top:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-footer p{font-size:0.65rem;color:rgba(255,255,255,0.3);letter-spacing:0.08em}
-footer a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.65rem}
+footer{background:var(--black);padding:1.75rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+footer p{font-size:0.7rem;color:rgba(255,255,255,0.35);font-family:'Josefin Sans',sans-serif;letter-spacing:0.06em}
+footer a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.7rem;font-family:'Josefin Sans',sans-serif}
 
 @media(max-width:900px){
-  .split{grid-template-columns:1fr}
-  .split-img{height:50vh}
-  .steps{grid-template-columns:1fr 1fr}
-  .stats-grid{grid-template-columns:1fr 1fr}
+  .img-grid{grid-template-columns:1fr 1fr}.img-cell.wide{grid-column:span 2}
+  .process-grid{grid-template-columns:1fr}
+  .split{grid-template-columns:1fr}.split-img{height:50vw}
   .form-wrap{grid-template-columns:1fr;gap:3rem}
 }
 @media(max-width:600px){
-  nav{padding:1rem 1.25rem}
-  .hero-content,.form-section,.process{padding-left:1.25rem;padding-right:1.25rem}
-  .stats{padding:4rem 1.25rem}
-  .steps{grid-template-columns:1fr}
-  .stats-grid{grid-template-columns:1fr 1fr}
-  .process-header{flex-direction:column;align-items:flex-start;gap:1rem}
-  .form-row{grid-template-columns:1fr}
-  .trust{padding:1rem 1.25rem;gap:1.5rem}
+  nav{padding:1rem 1.25rem}.section{padding:3.5rem 1.25rem}
+  .process-section,.form-section{padding:3.5rem 1.25rem}
+  .stats-bar{padding:1.25rem}.form-row{grid-template-columns:1fr}
+  .img-grid{grid-template-columns:1fr}.img-cell.wide{grid-column:span 1;aspect-ratio:3/4}
   footer{padding:1.25rem;flex-direction:column;align-items:flex-start}
 }
 </style>
 </head>
 <body>
 <nav>
-  <div class="nav-logo">Nathan Bingle Photography</div>
+  <div class="logo">Nathan Bingle Photography</div>
   <a href="#contact" class="nav-cta">Get a Quote</a>
 </nav>
 
 <div class="hero">
-  <div class="hero-img"></div>
+  <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-tag">Charlotte-Area School Photography</div>
-    <h1>Picture Day<br><em>Done Right.</em></h1>
-    <p class="hero-sub">Professional school photography built for Charlotte-area schools — seamless process, high parent participation, and zero chaos on picture day.</p>
-    <a href="#contact" class="hero-cta">Schedule Picture Day</a>
+  <div class="hero-inner">
+    <div class="hero-badge"><span></span><p>Now Booking Charlotte-Area Schools</p></div>
+    <h1>Picture Day Done Right.</h1>
+    <p class="hero-sub">Professional school photography built for Charlotte-area schools — seamless process, high parent participation, zero chaos on picture day.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-white">Schedule Picture Day →</a>
+      <a href="#process" class="btn-outline">See How It Works</a>
+    </div>
   </div>
-  <div class="hero-scroll">Scroll</div>
 </div>
 
-<div class="trust">
-  <div class="trust-item"><strong>100+</strong> Schools Across the Carolinas</div>
-  <div class="trust-item"><strong>Same-Day</strong> Online Ordering Available</div>
-  <div class="trust-item"><strong>Zero</strong> Chaos Guarantee</div>
-  <div class="trust-item"><strong>CMS</strong> Approved Vendor</div>
+<div class="stats-bar">
+  <div class="stat"><div class="stat-num">100+</div><div class="stat-label">Schools Served</div></div>
+  <div class="stat"><div class="stat-num">95%</div><div class="stat-label">Avg. Parent Participation</div></div>
+  <div class="stat"><div class="stat-num">48hr</div><div class="stat-label">Gallery Turnaround</div></div>
+  <div class="stat"><div class="stat-num">CMS</div><div class="stat-label">Approved Vendor</div></div>
 </div>
+
+<section class="section">
+  <div class="section-tag">Our Work</div>
+  <h2>Photos Students<br>Actually Want to Keep.</h2>
+  <p class="section-sub">We shoot every student like they're the most important person in the room — because to their family, they are.</p>
+  <div class="img-grid">
+    <div class="img-cell wide"><img src="https://drive.google.com/uc?export=view&id=1kINMX75XGT8DYvBTSl2kbs8WLLJzRVvT" alt="School group photo" loading="lazy"></div>
+    <div class="img-cell"><img src="https://drive.google.com/uc?export=view&id=1_rQ9RMs0TpDTr2xe4vDXs6A7L4G8Ra6I" alt="Student portrait" loading="lazy"></div>
+    <div class="img-cell"><img src="https://drive.google.com/uc?export=view&id=1zR2Xu9NwzsWHBSUb4S0E-DbxW0_8Ywk1" alt="Student portrait outdoor" loading="lazy"></div>
+    <div class="img-cell"><img src="https://drive.google.com/uc?export=view&id=11r2Lw2HPD2D_tYcoomqUrs8GViO4bOOD" alt="Student portrait" loading="lazy"></div>
+    <div class="img-cell wide"><img src="https://drive.google.com/uc?export=view&id=14My8818YrJ641GsD-k2T5dCsoWFLSRnk" alt="Student portrait" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="process-section" id="process">
+  <div class="section-tag">How It Works</div>
+  <h2>Four Steps.<br>One Smooth Day.</h2>
+  <div class="process-grid">
+    <div class="process-card"><div class="process-num">01</div><h3>We Plan Together</h3><p>We work with your office to build a schedule that fits your student count and class flow. No surprises, no disruptions.</p></div>
+    <div class="process-card"><div class="process-num">02</div><h3>Families Are Notified</h3><p>We provide ready-to-send communication assets so parents know exactly how to order before picture day arrives.</p></div>
+    <div class="process-card"><div class="process-num">03</div><h3>Picture Day Runs Smoothly</h3><p>We arrive early, set up fast, and move students through efficiently — minimal disruption to your school day.</p></div>
+    <div class="process-card"><div class="process-num">04</div><h3>Galleries Delivered Fast</h3><p>Parents order easily online. No paper forms, no cash. High-quality portraits delivered within 48 hours.</p></div>
+  </div>
+</section>
 
 <div class="split">
-  <div class="split-img"></div>
+  <div class="split-img" style="background-image:url('https://drive.google.com/uc?export=view&id=1JaickDnDyykclkYDAo9c8WaEJiiyqNBs')"></div>
   <div class="split-content">
-    <p class="eyebrow">The Problem</p>
-    <h2>Picture Day Doesn't Have to Be a Headache.</h2>
-    <p>Long lines, confused students, low parent participation, and a photographer who doesn't know your school. We've heard it all — and built our entire process around solving it.</p>
-    <a href="#process" class="text-link">See How We Do It →</a>
-  </div>
-</div>
-
-<div class="process" id="process">
-  <div class="process-header">
-    <h2>Four Steps.<br>One Smooth Day.</h2>
-    <p>We handle everything — from pre-day communication to families, to on-site coordination, to online gallery delivery.</p>
-  </div>
-  <div class="steps">
-    <div class="step">
-      <div class="step-num">Step 01</div>
-      <h3>We Plan Together</h3>
-      <p>We work with your office to build a schedule that fits your student count and class flow. No surprises.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">Step 02</div>
-      <h3>Families Are Notified</h3>
-      <p>We provide pre-day communication assets so parents know exactly how to order before picture day arrives.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">Step 03</div>
-      <h3>Picture Day Runs Smoothly</h3>
-      <p>We arrive early, set up fast, and move students through efficiently — minimal disruption to your day.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">Step 04</div>
-      <h3>Galleries Delivered Fast</h3>
-      <p>Parents order easily online. No paper forms. No cash. High-quality portraits delivered within days.</p>
-    </div>
-  </div>
-</div>
-
-<div class="full-bleed">
-  <div class="full-bleed-overlay"></div>
-  <div class="full-bleed-content">
-    <blockquote>"We don't just take photos — we run photo programs that perform."</blockquote>
-  </div>
-</div>
-
-<div class="stats">
-  <div class="stats-grid">
-    <div class="stat"><div class="num">2–4</div><p>Day Gallery Turnaround</p></div>
-    <div class="stat"><div class="num">95%</div><p>Avg. Parent Participation</p></div>
-    <div class="stat"><div class="num">100+</div><p>Schools Served</p></div>
-    <div class="stat"><div class="num">0</div><p>Hidden Fees</p></div>
+    <div class="section-tag">Why NBP</div>
+    <h2>Built for Schools.<br>Built for Scale.</h2>
+    <p class="section-sub">School photography is all we do — which means our systems, speed, and quality are built specifically for your environment.</p>
+    <ul class="check-list">
+      <li>CMS approved vendor serving Charlotte-Mecklenburg Schools</li>
+      <li>Online ordering — no cash, no paper forms, no headaches</li>
+      <li>Pre-day family communication assets included</li>
+      <li>Galleries delivered within 48 hours of picture day</li>
+      <li>Transparent pricing with no surprise fees</li>
+    </ul>
   </div>
 </div>
 
 <section id="contact" class="form-section">
   <div class="form-wrap">
-    <div class="form-left">
+    <div class="form-intro">
+      <div class="section-tag">Get Started</div>
       <h2>Get a Free Quote for Your School.</h2>
-      <p>Fill out the form and we'll follow up within one business day with availability and pricing tailored to your school.</p>
-      <ul>
-        <li>No obligation, no pressure</li>
-        <li>We serve all Charlotte-area districts</li>
-        <li>Custom scheduling for your student count</li>
-        <li>Transparent, straightforward pricing</li>
-      </ul>
+      <p>Fill out the form and we'll follow up within one business day with availability and pricing for your school.</p>
     </div>
     <form action="https://formspree.io/f/xeepaory" method="POST">
       <input type="hidden" name="_subject" value="Charlotte School Photography Inquiry">
@@ -213,20 +188,8 @@ footer a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.65rem}
       <input type="email" name="email" placeholder="Email Address" required>
       <input type="tel" name="phone" placeholder="Phone Number">
       <input type="text" name="school_name" placeholder="School Name" required>
-      <select name="student_count">
-        <option value="" disabled selected>Approx. Student Count</option>
-        <option>Under 300</option>
-        <option>300–600</option>
-        <option>600–1,000</option>
-        <option>1,000+</option>
-      </select>
-      <select name="timing">
-        <option value="" disabled selected>When Is Picture Day?</option>
-        <option>Fall 2025</option>
-        <option>Spring 2026</option>
-        <option>Fall 2026</option>
-        <option>Not Sure Yet</option>
-      </select>
+      <select name="student_count"><option value="" disabled selected>Approx. Student Count</option><option>Under 300</option><option>300–600</option><option>600–1,000</option><option>1,000+</option></select>
+      <select name="timing"><option value="" disabled selected>When Is Picture Day?</option><option>Fall 2025</option><option>Spring 2026</option><option>Fall 2026</option><option>Not Sure Yet</option></select>
       <textarea name="message" placeholder="Anything else we should know?"></textarea>
       <button type="submit" class="submit-btn">Send My Request →</button>
       <p class="form-note">We respond within 1 business day.</p>

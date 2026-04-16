@@ -4,202 +4,166 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Corporate Headshots Charlotte | Nathan Bingle Photography</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--black:#0A0A0A;--white:#FFFFFF;--off-white:#F8F6F2;--gray:#6B6B6B;--light:#EBEBEB}
-body{background:var(--white);color:var(--black);font-family:'Inter',sans-serif;overflow-x:hidden}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 2.5rem;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--light)}
-.nav-logo{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700}
-.nav-cta{background:var(--black);color:var(--white);font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.65rem 1.5rem;text-decoration:none;transition:background 0.2s}
+:root{--black:#111;--white:#fff;--off:#F5F5F3;--gray:#666;--light:#E5E5E5;--radius:12px}
+body{background:var(--white);color:var(--black);font-family:'Poppins',sans-serif;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 2rem;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,0.06)}
+.logo{font-family:'Josefin Sans',sans-serif;font-size:0.95rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase}
+.nav-cta{background:var(--black);color:#fff;font-family:'Josefin Sans',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:0.65rem 1.4rem;border-radius:50px;text-decoration:none;transition:background 0.2s}
 .nav-cta:hover{background:#333}
-
-/* HERO - magazine cover style */
-.hero{height:100vh;display:grid;grid-template-columns:55% 45%;padding-top:70px}
+.hero{height:100vh;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;padding-top:70px}
 .hero-left{position:relative;overflow:hidden}
-.hero-img{width:100%;height:100%;object-fit:cover;background:url('https://images.unsplash.com/photo-1560250097-0b93528c311a?w=900&q=80') center/cover no-repeat}
-.hero-right{background:var(--off-white);display:flex;flex-direction:column;justify-content:center;padding:4rem 3.5rem}
-.hero-tag{font-size:0.6rem;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:var(--gray);margin-bottom:2rem}
-.hero-right h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,4vw,4rem);font-weight:900;line-height:1.05;letter-spacing:-0.02em;margin-bottom:1.75rem}
-.hero-right h1 em{font-style:italic}
-.hero-right p{font-size:0.95rem;color:var(--gray);line-height:1.8;margin-bottom:2.5rem;font-weight:300;max-width:360px}
-.hero-right a{background:var(--black);color:#fff;font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:1rem 2.25rem;text-decoration:none;display:inline-block;transition:background 0.2s;align-self:flex-start}
-.hero-right a:hover{background:#333}
-.hero-caption{position:absolute;bottom:2rem;left:2rem;font-size:0.6rem;color:rgba(255,255,255,0.7);letter-spacing:0.1em;text-transform:uppercase}
-
-/* SERVICES */
-.services{padding:6rem 2.5rem;background:var(--white)}
-.services-header{margin-bottom:3.5rem}
-.services-header .eyebrow{font-size:0.6rem;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:var(--gray);margin-bottom:1rem}
-.services-header h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:900;letter-spacing:-0.02em;max-width:600px;line-height:1.1}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--light)}
-.service{padding:2.5rem 2rem;border-right:1px solid var(--light)}
-.service:last-child{border-right:none}
-.service-num{font-size:0.6rem;letter-spacing:0.2em;color:var(--gray);margin-bottom:1.5rem;text-transform:uppercase}
-.service h3{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;margin-bottom:0.85rem;line-height:1.2}
-.service p{font-size:0.85rem;color:var(--gray);line-height:1.7;font-weight:300}
-
-/* FULL WIDTH PHOTO */
-.photo-break{height:55vh;background:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&q=80') center 30%/cover no-repeat;position:relative}
-.photo-break-caption{position:absolute;bottom:2rem;right:2rem;font-size:0.6rem;color:rgba(255,255,255,0.6);letter-spacing:0.15em;text-transform:uppercase;background:rgba(0,0,0,0.4);padding:0.5rem 0.75rem}
-
-/* PROCESS - horizontal timeline */
-.process{background:var(--off-white);padding:6rem 2.5rem}
-.process h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:900;letter-spacing:-0.02em;margin-bottom:3.5rem}
-.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
-.timeline::before{content:'';position:absolute;top:1.25rem;left:0;right:0;height:1px;background:var(--light)}
-.tl-item{padding-top:3rem;padding-right:2rem}
-.tl-dot{width:0.6rem;height:0.6rem;background:var(--black);border-radius:50%;position:absolute;top:1rem;margin-top:-0.3rem}
-.tl-num{font-size:0.6rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);margin-bottom:0.75rem}
-.tl-item h3{font-size:0.9rem;font-weight:600;margin-bottom:0.5rem}
-.tl-item p{font-size:0.8rem;color:var(--gray);line-height:1.65;font-weight:300}
-
-/* SPLIT - why NBP */
-.why-split{display:grid;grid-template-columns:1fr 1fr}
-.why-img{background:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&q=80') center/cover no-repeat;min-height:500px}
-.why-content{padding:5rem 4rem;background:var(--black);display:flex;flex-direction:column;justify-content:center}
-.why-content .eyebrow{font-size:0.6rem;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:1.5rem}
-.why-content h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,3vw,2.75rem);color:#fff;font-weight:900;line-height:1.1;letter-spacing:-0.02em;margin-bottom:2.5rem}
-.why-list{list-style:none;display:flex;flex-direction:column;gap:1.25rem}
-.why-list li{font-size:0.85rem;color:rgba(255,255,255,0.65);line-height:1.6;display:flex;gap:0.85rem;font-weight:300}
-.why-list li::before{content:'→';color:#fff;flex-shrink:0;font-size:0.75rem;padding-top:0.1rem}
-
-/* FORM */
-.form-section{padding:6rem 2.5rem;background:var(--white)}
-.form-section h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:900;letter-spacing:-0.02em;margin-bottom:0.75rem}
-.form-section .form-desc{font-size:0.9rem;color:var(--gray);margin-bottom:3rem;font-weight:300}
-.form-wrap{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.hero-left-bg{position:absolute;inset:0;background:url('https://drive.google.com/uc?export=view&id=16Af73ZL_1Y2xUwHhWo-HuhLc-b_FcXqG') center/cover no-repeat}
+.hero-right{background:var(--off);display:flex;flex-direction:column;justify-content:center;padding:3.5rem 3rem}
+.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:#fff;border:1px solid var(--light);border-radius:50px;padding:0.4rem 1rem;margin-bottom:2rem}
+.hero-badge span{width:8px;height:8px;background:#4ade80;border-radius:50%}
+.hero-badge p{font-family:'Josefin Sans',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gray)}
+.hero-right h1{font-family:'Josefin Sans',sans-serif;font-size:clamp(2.5rem,4vw,3.75rem);font-weight:700;line-height:1.05;letter-spacing:-0.01em;margin-bottom:1.25rem}
+.hero-right p{font-size:0.95rem;color:var(--gray);line-height:1.75;margin-bottom:2.5rem;font-weight:300;max-width:380px}
+.btn-black{background:var(--black);color:#fff;font-family:'Josefin Sans',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.9rem 2rem;border-radius:50px;text-decoration:none;display:inline-block;transition:background 0.2s}
+.btn-black:hover{background:#333}
+.section{padding:5rem 2rem}
+.section-tag{display:inline-block;background:var(--off);border-radius:50px;font-family:'Josefin Sans',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;padding:0.4rem 1rem;margin-bottom:1.5rem;color:var(--gray)}
+h2{font-family:'Josefin Sans',sans-serif;font-size:clamp(2rem,4vw,3.25rem);font-weight:700;line-height:1.08;letter-spacing:-0.01em;margin-bottom:1.25rem}
+.section-sub{font-size:0.95rem;color:var(--gray);line-height:1.75;max-width:520px;font-weight:300}
+.img-scroll{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:3rem}
+.img-scroll-item{border-radius:var(--radius);overflow:hidden;aspect-ratio:3/4;background:#eee}
+.img-scroll-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s}
+.img-scroll-item:hover img{transform:scale(1.04)}
+.services-section{background:var(--off);padding:5rem 2rem}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem}
+.service-card{background:var(--white);border-radius:var(--radius);padding:2rem}
+.service-icon{width:40px;height:40px;background:var(--black);border-radius:10px;margin-bottom:1.25rem;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem}
+.service-card h3{font-family:'Josefin Sans',sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:0.6rem}
+.service-card p{font-size:0.83rem;color:var(--gray);line-height:1.7;font-weight:300}
+.process-section{padding:5rem 2rem}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:3rem}
+.step{padding-top:1.5rem;border-top:2px solid var(--light)}
+.step-num{font-family:'Josefin Sans',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);margin-bottom:0.75rem}
+.step h3{font-family:'Josefin Sans',sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.5rem}
+.step p{font-size:0.82rem;color:var(--gray);line-height:1.65;font-weight:300}
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:500px}
+.split-img{background-size:cover;background-position:center top}
+.split-content{padding:4rem 3rem;background:var(--black);display:flex;flex-direction:column;justify-content:center}
+.split-content .section-tag{background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.6)}
+.split-content h2{color:#fff}
+.split-content .section-sub{color:rgba(255,255,255,0.55);max-width:100%}
+.check-list{list-style:none;margin-top:2rem;display:flex;flex-direction:column;gap:0.75rem}
+.check-list li{font-size:0.85rem;color:rgba(255,255,255,0.65);display:flex;gap:0.75rem;font-weight:300}
+.check-list li::before{content:'✓';color:#fff;font-weight:700;flex-shrink:0}
+.form-section{padding:5rem 2rem;background:var(--off)}
+.form-wrap{display:grid;grid-template-columns:1fr 1fr;gap:5rem;max-width:1100px;margin:0 auto}
 form{display:flex;flex-direction:column;gap:0.85rem}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:0.85rem}
-input,select,textarea{background:var(--off-white);border:1px solid var(--light);color:var(--black);font-family:'Inter',sans-serif;font-size:0.8rem;padding:0.9rem 1rem;width:100%;outline:none;transition:border-color 0.2s}
+input,select,textarea{background:#fff;border:1.5px solid var(--light);color:var(--black);font-family:'Poppins',sans-serif;font-size:0.82rem;padding:0.9rem 1.1rem;width:100%;outline:none;border-radius:8px;transition:border-color 0.2s;-webkit-appearance:none}
 input::placeholder,textarea::placeholder{color:#aaa}
 input:focus,select:focus,textarea:focus{border-color:var(--black)}
-select{appearance:none;cursor:pointer}
+select{cursor:pointer}
 textarea{resize:vertical;min-height:110px}
-.submit-btn{background:var(--black);color:#fff;font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:1.1rem;border:none;cursor:pointer;transition:background 0.2s;margin-top:0.5rem}
+.submit-btn{background:var(--black);color:#fff;font-family:'Josefin Sans',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:1.1rem;border:none;cursor:pointer;border-radius:50px;transition:background 0.2s}
 .submit-btn:hover{background:#333}
 .form-note{font-size:0.65rem;color:#aaa;text-align:center}
-.form-aside{padding-top:1rem}
-.form-aside h3{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;margin-bottom:1.25rem}
-.form-aside ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
-.form-aside ul li{font-size:0.85rem;color:var(--gray);display:flex;gap:0.75rem;line-height:1.5;font-weight:300}
-.form-aside ul li::before{content:'✓';color:var(--black);font-weight:700;flex-shrink:0}
-
-footer{padding:1.75rem 2.5rem;border-top:1px solid var(--light);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-footer p{font-size:0.65rem;color:var(--gray);letter-spacing:0.08em}
-footer a{color:var(--black);text-decoration:none;font-size:0.65rem}
-
+.form-aside h3{font-family:'Josefin Sans',sans-serif;font-size:1.35rem;font-weight:700;margin-bottom:1.25rem}
+.form-aside ul{list-style:none;display:flex;flex-direction:column;gap:0.85rem}
+.form-aside ul li{font-size:0.85rem;color:var(--gray);display:flex;gap:0.75rem;font-weight:300}
+.form-aside ul li::before{content:'→';color:var(--black);font-weight:700;flex-shrink:0}
+footer{background:var(--black);padding:1.75rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+footer p{font-size:0.7rem;color:rgba(255,255,255,0.35);font-family:'Josefin Sans',sans-serif;letter-spacing:0.06em}
+footer a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.7rem;font-family:'Josefin Sans',sans-serif}
 @media(max-width:900px){
-  .hero{grid-template-columns:1fr;height:auto}
-  .hero-left{height:55vh}
-  .hero-right{padding:3rem 2rem}
-  .services-grid{grid-template-columns:1fr}
-  .service{border-right:none;border-bottom:1px solid var(--light)}
-  .timeline{grid-template-columns:1fr 1fr}
-  .why-split{grid-template-columns:1fr}
-  .why-img{min-height:40vh}
+  .hero{grid-template-columns:1fr;height:auto}.hero-left{height:55vw}.hero-right{padding:3rem 1.5rem}
+  .img-scroll{grid-template-columns:1fr 1fr}.services-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}.split{grid-template-columns:1fr}.split-img{height:50vw}
   .form-wrap{grid-template-columns:1fr;gap:3rem}
 }
 @media(max-width:600px){
-  nav{padding:1rem 1.25rem}
-  .services,.process,.form-section{padding-left:1.25rem;padding-right:1.25rem}
-  .timeline{grid-template-columns:1fr}
-  .form-row{grid-template-columns:1fr}
+  nav{padding:1rem 1.25rem}.section,.process-section,.form-section,.services-section{padding:3.5rem 1.25rem}
+  .steps{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}
   footer{padding:1.25rem;flex-direction:column;align-items:flex-start}
 }
 </style>
 </head>
 <body>
 <nav>
-  <div class="nav-logo">Nathan Bingle Photography</div>
+  <div class="logo">Nathan Bingle Photography</div>
   <a href="#contact" class="nav-cta">Book a Session</a>
 </nav>
 
 <div class="hero">
-  <div class="hero-left">
-    <div class="hero-img"></div>
-    <div class="hero-caption">Charlotte Corporate Headshots</div>
-  </div>
+  <div class="hero-left"><div class="hero-left-bg"></div></div>
   <div class="hero-right">
-    <div class="hero-tag">Professional Headshots · Charlotte, NC</div>
-    <h1>Your Team.<br><em>Professionally</em><br>Presented.</h1>
-    <p>Polished corporate headshots for Charlotte-area teams, executives, and professionals. We come to your office. Fast sessions. Exceptional results.</p>
-    <a href="#contact">Book a Session</a>
+    <div class="hero-badge"><span></span><p>Charlotte Corporate Headshots</p></div>
+    <h1>Your Team.<br>Professionally<br>Presented.</h1>
+    <p>Polished corporate headshots for Charlotte-area teams and executives. We come to your office. Fast sessions. Exceptional results.</p>
+    <a href="#contact" class="btn-black">Book a Session →</a>
   </div>
 </div>
 
-<div class="services">
-  <div class="services-header">
-    <p class="eyebrow">What We Offer</p>
-    <h2>Every Format, One Photographer.</h2>
+<section class="section">
+  <div class="section-tag">Our Work</div>
+  <h2>Headshots That Work<br>As Hard As You Do.</h2>
+  <p class="section-sub">Every person gets the same high-quality, consistent result — whether it's one person or your entire team.</p>
+  <div class="img-scroll">
+    <div class="img-scroll-item"><img src="https://drive.google.com/uc?export=view&id=1v3UuHzO5ramWM6R3Bs6_3hp7i5yknny9" alt="Professional headshot" loading="lazy"></div>
+    <div class="img-scroll-item"><img src="https://drive.google.com/uc?export=view&id=1gSCkWqhU6B8guNjuR4Ac3J6ZAU4ke4I9" alt="Professional headshot" loading="lazy"></div>
+    <div class="img-scroll-item"><img src="https://drive.google.com/uc?export=view&id=19VsZHUlOizRLNjyaHTxlWQXCd0BhfWhC" alt="Professional headshot" loading="lazy"></div>
+    <div class="img-scroll-item"><img src="https://drive.google.com/uc?export=view&id=149dd-YMiBxZRWz1tgS9bST0Qy4A-_pw0" alt="Professional headshot" loading="lazy"></div>
   </div>
+</section>
+
+<section class="services-section">
+  <div class="section-tag">What We Offer</div>
+  <h2>Every Format Covered.</h2>
   <div class="services-grid">
-    <div class="service">
-      <div class="service-num">01 · Individual</div>
-      <h3>Personal Headshot Session</h3>
-      <p>One-on-one portrait session delivering polished, LinkedIn-ready images. Ideal for executives, consultants, and individual professionals.</p>
-    </div>
-    <div class="service">
-      <div class="service-num">02 · Team</div>
-      <h3>Corporate Team Shoot</h3>
-      <p>Consistent, professional headshots for your entire team in one efficient session. Same quality, same style, same background — cohesive across your brand.</p>
-    </div>
-    <div class="service">
-      <div class="service-num">03 · On-Site</div>
-      <h3>We Come to Your Office</h3>
-      <p>No travel time for your team. We set up a professional studio at your location and photograph everyone in one day — anywhere in the Charlotte metro.</p>
-    </div>
+    <div class="service-card"><div class="service-icon">👤</div><h3>Individual Session</h3><p>One-on-one portrait session delivering polished, LinkedIn-ready images. Ideal for executives, consultants, and individual professionals.</p></div>
+    <div class="service-card"><div class="service-icon">👥</div><h3>Team Shoot</h3><p>Consistent, professional headshots for your entire team in one efficient session. Same quality, same style, cohesive across your brand.</p></div>
+    <div class="service-card"><div class="service-icon">🏢</div><h3>We Come to You</h3><p>No travel time for your team. We set up a professional studio at your Charlotte-area office and shoot everyone in a single day.</p></div>
   </div>
-</div>
+</section>
 
-<div class="photo-break">
-  <div class="photo-break-caption">Charlotte · Fort Mill · Rock Hill</div>
-</div>
-
-<div class="process">
-  <h2>Simple Process.<br>No Friction.</h2>
-  <div class="timeline">
-    <div class="tl-item">
-      <div class="tl-num">Step 01</div>
-      <h3>Reach Out</h3>
-      <p>Fill out the form below. We'll confirm availability within 24 hours — no phone tag.</p>
-    </div>
-    <div class="tl-item">
-      <div class="tl-num">Step 02</div>
-      <h3>We Set Up at Your Office</h3>
-      <p>We arrive with full studio lighting and a clean backdrop. Your team keeps working until it's their turn.</p>
-    </div>
-    <div class="tl-item">
-      <div class="tl-num">Step 03</div>
-      <h3>Fast Focused Sessions</h3>
-      <p>5–10 minutes per person. We know how to make people look natural and relaxed quickly.</p>
-    </div>
-    <div class="tl-item">
-      <div class="tl-num">Step 04</div>
-      <h3>Gallery Delivered</h3>
-      <p>Professionally edited, download-ready gallery sent to your entire team within 3–5 business days.</p>
-    </div>
+<section class="process-section">
+  <div class="section-tag">The Process</div>
+  <h2>Simple. Fast. No Friction.</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">Step 01</div><h3>Reach Out</h3><p>Fill out the form. We'll confirm availability and details within 24 hours — no phone tag.</p></div>
+    <div class="step"><div class="step-num">Step 02</div><h3>We Set Up at Your Office</h3><p>We arrive with full studio lighting and a clean backdrop. Your team keeps working until it's their turn.</p></div>
+    <div class="step"><div class="step-num">Step 03</div><h3>Fast Focused Sessions</h3><p>5–10 minutes per person. We know how to make people look natural quickly.</p></div>
+    <div class="step"><div class="step-num">Step 04</div><h3>Gallery Delivered</h3><p>Professionally edited gallery sent to your team within 3–5 business days.</p></div>
   </div>
-</div>
+</section>
 
-<div class="why-split">
-  <div class="why-img"></div>
-  <div class="why-content">
-    <p class="eyebrow">Why NBP</p>
+<div class="split">
+  <div class="split-img" style="background-image:url('https://drive.google.com/uc?export=view&id=1VtgW9TWUcukTUY-8TKC-D4N7vExTmdMy')"></div>
+  <div class="split-content">
+    <div class="section-tag">Why NBP</div>
     <h2>Built for Volume.<br>Refined for Business.</h2>
-    <ul class="why-list">
-      <li>We shoot hundreds of people every year — every person gets the same professional, consistent result</li>
-      <li>Studio comes to your office — no coordinating travel for 20 people</li>
-      <li>Edited gallery delivered in 3–5 business days — rush available</li>
-      <li>Transparent per-person pricing with team discounts — no surprise fees</li>
+    <p class="section-sub">We shoot hundreds of people every year. Every person gets the same professional, consistent result.</p>
+    <ul class="check-list">
+      <li>Studio comes to your office — no travel for your team</li>
+      <li>Consistent quality across your entire roster</li>
+      <li>Edited gallery in 3–5 business days</li>
+      <li>Per-person pricing with team discounts</li>
+      <li>Serving the entire Charlotte metro area</li>
     </ul>
   </div>
 </div>
 
 <section id="contact" class="form-section">
-  <h2>Let's Get Your Team Sorted.</h2>
-  <p class="form-desc">Fill out the form and we'll follow up within one business day with availability and pricing.</p>
   <div class="form-wrap">
+    <div class="form-aside">
+      <div class="section-tag">Book a Session</div>
+      <h3>Let's Get Your<br>Team Sorted.</h3>
+      <p style="font-size:0.9rem;color:var(--gray);margin-bottom:2rem;font-weight:300;line-height:1.75">Fill out the form and we'll follow up within one business day with availability and pricing.</p>
+      <ul>
+        <li>Individual and full-team packages available</li>
+        <li>On-site setup at your Charlotte-area office</li>
+        <li>Gallery delivered within 3–5 business days</li>
+        <li>Transparent per-person pricing</li>
+        <li>No obligation, no pressure</li>
+      </ul>
+    </div>
     <form action="https://formspree.io/f/xeepaory" method="POST">
       <input type="hidden" name="_subject" value="Corporate Headshots Inquiry">
       <div class="form-row">
@@ -209,34 +173,12 @@ footer a{color:var(--black);text-decoration:none;font-size:0.65rem}
       <input type="email" name="email" placeholder="Work Email" required>
       <input type="tel" name="phone" placeholder="Phone Number">
       <input type="text" name="company" placeholder="Company Name">
-      <select name="session_type">
-        <option value="" disabled selected>Session Type</option>
-        <option>Individual Headshot</option>
-        <option>Small Team (2–10)</option>
-        <option>Large Team (10+)</option>
-        <option>Not Sure Yet</option>
-      </select>
-      <select name="timing">
-        <option value="" disabled selected>Preferred Timing</option>
-        <option>Within 2 Weeks</option>
-        <option>Within a Month</option>
-        <option>1–3 Months Out</option>
-        <option>Just Exploring</option>
-      </select>
+      <select name="session_type"><option value="" disabled selected>Session Type</option><option>Individual Headshot</option><option>Small Team (2–10)</option><option>Large Team (10+)</option><option>Not Sure Yet</option></select>
+      <select name="timing"><option value="" disabled selected>Preferred Timing</option><option>Within 2 Weeks</option><option>Within a Month</option><option>1–3 Months Out</option><option>Just Exploring</option></select>
       <textarea name="message" placeholder="Questions or details..."></textarea>
       <button type="submit" class="submit-btn">Request a Session →</button>
       <p class="form-note">Response within 1 business day.</p>
     </form>
-    <div class="form-aside">
-      <h3>What to Expect</h3>
-      <ul>
-        <li>Individual and full-team packages available</li>
-        <li>On-site studio setup at your Charlotte-area office</li>
-        <li>Edited gallery delivered within 3–5 business days</li>
-        <li>Transparent, per-person pricing</li>
-        <li>No obligation, no pressure</li>
-      </ul>
-    </div>
   </div>
 </section>
 
