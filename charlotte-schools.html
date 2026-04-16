@@ -7,16 +7,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --dark:#101014;--dark2:#28282c;--white:#fff;--off:#fafafa;
-  --border:#e9ecf2;--gray:#6b6b6b;--text:#101014;
-  --font:'Manrope',sans-serif;
-}
+:root{--dark:#101014;--white:#fff;--off:#fafafa;--border:#e9ecf2;--gray:#6b6b6b;--font:'Manrope',sans-serif}
 html{scroll-behavior:smooth}
-body{font-family:var(--font);background:var(--white);color:var(--text);overflow-x:hidden;font-size:16px}
-
-/* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 60px;background:rgba(16,16,20,0.85);backdrop-filter:blur(16px)}
+body{font-family:var(--font);background:var(--white);color:var(--dark);overflow-x:hidden}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 60px;background:rgba(16,16,20,0.88);backdrop-filter:blur(16px)}
 .nav-logo{font-size:18px;font-weight:700;color:#fff;letter-spacing:-0.3px}
 .nav-links{display:flex;gap:32px}
 .nav-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:14px;font-weight:500;transition:color 0.2s}
@@ -26,103 +20,107 @@ body{font-family:var(--font);background:var(--white);color:var(--text);overflow-
 
 /* HERO */
 .hero{min-height:100vh;background:var(--dark);position:relative;display:flex;align-items:flex-end;overflow:hidden}
-.hero-img{position:absolute;inset:0;background:url('https://drive.google.com/uc?export=view&id=1JaickDnDyykclkYDAo9c8WaEJiiyqNBs') center/cover no-repeat;opacity:0.55}
+.hero-bg{position:absolute;inset:0;background-image:url('images/cs-hero.jpg');background-size:cover;background-position:center;opacity:0.55}
 .hero-inner{position:relative;z-index:2;padding:0 60px 80px;max-width:800px}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:50px;padding:7px 16px;margin-bottom:28px}
-.hero-badge-dot{width:8px;height:8px;background:#4ade80;border-radius:50%}
-.hero-badge span{font-size:13px;font-weight:500;color:rgba(255,255,255,0.8);letter-spacing:0.01em}
-.hero h1{font-size:clamp(42px,5.5vw,72px);font-weight:500;color:#fff;line-height:1.1;letter-spacing:-1.5px;margin-bottom:20px}
-.hero-sub{font-size:18px;font-weight:400;color:rgba(255,255,255,0.65);line-height:1.6;max-width:520px;margin-bottom:36px;letter-spacing:-0.1px}
-.btn-hero{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.1);color:#fff;text-decoration:none;font-size:15px;font-weight:500;padding:12px 24px 14px;border-radius:50px;border:1px solid rgba(255,255,255,0.2);transition:all 0.2s}
+.hero-dot{width:8px;height:8px;background:#4ade80;border-radius:50%;flex-shrink:0}
+.hero-badge p{font-size:13px;font-weight:500;color:rgba(255,255,255,0.85)}
+.hero h1{font-size:clamp(44px,5.5vw,72px);font-weight:500;color:#fff;line-height:1.08;letter-spacing:-1.5px;margin-bottom:20px}
+.hero-sub{font-size:18px;color:rgba(255,255,255,0.65);line-height:1.6;max-width:520px;margin-bottom:36px}
+.btn-hero{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.1);color:#fff;text-decoration:none;font-size:15px;font-weight:500;padding:12px 12px 13px 24px;border-radius:50px;border:1px solid rgba(255,255,255,0.2);transition:background 0.2s}
 .btn-hero:hover{background:rgba(255,255,255,0.18)}
-.btn-arrow{width:28px;height:28px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--dark);font-size:14px;flex-shrink:0}
+.btn-icon{width:28px;height:28px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--dark);font-size:13px;flex-shrink:0}
+
+/* SCROLLING STRIP */
+.scroll-strip{overflow:hidden;padding:0;background:var(--off);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.scroll-track{display:flex;gap:0;animation:stripScroll 28s linear infinite;width:max-content}
+.scroll-track:hover{animation-play-state:paused}
+.strip-img{width:320px;height:220px;object-fit:cover;flex-shrink:0;display:block}
+@keyframes stripScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
 /* ABOUT */
 .about{padding:120px 60px}
 .about-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
-.section-tag{display:inline-block;background:#f0f0f0;border-radius:50px;font-size:13px;font-weight:600;padding:6px 14px;margin-bottom:20px;color:var(--gray)}
+.section-tag{display:inline-block;background:#efefef;border-radius:50px;font-size:13px;font-weight:600;padding:6px 14px;margin-bottom:20px;color:var(--gray)}
 .about h2{font-size:clamp(32px,3.5vw,48px);font-weight:500;line-height:1.1;letter-spacing:-0.8px;margin-bottom:24px}
-.about p{font-size:16px;color:var(--gray);line-height:1.75;font-weight:400}
-.about-imgs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.about-img{border-radius:12px;overflow:hidden;aspect-ratio:4/5;background:#eee}
-.about-img img{width:100%;height:100%;object-fit:cover;display:block}
-.about-img.tall{grid-row:span 2;aspect-ratio:auto}
+.about p{font-size:16px;color:var(--gray);line-height:1.75}
+.about-imgs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.aimg{border-radius:12px;overflow:hidden;background:#eee}
+.aimg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s}
+.aimg:hover img{transform:scale(1.04)}
+.aimg-tall{aspect-ratio:3/4;grid-row:span 2}
+.aimg-sq{aspect-ratio:1/1}
 
 /* STATS */
-.stats{background:var(--off);padding:80px 60px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.stat{padding:40px;border-right:1px solid var(--border)}
+.stats{background:var(--off);border-top:1px solid var(--border);border-bottom:1px solid var(--border);display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:48px 40px;border-right:1px solid var(--border)}
 .stat:last-child{border-right:none}
-.stat-num{font-size:52px;font-weight:500;line-height:1;letter-spacing:-2px;margin-bottom:12px}
+.stat-num{font-size:52px;font-weight:500;letter-spacing:-2px;line-height:1;margin-bottom:12px}
 .stat-title{font-size:15px;font-weight:600;margin-bottom:6px}
 .stat-sub{font-size:13px;color:var(--gray);line-height:1.5}
 
 /* SERVICES */
 .services{background:var(--off);padding:100px 60px}
-.services-header{margin-bottom:60px}
-.services-header h2{font-size:clamp(32px,3.5vw,48px);font-weight:500;letter-spacing:-0.8px;line-height:1.1;margin-top:16px}
-.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.service-card{background:var(--white);border-radius:16px;padding:36px;border:1px solid var(--border)}
-.service-num{font-size:13px;font-weight:600;color:var(--gray);margin-bottom:20px;letter-spacing:0.02em}
-.service-card h3{font-size:20px;font-weight:600;letter-spacing:-0.3px;margin-bottom:12px}
-.service-card p{font-size:15px;color:var(--gray);line-height:1.65}
+.services h2{font-size:clamp(32px,3.5vw,48px);font-weight:500;letter-spacing:-0.8px;line-height:1.1;margin-top:16px;margin-bottom:56px}
+.services-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.scard{background:var(--white);border-radius:16px;padding:36px;border:1px solid var(--border)}
+.scard-num{font-size:13px;font-weight:600;color:var(--gray);margin-bottom:20px;letter-spacing:0.02em}
+.scard h3{font-size:20px;font-weight:600;letter-spacing:-0.3px;margin-bottom:10px}
+.scard p{font-size:15px;color:var(--gray);line-height:1.65}
 
 /* GALLERY */
 .gallery{padding:100px 60px}
-.gallery-header{margin-bottom:48px}
-.gallery-header h2{font-size:clamp(32px,3.5vw,48px);font-weight:500;letter-spacing:-0.8px;margin-top:16px}
-.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.gal-item{border-radius:12px;overflow:hidden;background:#eee}
-.gal-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s}
-.gal-item:hover img{transform:scale(1.04)}
-.gal-tall{aspect-ratio:3/4}
-.gal-wide{grid-column:span 2;aspect-ratio:16/9}
-
-/* FULL BLEED */
-.full-bleed{height:60vh;background:url('https://drive.google.com/uc?export=view&id=1kINMX75XGT8DYvBTSl2kbs8WLLJzRVvT') center/cover no-repeat;position:relative}
+.gallery h2{font-size:clamp(32px,3.5vw,48px);font-weight:500;letter-spacing:-0.8px;margin-top:16px;margin-bottom:48px}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.gitem{border-radius:12px;overflow:hidden;background:#eee}
+.gitem img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s}
+.gitem:hover img{transform:scale(1.04)}
+.g-tall{aspect-ratio:3/4}
+.g-wide{grid-column:span 2;aspect-ratio:16/9}
 
 /* CONTACT */
 .contact{background:var(--dark);padding:100px 60px}
 .contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
-.contact h2{font-size:clamp(32px,3.5vw,48px);font-weight:500;color:#fff;letter-spacing:-0.8px;line-height:1.1;margin-top:16px;margin-bottom:20px}
-.contact-sub{font-size:16px;color:rgba(255,255,255,0.5);line-height:1.7;font-weight:400}
-.contact .section-tag{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.5)}
-form{display:flex;flex-direction:column;gap:12px;margin-top:8px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-input,select,textarea{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#fff;font-family:var(--font);font-size:15px;font-weight:400;padding:14px 16px;border-radius:8px;outline:none;transition:border-color 0.2s;-webkit-appearance:none;width:100%}
+.contact .section-tag{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.45)}
+.contact h2{font-size:clamp(32px,3.5vw,48px);font-weight:500;color:#fff;letter-spacing:-0.8px;margin-top:16px;margin-bottom:20px}
+.contact p{font-size:16px;color:rgba(255,255,255,0.5);line-height:1.7}
+form{display:flex;flex-direction:column;gap:10px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+input,select,textarea{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#fff;font-family:var(--font);font-size:15px;padding:14px 16px;border-radius:8px;outline:none;-webkit-appearance:none;width:100%;transition:border-color 0.2s}
 input::placeholder,textarea::placeholder{color:rgba(255,255,255,0.3)}
-input:focus,select:focus,textarea:focus{border-color:rgba(255,255,255,0.35)}
+input:focus,select:focus,textarea:focus{border-color:rgba(255,255,255,0.4)}
 select{cursor:pointer}
-select option{background:#1a1a1e;color:#fff}
+select option{background:#1a1a1e}
 textarea{resize:vertical;min-height:120px}
-.submit-btn{background:#fff;color:var(--dark);font-family:var(--font);font-size:15px;font-weight:600;padding:14px 24px;border:none;border-radius:50px;cursor:pointer;transition:background 0.2s;letter-spacing:-0.2px;margin-top:4px}
-.submit-btn:hover{background:#e5e5e5}
+.submit{background:#fff;color:var(--dark);font-family:var(--font);font-size:15px;font-weight:600;padding:14px 24px;border:none;border-radius:50px;cursor:pointer;transition:background 0.2s;margin-top:4px}
+.submit:hover{background:#e5e5e5}
 
-/* FOOTER */
-footer{background:var(--dark);border-top:1px solid rgba(255,255,255,0.08);padding:32px 60px;display:flex;justify-content:space-between;align-items:center}
+footer{background:var(--dark);border-top:1px solid rgba(255,255,255,0.07);padding:32px 60px;display:flex;justify-content:space-between;align-items:center}
 footer p,footer a{font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none}
-footer a:hover{color:rgba(255,255,255,0.6)}
 
 @media(max-width:1024px){
   .nav{padding:20px 32px}.nav-links{display:none}
-  .hero-inner{padding:0 32px 60px}
-  .about,.services,.gallery,.contact{padding:80px 32px}
-  .stats{padding:60px 32px;grid-template-columns:1fr 1fr}
+  .hero-inner,.about,.services,.gallery,.contact{padding-left:32px;padding-right:32px}
+  .hero-inner{padding-bottom:60px}
+  .stats{grid-template-columns:1fr 1fr}
   .stat{border-bottom:1px solid var(--border)}
-  .about-inner{grid-template-columns:1fr;gap:48px}
-  .contact-inner{grid-template-columns:1fr;gap:48px}
+  .about-inner,.contact-inner{grid-template-columns:1fr;gap:48px}
   .gallery-grid{grid-template-columns:1fr 1fr}
-  .gal-wide{grid-column:span 2}
   footer{padding:24px 32px}
 }
 @media(max-width:640px){
   .nav{padding:16px 20px}
-  .hero-inner{padding:0 20px 48px}
-  .about,.services,.gallery,.contact{padding:60px 20px}
-  .stats{padding:40px 20px;grid-template-columns:1fr 1fr}
+  .hero-inner,.about,.services,.gallery,.contact{padding-left:20px;padding-right:20px}
+  .hero-inner{padding-bottom:48px}
+  .about{padding-top:60px;padding-bottom:60px}
+  .services{padding-top:60px;padding-bottom:60px}
+  .gallery{padding-top:60px;padding-bottom:60px}
+  .contact{padding-top:60px;padding-bottom:60px}
+  .stats{grid-template-columns:1fr 1fr}
   .services-grid{grid-template-columns:1fr}
-  .form-row{grid-template-columns:1fr}
-  .gallery-grid{grid-template-columns:1fr}
-  .gal-wide{grid-column:span 1;aspect-ratio:3/4}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .g-wide{grid-column:span 2}
+  .frow{grid-template-columns:1fr}
   footer{padding:20px;flex-direction:column;align-items:flex-start;gap:8px}
 }
 </style>
@@ -141,26 +139,45 @@ footer a:hover{color:rgba(255,255,255,0.6)}
 </nav>
 
 <section class="hero">
-  <div class="hero-img"></div>
+  <div class="hero-bg"></div>
   <div class="hero-inner">
-    <div class="hero-badge"><div class="hero-badge-dot"></div><span>Now Booking Charlotte-Area Schools</span></div>
+    <div class="hero-badge"><div class="hero-dot"></div><p>Now Booking Charlotte-Area Schools</p></div>
     <h1>Picture Day<br>Done Right.</h1>
     <p class="hero-sub">Professional school photography for Charlotte-area schools — seamless process, high parent participation, and zero chaos on picture day.</p>
-    <a href="#contact" class="btn-hero">Schedule Picture Day <span class="btn-arrow">↗</span></a>
+    <a href="#contact" class="btn-hero">Schedule Picture Day <span class="btn-icon">↗</span></a>
   </div>
 </section>
+
+<!-- SCROLLING IMAGE STRIP -->
+<div class="scroll-strip">
+  <div class="scroll-track">
+    <img class="strip-img" src="images/cs-1.jpg" alt="">
+    <img class="strip-img" src="images/cs-2.jpg" alt="">
+    <img class="strip-img" src="images/cs-3.jpg" alt="">
+    <img class="strip-img" src="images/cs-4.jpg" alt="">
+    <img class="strip-img" src="images/cs-5.jpg" alt="">
+    <img class="strip-img" src="images/cs-hero.jpg" alt="">
+    <!-- duplicate for seamless loop -->
+    <img class="strip-img" src="images/cs-1.jpg" alt="">
+    <img class="strip-img" src="images/cs-2.jpg" alt="">
+    <img class="strip-img" src="images/cs-3.jpg" alt="">
+    <img class="strip-img" src="images/cs-4.jpg" alt="">
+    <img class="strip-img" src="images/cs-5.jpg" alt="">
+    <img class="strip-img" src="images/cs-hero.jpg" alt="">
+  </div>
+</div>
 
 <section class="about" id="about">
   <div class="about-inner">
     <div>
       <div class="section-tag">About Us</div>
       <h2>School photography specialists.</h2>
-      <p>Nathan Bingle Photography is a high-volume school photography operation serving Charlotte-area schools and the greater Carolinas. We specialize in building photo programs that actually perform — high participation, fast delivery, and portraits students and families are proud of. We handle everything from pre-day communication to online gallery delivery, so your staff can stay focused on running a great school.</p>
+      <p>Nathan Bingle Photography is a high-volume school photography operation serving Charlotte-area schools and the greater Carolinas. We specialize in building photo programs that perform — high participation, fast delivery, and portraits students and families are proud of. We handle everything from pre-day communication to online gallery delivery.</p>
     </div>
     <div class="about-imgs">
-      <div class="about-img tall"><img src="https://drive.google.com/uc?export=view&id=1_rQ9RMs0TpDTr2xe4vDXs6A7L4G8Ra6I" alt="Student portrait" loading="lazy"></div>
-      <div class="about-img"><img src="https://drive.google.com/uc?export=view&id=1zR2Xu9NwzsWHBSUb4S0E-DbxW0_8Ywk1" alt="Student portrait" loading="lazy"></div>
-      <div class="about-img"><img src="https://drive.google.com/uc?export=view&id=11r2Lw2HPD2D_tYcoomqUrs8GViO4bOOD" alt="Student portrait" loading="lazy"></div>
+      <div class="aimg aimg-tall"><img src="images/cs-1.jpg" alt="Student portrait"></div>
+      <div class="aimg aimg-sq"><img src="images/cs-2.jpg" alt="Student portrait"></div>
+      <div class="aimg aimg-sq"><img src="images/cs-4.jpg" alt="Student portrait"></div>
     </div>
   </div>
 </section>
@@ -173,30 +190,26 @@ footer a:hover{color:rgba(255,255,255,0.6)}
 </section>
 
 <section class="services" id="services">
-  <div class="services-header">
-    <div class="section-tag">How It Works</div>
-    <h2>Four steps. One smooth day.</h2>
-  </div>
+  <div class="section-tag">How It Works</div>
+  <h2>Four steps. One smooth day.</h2>
   <div class="services-grid">
-    <div class="service-card"><div class="service-num">01</div><h3>We Plan Together</h3><p>We work with your office to build a schedule that fits your student count and class flow. No surprises, no disruptions.</p></div>
-    <div class="service-card"><div class="service-num">02</div><h3>Families Are Notified</h3><p>We provide ready-to-send communication assets so parents know exactly how to order before picture day arrives.</p></div>
-    <div class="service-card"><div class="service-num">03</div><h3>Picture Day Runs Smoothly</h3><p>We arrive early, set up fast, and move students through efficiently — minimal disruption to your school day.</p></div>
-    <div class="service-card"><div class="service-num">04</div><h3>Galleries Delivered Fast</h3><p>Parents order online — no paper forms, no cash. High-quality portraits delivered within 48 hours of picture day.</p></div>
+    <div class="scard"><div class="scard-num">01</div><h3>We Plan Together</h3><p>We work with your office to build a schedule that fits your student count and class flow. No surprises, no disruptions.</p></div>
+    <div class="scard"><div class="scard-num">02</div><h3>Families Are Notified</h3><p>We provide ready-to-send communication assets so parents know exactly how to order before picture day arrives.</p></div>
+    <div class="scard"><div class="scard-num">03</div><h3>Picture Day Runs Smoothly</h3><p>We arrive early, set up fast, and move students through efficiently — minimal disruption to your school day.</p></div>
+    <div class="scard"><div class="scard-num">04</div><h3>Galleries Delivered Fast</h3><p>Parents order online — no paper forms, no cash. High-quality portraits delivered within 48 hours of picture day.</p></div>
   </div>
 </section>
 
 <section class="gallery" id="gallery">
-  <div class="gallery-header">
-    <div class="section-tag">Our Work</div>
-    <h2>Photos students actually want to keep.</h2>
-  </div>
+  <div class="section-tag">Our Work</div>
+  <h2>Photos students actually want to keep.</h2>
   <div class="gallery-grid">
-    <div class="gal-item gal-tall"><img src="https://drive.google.com/uc?export=view&id=1_rQ9RMs0TpDTr2xe4vDXs6A7L4G8Ra6I" alt="Student portrait" loading="lazy"></div>
-    <div class="gal-item gal-wide"><img src="https://drive.google.com/uc?export=view&id=1kINMX75XGT8DYvBTSl2kbs8WLLJzRVvT" alt="School group" loading="lazy"></div>
-    <div class="gal-item gal-tall"><img src="https://drive.google.com/uc?export=view&id=14My8818YrJ641GsD-k2T5dCsoWFLSRnk" alt="Student portrait" loading="lazy"></div>
-    <div class="gal-item gal-tall"><img src="https://drive.google.com/uc?export=view&id=1zR2Xu9NwzsWHBSUb4S0E-DbxW0_8Ywk1" alt="Student portrait" loading="lazy"></div>
-    <div class="gal-item gal-wide"><img src="https://drive.google.com/uc?export=view&id=11r2Lw2HPD2D_tYcoomqUrs8GViO4bOOD" alt="Student portrait" loading="lazy"></div>
-    <div class="gal-item gal-tall"><img src="https://drive.google.com/uc?export=view&id=14My8818YrJ641GsD-k2T5dCsoWFLSRnk" alt="Student portrait" loading="lazy"></div>
+    <div class="gitem g-tall"><img src="images/cs-1.jpg" alt="Student portrait"></div>
+    <div class="gitem g-wide"><img src="images/cs-3.jpg" alt="School group"></div>
+    <div class="gitem g-tall"><img src="images/cs-5.jpg" alt="Student portrait"></div>
+    <div class="gitem g-tall"><img src="images/cs-2.jpg" alt="Student portrait"></div>
+    <div class="gitem g-wide"><img src="images/cs-4.jpg" alt="Student portrait"></div>
+    <div class="gitem g-tall"><img src="images/cs-5.jpg" alt="Student portrait"></div>
   </div>
 </section>
 
@@ -205,11 +218,11 @@ footer a:hover{color:rgba(255,255,255,0.6)}
     <div>
       <div class="section-tag">Get Started</div>
       <h2>Get a free quote for your school.</h2>
-      <p class="contact-sub">Fill out the form and we'll follow up within one business day with availability and pricing for your school. No obligation.</p>
+      <p>Fill out the form and we'll follow up within one business day with availability and pricing. No obligation.</p>
     </div>
     <form action="https://formspree.io/f/xeepaory" method="POST">
       <input type="hidden" name="_subject" value="Charlotte School Photography Inquiry">
-      <div class="form-row">
+      <div class="frow">
         <input type="text" name="first_name" placeholder="First Name" required>
         <input type="text" name="last_name" placeholder="Last Name" required>
       </div>
@@ -219,7 +232,7 @@ footer a:hover{color:rgba(255,255,255,0.6)}
       <select name="student_count"><option value="" disabled selected>Approx. Student Count</option><option>Under 300</option><option>300–600</option><option>600–1,000</option><option>1,000+</option></select>
       <select name="timing"><option value="" disabled selected>When Is Picture Day?</option><option>Fall 2025</option><option>Spring 2026</option><option>Fall 2026</option><option>Not Sure Yet</option></select>
       <textarea name="message" placeholder="Anything else we should know?"></textarea>
-      <button type="submit" class="submit-btn">Send My Request →</button>
+      <button type="submit" class="submit">Send My Request →</button>
     </form>
   </div>
 </section>

@@ -1,127 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Corporate Headshots Charlotte | Nathan Bingle Photography</title>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--dark:#101014;--dark2:#28282c;--white:#fff;--off:#fafafa;--border:#e9ecf2;--gray:#6b6b6b;--text:#101014;--font:'Manrope',sans-serif}
-html{scroll-behavior:smooth}
-body{font-family:var(--font);background:var(--white);color:var(--text);overflow-x:hidden}
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 60px;background:rgba(16,16,20,0.85);backdrop-filter:blur(16px)}
-.nav-logo{font-size:18px;font-weight:700;color:#fff;letter-spacing:-0.3px}
-.nav-links{display:flex;gap:32px}
-.nav-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:14px;font-weight:500;transition:color 0.2s}
-.nav-links a:hover{color:#fff}
-.nav-cta{background:rgba(255,255,255,0.12);color:#fff;text-decoration:none;font-size:14px;font-weight:500;padding:9px 22px;border-radius:50px;border:1px solid rgba(255,255,255,0.2);transition:all 0.2s}
-.nav-cta:hover{background:rgba(255,255,255,0.2)}
-.hero{min-height:100vh;background:var(--dark);position:relative;display:flex;align-items:flex-end;overflow:hidden}
-.hero-img{position:absolute;inset:0;background:url('https://drive.google.com/uc?export=view&id=16Af73ZL_1Y2xUwHhWo-HuhLc-b_FcXqG') center top/cover no-repeat;opacity:0.6}
-.hero-inner{position:relative;z-index:2;padding:0 60px 80px;max-width:800px}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:50px;padding:7px 16px;margin-bottom:28px}
-.hero-badge-dot{width:8px;height:8px;background:#4ade80;border-radius:50%}
-.hero-badge span{font-size:13px;font-weight:500;color:rgba(255,255,255,0.8)}
-.hero h1{font-size:clamp(42px,5.5vw,72px);font-weight:500;color:#fff;line-height:1.1;letter-spacing:-1.5px;margin-bottom:20px}
-.hero-sub{font-size:18px;font-weight:400;color:rgba(255,255,255,0.65);line-height:1.6;max-width:520px;margin-bottom:36px;letter-spacing:-0.1px}
-.btn-hero{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.1);color:#fff;text-decoration:none;font-size:15px;font-weight:500;padding:12px 24px 14px;border-radius:50px;border:1px solid rgba(255,255,255,0.2);transition:all 0.2s}
-.btn-hero:hover{background:rgba(255,255,255,0.18)}
-.btn-arrow{width:28px;height:28px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--dark);font-size:14px;flex-shrink:0}
-.section-tag{display:inline-block;background:#f0f0f0;border-radius:50px;font-size:13px;font-weight:600;padding:6px 14px;margin-bottom:20px;color:var(--gray)}
-/* ABOUT */
-.about{padding:120px 60px}
-.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
-.about h2{font-size:clamp(32px,3.5vw,48px);font-weight:500;line-height:1.1;letter-spacing:-0.8px;margin-bottom:24px}
-.about p{font-size:16px;color:var(--gray);line-height:1.75}
-.about-imgs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.about-img{border-radius:12px;overflow:hidden;aspect-ratio:3/4;background:#eee}
-.about-img img{width:100%;height:100%;object-fit:cover;display:block}
-/* STATS */
-.stats{background:var(--off);padding:80px 60px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.stat{padding:40px;border-right:1px solid var(--border)}
-.stat:last-child{border-right:none}
-.stat-num{font-size:52px;font-weight:500;line-height:1;letter-spacing:-2px;margin-bottom:12px}
-.stat-title{font-size:15px;font-weight:600;margin-bottom:6px}
-.stat-sub{font-size:13px;color:var(--gray);line-height:1.5}
-/* SERVICES */
-.services{background:var(--off);padding:100px 60px}
-.services-header{margin-bottom:60px}
-.services-header h2{font-size:clamp(32px,3.5vw,48px);font-weight:500;letter-spacing:-0.8px;line-height:1.1;margin-top:16px}
-.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.service-card{background:var(--white);border-radius:16px;padding:36px;border:1px solid var(--border)}
-.service-num{font-size:13px;font-weight:600;color:var(--gray);margin-bottom:20px}
-.service-card h3{font-size:20px;font-weight:600;letter-spacing:-0.3px;margin-bottom:12px}
-.service-card p{font-size:15px;color:var(--gray);line-height:1.65}
-/* GALLERY */
-.gallery{padding:100px 60px}
-.gallery h2{font-size:clamp(32px,3.5vw,48px);font-weight:500;letter-spacing:-0.8px;margin:16px 0 48px}
-.gallery-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.gal-item{border-radius:12px;overflow:hidden;aspect-ratio:3/4;background:#eee}
-.gal-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s}
-.gal-item:hover img{transform:scale(1.04)}
-/* CONTACT */
-.contact{background:var(--dark);padding:100px 60px}
-.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
-.contact .section-tag{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.5)}
-.contact h2{font-size:clamp(32px,3.5vw,48px);font-weight:500;color:#fff;letter-spacing:-0.8px;line-height:1.1;margin-top:16px;margin-bottom:20px}
-.contact-sub{font-size:16px;color:rgba(255,255,255,0.5);line-height:1.7}
-form{display:flex;flex-direction:column;gap:12px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-input,select,textarea{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#fff;font-family:var(--font);font-size:15px;padding:14px 16px;border-radius:8px;outline:none;transition:border-color 0.2s;-webkit-appearance:none;width:100%}
-input::placeholder,textarea::placeholder{color:rgba(255,255,255,0.3)}
-input:focus,select:focus,textarea:focus{border-color:rgba(255,255,255,0.35)}
-select{cursor:pointer}
-select option{background:#1a1a1e;color:#fff}
-textarea{resize:vertical;min-height:120px}
-.submit-btn{background:#fff;color:var(--dark);font-family:var(--font);font-size:15px;font-weight:600;padding:14px 24px;border:none;border-radius:50px;cursor:pointer;transition:background 0.2s;margin-top:4px}
-.submit-btn:hover{background:#e5e5e5}
-footer{background:var(--dark);border-top:1px solid rgba(255,255,255,0.08);padding:32px 60px;display:flex;justify-content:space-between;align-items:center}
-footer p,footer a{font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none}
-@media(max-width:1024px){
-  .nav{padding:20px 32px}.nav-links{display:none}
-  .hero-inner{padding:0 32px 60px}
-  .about,.services,.gallery,.contact{padding:80px 32px}
-  .stats{padding:60px 32px;grid-template-columns:1fr 1fr}
-  .about-inner,.contact-inner{grid-template-columns:1fr;gap:48px}
-  footer{padding:24px 32px}
-}
-@media(max-width:640px){
-  .nav{padding:16px 20px}
-  .hero-inner,.about,.services,.gallery,.contact{padding-left:20px;padding-right:20px}
-  .about{padding-top:60px;padding-bottom:60px}
-  .services{padding-top:60px;padding-bottom:60px}
-  .gallery{padding-top:60px;padding-bottom:60px}
-  .contact{padding-top:60px;padding-bottom:60px}
-  .stats{padding:40px 20px;grid-template-columns:1fr 1fr}
-  .services-grid,.gallery-row{grid-template-columns:1fr}
-  .form-row{grid-template-columns:1fr}
-  footer{padding:20px;flex-direction:column;gap:8px;align-items:flex-start}
-}
-</style>
+<link rel="stylesheet" href="shared.css">
 </head>
 <body>
 <nav class="nav">
   <div class="nav-logo">Nathan Bingle Photography</div>
-  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#gallery">Our Work</a>
-    <a href="#contact">Contact</a>
-  </div>
+  <div class="nav-links"><a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Our Work</a><a href="#contact">Contact</a></div>
   <a href="#contact" class="nav-cta">Book a Session</a>
 </nav>
-
 <section class="hero">
-  <div class="hero-img"></div>
+  <div class="hero-bg" style="background-image:url('images/ch-hero.jpg')"></div>
   <div class="hero-inner">
-    <div class="hero-badge"><div class="hero-badge-dot"></div><span>Charlotte Corporate Headshots</span></div>
+    <div class="hero-badge"><div class="hero-dot"></div><p>Charlotte Corporate Headshots</p></div>
     <h1>Your Team.<br>Professionally<br>Presented.</h1>
     <p class="hero-sub">Polished corporate headshots for Charlotte-area teams and executives. We come to your office. Fast sessions. Results your team will actually use.</p>
-    <a href="#contact" class="btn-hero">Book a Session <span class="btn-arrow">↗</span></a>
+    <a href="#contact" class="btn-hero">Book a Session <span class="btn-icon">↗</span></a>
   </div>
 </section>
-
+<div class="scroll-strip"><div class="scroll-track">
+  <img class="strip-img" src="images/ch-1.jpg" alt=""><img class="strip-img" src="images/ch-2.jpg" alt=""><img class="strip-img" src="images/ch-3.jpg" alt=""><img class="strip-img" src="images/ch-4.jpg" alt=""><img class="strip-img" src="images/ch-5.jpg" alt=""><img class="strip-img" src="images/ch-6.jpg" alt="">
+  <img class="strip-img" src="images/ch-1.jpg" alt=""><img class="strip-img" src="images/ch-2.jpg" alt=""><img class="strip-img" src="images/ch-3.jpg" alt=""><img class="strip-img" src="images/ch-4.jpg" alt=""><img class="strip-img" src="images/ch-5.jpg" alt=""><img class="strip-img" src="images/ch-6.jpg" alt="">
+</div></div>
 <section class="about" id="about">
   <div class="about-inner">
     <div>
@@ -130,72 +33,59 @@ footer p,footer a{font-size:13px;color:rgba(255,255,255,0.35);text-decoration:no
       <p>NBP has photographed hundreds of professionals across the Charlotte area. We built our process around one thing: great results fast, without wasting your team's time. We bring the full studio to you — professional lighting, clean backgrounds, and the experience to make even camera-shy people look confident on camera.</p>
     </div>
     <div class="about-imgs">
-      <div class="about-img"><img src="https://drive.google.com/uc?export=view&id=1v3UuHzO5ramWM6R3Bs6_3hp7i5yknny9" alt="Headshot" loading="lazy"></div>
-      <div class="about-img"><img src="https://drive.google.com/uc?export=view&id=1gSCkWqhU6B8guNjuR4Ac3J6ZAU4ke4I9" alt="Headshot" loading="lazy"></div>
-      <div class="about-img"><img src="https://drive.google.com/uc?export=view&id=19VsZHUlOizRLNjyaHTxlWQXCd0BhfWhC" alt="Headshot" loading="lazy"></div>
-      <div class="about-img"><img src="https://drive.google.com/uc?export=view&id=149dd-YMiBxZRWz1tgS9bST0Qy4A-_pw0" alt="Headshot" loading="lazy"></div>
+      <div class="aimg aimg-tall"><img src="images/ch-1.jpg" alt="Headshot"></div>
+      <div class="aimg aimg-sq"><img src="images/ch-2.jpg" alt="Headshot"></div>
+      <div class="aimg aimg-sq"><img src="images/ch-3.jpg" alt="Headshot"></div>
     </div>
   </div>
 </section>
-
 <section class="stats">
   <div class="stat"><div class="stat-num">500+</div><div class="stat-title">Professionals Photographed</div><div class="stat-sub">Across the Charlotte metro</div></div>
   <div class="stat"><div class="stat-num">3–5</div><div class="stat-title">Day Gallery Turnaround</div><div class="stat-sub">Rush delivery available</div></div>
   <div class="stat"><div class="stat-num">1</div><div class="stat-title">Studio Setup at Your Office</div><div class="stat-sub">No travel for your team</div></div>
   <div class="stat"><div class="stat-num">$0</div><div class="stat-title">Hidden Fees</div><div class="stat-sub">Transparent per-person pricing</div></div>
 </section>
-
 <section class="services" id="services">
-  <div class="services-header">
-    <div class="section-tag">What We Offer</div>
-    <h2>Every format. One photographer.</h2>
-  </div>
+  <div class="section-tag">What We Offer</div>
+  <h2>Every format. One photographer.</h2>
   <div class="services-grid">
-    <div class="service-card"><div class="service-num">01 · Individual</div><h3>Personal Headshot Session</h3><p>One-on-one portrait session. LinkedIn-ready results in under an hour. Ideal for executives, consultants, and individual professionals.</p></div>
-    <div class="service-card"><div class="service-num">02 · Team</div><h3>Corporate Team Shoot</h3><p>Consistent headshots for your entire team in one session. Same quality, same style — cohesive across your whole brand.</p></div>
-    <div class="service-card"><div class="service-num">03 · On-Site</div><h3>We Come to Your Office</h3><p>Full studio lighting setup at your Charlotte-area office. No travel coordination for your team. We arrive, set up, and work around your schedule.</p></div>
-    <div class="service-card"><div class="service-num">04 · Delivery</div><h3>Fast Gallery Turnaround</h3><p>Edited gallery delivered to every team member within 3–5 business days. Rush delivery within 24–48 hours available.</p></div>
+    <div class="scard"><div class="scard-num">01 · Individual</div><h3>Personal Headshot Session</h3><p>One-on-one portrait session. LinkedIn-ready results in under an hour. Ideal for executives, consultants, and professionals.</p></div>
+    <div class="scard"><div class="scard-num">02 · Team</div><h3>Corporate Team Shoot</h3><p>Consistent headshots for your entire team in one session. Same quality, same style — cohesive across your whole brand.</p></div>
+    <div class="scard"><div class="scard-num">03 · On-Site</div><h3>We Come to Your Office</h3><p>Full studio setup at your Charlotte-area office. No travel coordination for your team. We arrive, set up, and work around your schedule.</p></div>
+    <div class="scard"><div class="scard-num">04 · Delivery</div><h3>Fast Gallery Turnaround</h3><p>Edited gallery delivered to every team member within 3–5 business days. Rush delivery within 24–48 hours available.</p></div>
   </div>
 </section>
-
 <section class="gallery" id="gallery">
   <div class="section-tag">Our Work</div>
   <h2>Headshots that work as hard as you do.</h2>
-  <div class="gallery-row">
-    <div class="gal-item"><img src="https://drive.google.com/uc?export=view&id=1v3UuHzO5ramWM6R3Bs6_3hp7i5yknny9" alt="Headshot" loading="lazy"></div>
-    <div class="gal-item"><img src="https://drive.google.com/uc?export=view&id=1gSCkWqhU6B8guNjuR4Ac3J6ZAU4ke4I9" alt="Headshot" loading="lazy"></div>
-    <div class="gal-item"><img src="https://drive.google.com/uc?export=view&id=1VtgW9TWUcukTUY-8TKC-D4N7vExTmdMy" alt="Headshot" loading="lazy"></div>
-    <div class="gal-item"><img src="https://drive.google.com/uc?export=view&id=149dd-YMiBxZRWz1tgS9bST0Qy4A-_pw0" alt="Headshot" loading="lazy"></div>
+  <div class="gallery-grid">
+    <div class="gitem g-tall"><img src="images/ch-1.jpg" alt="Headshot"></div>
+    <div class="gitem g-wide"><img src="images/ch-5.jpg" alt="Headshot"></div>
+    <div class="gitem g-tall"><img src="images/ch-4.jpg" alt="Headshot"></div>
+    <div class="gitem g-tall"><img src="images/ch-2.jpg" alt="Headshot"></div>
+    <div class="gitem g-wide"><img src="images/ch-6.jpg" alt="Headshot"></div>
+    <div class="gitem g-tall"><img src="images/ch-3.jpg" alt="Headshot"></div>
   </div>
 </section>
-
 <section id="contact" class="contact">
   <div class="contact-inner">
     <div>
       <div class="section-tag">Book a Session</div>
       <h2>Let's get your team sorted.</h2>
-      <p class="contact-sub">Fill out the form and we'll follow up within one business day with availability, pricing, and everything you need to get scheduled.</p>
+      <p>Fill out the form and we'll follow up within one business day with availability, pricing, and everything you need to get scheduled.</p>
     </div>
     <form action="https://formspree.io/f/xeepaory" method="POST">
       <input type="hidden" name="_subject" value="Corporate Headshots Inquiry">
-      <div class="form-row">
-        <input type="text" name="first_name" placeholder="First Name" required>
-        <input type="text" name="last_name" placeholder="Last Name" required>
-      </div>
+      <div class="frow"><input type="text" name="first_name" placeholder="First Name" required><input type="text" name="last_name" placeholder="Last Name" required></div>
       <input type="email" name="email" placeholder="Work Email" required>
       <input type="tel" name="phone" placeholder="Phone Number">
       <input type="text" name="company" placeholder="Company Name">
       <select name="session_type"><option value="" disabled selected>Session Type</option><option>Individual Headshot</option><option>Small Team (2–10)</option><option>Large Team (10+)</option><option>Not Sure Yet</option></select>
       <select name="timing"><option value="" disabled selected>Preferred Timing</option><option>Within 2 Weeks</option><option>Within a Month</option><option>1–3 Months Out</option><option>Just Exploring</option></select>
       <textarea name="message" placeholder="Questions or details..."></textarea>
-      <button type="submit" class="submit-btn">Request a Session →</button>
+      <button type="submit" class="submit">Request a Session →</button>
     </form>
   </div>
 </section>
-
-<footer>
-  <p>© 2026 Nathan Bingle Photography · Fort Mill, SC</p>
-  <a href="https://nathanbinglephotography.com">nathanbinglephotography.com</a>
-</footer>
-</body>
-</html>
+<footer><p>© 2026 Nathan Bingle Photography · Fort Mill, SC</p><a href="https://nathanbinglephotography.com">nathanbinglephotography.com</a></footer>
+</body></html>
