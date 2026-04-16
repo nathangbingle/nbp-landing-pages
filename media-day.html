@@ -2,64 +2,59 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Athlete Media Day | Nathan Bingle Photography</title>
+<title>Digital Media Day | Nathan Bingle Photography</title>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
 <style>
 .tiers{background:var(--off);padding:100px 60px}
-.tiers h2{font-size:clamp(32px,3.5vw,48px);font-weight:500;letter-spacing:-0.8px;margin-top:16px;margin-bottom:56px}
-.tiers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.tier{background:var(--white);border-radius:16px;padding:36px;border:1px solid var(--border);border-top:3px solid var(--border);transition:border-top-color 0.3s}
-.tier:hover{border-top-color:var(--dark)}
-.tier.featured{background:var(--dark);border:none;border-top:3px solid var(--dark)}
-.tier-label{font-size:12px;font-weight:700;color:var(--gray);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:12px}
-.tier.featured .tier-label{color:rgba(255,255,255,0.4)}
-.tier-name{font-size:28px;font-weight:500;letter-spacing:-0.5px;margin-bottom:6px}
-.tier.featured .tier-name{color:#fff}
-.tier-tagline{font-size:14px;color:var(--gray);margin-bottom:28px;font-style:italic}
-.tier.featured .tier-tagline{color:rgba(255,255,255,0.4)}
-.tier-divider{height:1px;background:var(--border);margin-bottom:24px}
-.tier.featured .tier-divider{background:rgba(255,255,255,0.1)}
-.tier-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
-.tier-list li{font-size:14px;font-weight:500;display:flex;gap:8px;line-height:1.4}
-.tier.featured .tier-list li{color:rgba(255,255,255,0.8)}
-.tier-list li::before{content:'✓';font-weight:700;flex-shrink:0}
-.tier.featured .tier-list li::before{color:#fff}
-.tier-list li.na{color:#ccc}
-.tier.featured .tier-list li.na{color:rgba(255,255,255,0.2)}
-.tier-list li.na::before{content:'–';color:#ddd;font-weight:400}
-.tier-cta{display:block;text-align:center;border:1px solid var(--border);font-size:14px;font-weight:600;padding:12px 20px;border-radius:50px;text-decoration:none;color:var(--dark);transition:all 0.2s}
-.tier-cta:hover{background:var(--dark);color:#fff;border-color:var(--dark)}
-.tier.featured .tier-cta{background:#fff;color:var(--dark);border-color:#fff}
-@media(max-width:1024px){.tiers-grid{grid-template-columns:1fr}.tier.featured{order:-1}.tiers{padding-left:32px;padding-right:32px}}
-@media(max-width:640px){.tiers{padding-left:20px;padding-right:20px;padding-top:60px;padding-bottom:60px}}
+.tiers h2{font-size:clamp(32px,3.5vw,48px);font-weight:500;letter-spacing:-0.8px;margin-top:16px;margin-bottom:16px}
+.tiers-sub{font-size:16px;color:var(--gray);line-height:1.7;max-width:600px;margin-bottom:56px}
+.pricing-callout{background:var(--white);border-radius:16px;padding:36px;border:1px solid var(--border);margin-bottom:48px;display:flex;align-items:center;gap:40px;flex-wrap:wrap}
+.price-big{font-size:52px;font-weight:500;letter-spacing:-2px;line-height:1;flex-shrink:0}
+.price-detail{font-size:16px;color:var(--gray);line-height:1.75}
+.price-detail strong{color:var(--dark);font-weight:600}
+.what-you-get{background:var(--white);border-radius:16px;padding:36px;border:1px solid var(--border)}
+.what-you-get h3{font-size:20px;font-weight:600;letter-spacing:-0.3px;margin-bottom:24px}
+.what-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.what-list li{font-size:15px;color:var(--gray);display:flex;gap:10px;line-height:1.5;align-items:flex-start}
+.what-list li::before{content:'✓';color:var(--dark);font-weight:700;flex-shrink:0;margin-top:1px}
+.what-note{font-size:14px;color:var(--gray);margin-top:20px;padding-top:20px;border-top:1px solid var(--border);line-height:1.65;font-style:italic}
+.book-cta{display:inline-flex;align-items:center;gap:10px;background:var(--dark);color:#fff;text-decoration:none;font-size:15px;font-weight:600;padding:14px 12px 14px 28px;border-radius:50px;margin-top:32px;transition:background 0.2s}
+.book-cta:hover{background:#28282c}
+.book-icon{width:30px;height:30px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--dark);font-size:14px;flex-shrink:0}
+@media(max-width:1024px){.tiers{padding-left:32px;padding-right:32px}.what-list{grid-template-columns:1fr}}
+@media(max-width:640px){.tiers{padding-left:20px;padding-right:20px;padding-top:60px;padding-bottom:60px}.pricing-callout{flex-direction:column;gap:20px}.what-list{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <nav class="nav">
   <div class="nav-logo">Nathan Bingle Photography</div>
-  <div class="nav-links"><a href="#about">About</a><a href="#packages">Packages</a><a href="#gallery">Our Work</a><a href="#contact">Contact</a></div>
-  <a href="#contact" class="nav-cta">Book a Consult</a>
+  <div class="nav-links"><a href="#about">About</a><a href="#pricing">Pricing</a><a href="#gallery">Our Work</a><a href="#contact">Contact</a></div>
+  <a href="#contact" class="nav-cta">Book Now</a>
 </nav>
+
 <section class="hero">
   <div class="hero-bg" style="background-image:url('images/md-hero.jpg')"></div>
   <div class="hero-inner">
-    <div class="hero-badge"><div class="hero-dot"></div><p>The NBP Media Day Experience</p></div>
+    <div class="hero-badge"><div class="hero-dot"></div><p>Digital Media Day Sessions</p></div>
     <h1>Give Your Athletes<br>the Pro Treatment.</h1>
-    <p class="hero-sub">High-energy athlete portrait sessions that make your program look elite — and give your athletes images they'll actually use.</p>
-    <a href="#contact" class="btn-hero">Book a Consult <span class="btn-icon">↗</span></a>
+    <p class="hero-sub">Big lights, fog machines, light tubes, and any props you can imagine — we bring everything needed to make this an exciting, memorable experience for your team.</p>
+    <a href="#contact" class="btn-hero">Book Now <span class="btn-icon">↗</span></a>
   </div>
 </section>
+
 <div class="scroll-strip"><div class="scroll-track">
   <img class="strip-img" src="images/md-1.jpg" alt=""><img class="strip-img" src="images/md-2.jpg" alt=""><img class="strip-img" src="images/md-3.jpg" alt=""><img class="strip-img" src="images/md-4.jpg" alt=""><img class="strip-img" src="images/md-5.jpg" alt=""><img class="strip-img" src="images/md-6.jpg" alt="">
   <img class="strip-img" src="images/md-1.jpg" alt=""><img class="strip-img" src="images/md-2.jpg" alt=""><img class="strip-img" src="images/md-3.jpg" alt=""><img class="strip-img" src="images/md-4.jpg" alt=""><img class="strip-img" src="images/md-5.jpg" alt=""><img class="strip-img" src="images/md-6.jpg" alt="">
 </div></div>
+
 <section class="about" id="about">
   <div class="about-inner">
     <div>
-      <div class="section-tag">About NBP Media Day</div>
-      <h2>Athlete media day specialists.</h2>
-      <p>NBP Media Day is a structured, high-energy shoot built specifically for athletic programs. Your athletes get treated like pros — dramatic lighting, professional backdrops, and a process that moves fast without sacrificing quality. Three tiers to fit any program size and budget.</p>
+      <div class="section-tag">What Is Digital Media Day</div>
+      <h2>A unique experience that creates memories and content.</h2>
+      <p>Looking for a way to create memorable bonding experiences for your team while generating social media content for the season? A Digital Media Day Session is exactly what you need. We bring all the essentials — big lights, fog machines, light tubes, and any props you can imagine — to make this exciting and fun for every player.</p>
+      <p style="margin-top:16px">This session is ideal for smaller groups like varsity teams, seniors, or individual teams. It is not intended to replace your team's portrait or yearbook session.</p>
     </div>
     <div class="about-imgs">
       <div class="aimg aimg-tall"><img src="images/md-1.jpg" alt="Athlete portrait"></div>
@@ -68,51 +63,46 @@
     </div>
   </div>
 </section>
+
 <section class="stats">
-  <div class="stat"><div class="stat-num">3</div><div class="stat-title">Package Tiers</div><div class="stat-sub">Starter, Premier, Partner</div></div>
-  <div class="stat"><div class="stat-num">48hr</div><div class="stat-title">Gallery Turnaround</div><div class="stat-sub">After shoot day</div></div>
-  <div class="stat"><div class="stat-num">Any</div><div class="stat-title">Sport or Age Group</div><div class="stat-sub">We serve them all</div></div>
-  <div class="stat"><div class="stat-num">75mi</div><div class="stat-title">Service Radius</div><div class="stat-sub">From Charlotte, NC</div></div>
+  <div class="stat"><div class="stat-num">$70</div><div class="stat-title">Per Player</div><div class="stat-sub">$1,050 minimum (15 players)</div></div>
+  <div class="stat"><div class="stat-num">3+</div><div class="stat-title">Poses Per Player</div><div class="stat-sub">2 stills + 1 action or additional still</div></div>
+  <div class="stat"><div class="stat-num">5–6</div><div class="stat-title">Min. Per Player</div><div class="stat-sub">Fast, efficient, fun</div></div>
+  <div class="stat"><div class="stat-num">100%</div><div class="stat-title">Digital Delivery</div><div class="stat-sub">Gallery + print release included</div></div>
 </section>
-<section class="tiers" id="packages">
-  <div class="section-tag">Packages</div>
-  <h2>Choose your experience level.</h2>
-  <div class="tiers-grid">
-    <div class="tier">
-      <div class="tier-label">Entry</div>
-      <div class="tier-name">Starter</div>
-      <div class="tier-tagline">Great photos, simple process</div>
-      <div class="tier-divider"></div>
-      <ul class="tier-list">
-        <li>Team group photo</li><li>Individual portraits — all athletes</li><li>Online gallery with digital downloads</li><li>Up to 30 athletes</li>
-        <li class="na">Action / lifestyle shots</li><li class="na">Social media graphics pack</li>
-      </ul>
-      <a href="#contact" class="tier-cta">Get a Quote</a>
-    </div>
-    <div class="tier featured">
-      <div class="tier-label">Most Popular</div>
-      <div class="tier-name">Premier</div>
-      <div class="tier-tagline">The full media day experience</div>
-      <div class="tier-divider"></div>
-      <ul class="tier-list">
-        <li>Team group photo</li><li>Individual portraits — all athletes</li><li>Online gallery with digital downloads</li><li>Up to 60 athletes</li>
-        <li>Action / lifestyle shots</li><li>Social media graphics pack</li>
-      </ul>
-      <a href="#contact" class="tier-cta">Get a Quote</a>
-    </div>
-    <div class="tier">
-      <div class="tier-label">Full Program</div>
-      <div class="tier-name">Partner</div>
-      <div class="tier-tagline">Built for serious programs</div>
-      <div class="tier-divider"></div>
-      <ul class="tier-list">
-        <li>Team group photo</li><li>Individual portraits — unlimited</li><li>Online gallery with digital downloads</li><li>Unlimited athletes</li>
-        <li>Action / lifestyle shots</li><li>Social media graphics pack</li>
-      </ul>
-      <a href="#contact" class="tier-cta">Get a Quote</a>
+
+<section class="tiers" id="pricing">
+  <div class="section-tag">Pricing & What's Included</div>
+  <h2>Simple, transparent pricing.</h2>
+  <p class="tiers-sub">$70 per player with a minimum of 15 players (or $1,050 minimum). If fewer than 15 players participate, the total price is still $1,050. Payment is required before the session.</p>
+
+  <div class="pricing-callout">
+    <div class="price-big">$70<span style="font-size:24px;letter-spacing:-0.5px">/player</span></div>
+    <div class="price-detail">
+      <strong>Minimum: 15 players or $1,050</strong><br>
+      Perfect for varsity teams, senior classes, or individual sport teams.<br>
+      Not intended to replace standard team portrait or yearbook sessions.<br>
+      <strong>Payment required before the session.</strong>
     </div>
   </div>
+
+  <div class="what-you-get">
+    <h3>What Your Team Receives</h3>
+    <ul class="what-list">
+      <li>Access to a digital gallery with all final images and videos</li>
+      <li>A print release form — you own the digital images</li>
+      <li>At least 3 poses per player (2 stills + 1 action or additional still)</li>
+      <li>3 edited digital images per player, minimum</li>
+      <li>A minimum of one team or group photo</li>
+      <li>At least 7 Game Day images per 15 participants</li>
+      <li>Pre-session consultation to discuss team and player needs</li>
+      <li>Big lights, fog machines, light tubes, and custom props</li>
+    </ul>
+    <p class="what-note">Plan for a minimum of 5–6 minutes per player for the photoshoot. Ideal for varsity teams, senior athletes, and smaller group sessions.</p>
+    <a href="https://clients.nathanbinglephotography.com/contact/55a8be" class="book-cta" target="_blank">Book Now <span class="book-icon">↗</span></a>
+  </div>
 </section>
+
 <section class="gallery" id="gallery">
   <div class="section-tag">Our Work</div>
   <h2>Photos that make athletes look like pros.</h2>
@@ -125,23 +115,24 @@
     <div class="gitem g-tall"><img src="images/md-3.jpg" alt="Fencing"></div>
   </div>
 </section>
+
 <section id="contact" class="contact">
   <div class="contact-inner">
     <div>
-      <div class="section-tag">Book a Consult</div>
-      <h2>Let's build your media day.</h2>
-      <p>Fill out the form and we'll reach out within one business day to discuss your program, timing, and the right package for your team.</p>
+      <div class="section-tag">Book a Session</div>
+      <h2>Ready to give your athletes the pro treatment?</h2>
+      <p>Fill out the form and we'll reach out within one business day to confirm availability, discuss your team's needs, and get your session scheduled. Or book directly at the link above.</p>
     </div>
     <form action="https://formspree.io/f/xeepaory" method="POST">
-      <input type="hidden" name="_subject" value="Media Day Experience Inquiry">
+      <input type="hidden" name="_subject" value="Digital Media Day Inquiry">
       <div class="frow"><input type="text" name="first_name" placeholder="First Name" required><input type="text" name="last_name" placeholder="Last Name" required></div>
       <input type="email" name="email" placeholder="Email Address" required>
       <input type="tel" name="phone" placeholder="Phone Number">
-      <input type="text" name="school_org" placeholder="School / Organization" required>
-      <select name="sport"><option value="" disabled selected>Sport / Program</option><option>Football</option><option>Basketball</option><option>Baseball / Softball</option><option>Soccer</option><option>Lacrosse</option><option>Wrestling</option><option>Multiple Sports</option><option>Other</option></select>
-      <select name="tier"><option value="" disabled selected>Package Interest</option><option>Starter</option><option>Premier</option><option>Program Partner</option><option>Not Sure Yet</option></select>
-      <textarea name="message" placeholder="Tell us about your program..."></textarea>
-      <button type="submit" class="submit">Book My Consult →</button>
+      <input type="text" name="school_org" placeholder="School / Organization / Team" required>
+      <select name="sport"><option value="" disabled selected>Sport</option><option>Football</option><option>Basketball</option><option>Baseball / Softball</option><option>Soccer</option><option>Lacrosse</option><option>Wrestling</option><option>Volleyball</option><option>Multiple Sports</option><option>Other</option></select>
+      <select name="player_count"><option value="" disabled selected>Approx. Number of Players</option><option>15–20</option><option>20–30</option><option>30–40</option><option>40+</option></select>
+      <textarea name="message" placeholder="Tell us about your team, preferred timing, or any questions..."></textarea>
+      <button type="submit" class="submit">Book My Session →</button>
     </form>
   </div>
 </section>
