@@ -2,59 +2,138 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Corporate Headshots Charlotte | Nathan Bingle Photography</title>
+<title>Corporate Headshots Charlotte NC | Nathan Bingle Photography</title>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
+<style>
+.pricing-section{padding:100px 60px;background:var(--off)}
+.pricing-section h2{font-size:clamp(32px,3.5vw,48px);font-weight:500;letter-spacing:-0.8px;margin-top:16px;margin-bottom:56px}
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pcard{background:var(--white);border-radius:16px;padding:36px;border:1px solid var(--border);border-top:3px solid var(--border);transition:border-top-color 0.3s}
+.pcard:hover{border-top-color:var(--dark)}
+.pcard-label{font-size:12px;font-weight:700;color:var(--gray);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:12px}
+.pcard-price{font-size:40px;font-weight:500;letter-spacing:-1.5px;line-height:1;margin-bottom:6px}
+.pcard-price span{font-size:18px;font-weight:400;letter-spacing:-0.3px}
+.pcard-tagline{font-size:14px;color:var(--gray);margin-bottom:24px;font-style:italic}
+.pcard-divider{height:1px;background:var(--border);margin-bottom:24px}
+.pcard ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.pcard ul li{font-size:14px;color:var(--gray);display:flex;gap:8px;line-height:1.4}
+.pcard ul li::before{content:'✓';color:var(--dark);font-weight:700;flex-shrink:0}
+.pcard-cta{display:block;text-align:center;background:var(--dark);color:#fff;font-size:14px;font-weight:600;padding:13px 20px;border-radius:50px;text-decoration:none;transition:background 0.2s}
+.pcard-cta:hover{background:#333}
+.pcard.event{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.testimonial-block{padding:80px 60px}
+.testimonial-inner{max-width:860px;margin:0 auto;text-align:center}
+.tquote{font-size:clamp(20px,2.5vw,28px);font-weight:500;letter-spacing:-0.4px;line-height:1.4;margin-bottom:24px}
+.tquote::before{content:'\201C'}.tquote::after{content:'\201D'}
+.tattrib{font-size:14px;color:var(--gray);font-weight:500}
+@media(max-width:1024px){.pricing-section,.testimonial-block{padding-left:32px;padding-right:32px}.pricing-grid{grid-template-columns:1fr}.pcard.event{grid-column:span 1;grid-template-columns:1fr}}
+@media(max-width:640px){.pricing-section,.testimonial-block{padding-left:20px;padding-right:20px;padding-top:60px;padding-bottom:60px}}
+</style>
 </head>
 <body>
 <nav class="nav">
   <div class="nav-logo">Nathan Bingle Photography</div>
-  <div class="nav-links"><a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Our Work</a><a href="#contact">Contact</a></div>
-  <a href="#contact" class="nav-cta">Book a Session</a>
+  <div class="nav-links"><a href="#about">About</a><a href="#pricing">Pricing</a><a href="#gallery">Our Work</a><a href="#contact">Contact</a></div>
+  <a href="https://clients.nathanbinglephotography.com/contact/42388e" class="nav-cta" target="_blank">Book Today</a>
 </nav>
+
 <section class="hero">
   <div class="hero-bg" style="background-image:url('images/ch-hero.jpg')"></div>
   <div class="hero-inner">
-    <div class="hero-badge"><div class="hero-dot"></div><p>Charlotte Corporate Headshots</p></div>
-    <h1>Your Team.<br>Professionally<br>Presented.</h1>
-    <p class="hero-sub">Polished corporate headshots for Charlotte-area teams and executives. We come to your office. Fast sessions. Results your team will actually use.</p>
-    <a href="#contact" class="btn-hero">Book a Session <span class="btn-icon">↗</span></a>
+    <div class="hero-badge"><div class="hero-dot"></div><p>Headshots & Corporate Events · Charlotte, NC</p></div>
+    <h1>Capturing Your Team.</h1>
+    <p class="hero-sub">Professional corporate headshots photography on-location and in-studio. Business portraits, image branding, and corporate events. Available on short notice with fast turnaround.</p>
+    <a href="https://clients.nathanbinglephotography.com/contact/42388e" class="btn-hero" target="_blank">Book Today <span class="btn-icon">↗</span></a>
   </div>
 </section>
+
 <div class="scroll-strip"><div class="scroll-track">
   <img class="strip-img" src="images/ch-1.jpg" alt=""><img class="strip-img" src="images/ch-2.jpg" alt=""><img class="strip-img" src="images/ch-3.jpg" alt=""><img class="strip-img" src="images/ch-4.jpg" alt=""><img class="strip-img" src="images/ch-5.jpg" alt=""><img class="strip-img" src="images/ch-6.jpg" alt="">
   <img class="strip-img" src="images/ch-1.jpg" alt=""><img class="strip-img" src="images/ch-2.jpg" alt=""><img class="strip-img" src="images/ch-3.jpg" alt=""><img class="strip-img" src="images/ch-4.jpg" alt=""><img class="strip-img" src="images/ch-5.jpg" alt=""><img class="strip-img" src="images/ch-6.jpg" alt="">
 </div></div>
+
 <section class="about" id="about">
   <div class="about-inner">
     <div>
       <div class="section-tag">About Us</div>
-      <h2>Headshot photographers for business.</h2>
-      <p>NBP has photographed hundreds of professionals across the Charlotte area. We built our process around one thing: great results fast, without wasting your team's time. We bring the full studio to you — professional lighting, clean backgrounds, and the experience to make even camera-shy people look confident on camera.</p>
+      <h2>Headshots and corporate photography specialists.</h2>
+      <p>We're a team of photographers shooting headshots and corporate events in the Charlotte area. We offer professional on-location and in-studio sessions for businesses of all sizes — from individual executives to full team shoots to corporate events.</p>
+      <p style="margin-top:16px;font-size:16px;color:var(--gray);line-height:1.75">Available on short notice and providing a fast turnaround. Whether you need one headshot or an entire department photographed, we make the process fast, painless, and professional.</p>
     </div>
     <div class="about-imgs">
-      <div class="aimg aimg-tall"><img src="images/ch-1.jpg" alt="Headshot"></div>
-      <div class="aimg aimg-sq"><img src="images/ch-2.jpg" alt="Headshot"></div>
-      <div class="aimg aimg-sq"><img src="images/ch-3.jpg" alt="Headshot"></div>
+      <div class="aimg aimg-tall"><img src="images/ch-1.jpg" alt="Professional headshot"></div>
+      <div class="aimg aimg-sq"><img src="images/ch-2.jpg" alt="Professional headshot"></div>
+      <div class="aimg aimg-sq"><img src="images/ch-3.jpg" alt="Professional headshot"></div>
     </div>
   </div>
 </section>
+
 <section class="stats">
-  <div class="stat"><div class="stat-num">500+</div><div class="stat-title">Professionals Photographed</div><div class="stat-sub">Across the Charlotte metro</div></div>
-  <div class="stat"><div class="stat-num">3–5</div><div class="stat-title">Day Gallery Turnaround</div><div class="stat-sub">Rush delivery available</div></div>
-  <div class="stat"><div class="stat-num">1</div><div class="stat-title">Studio Setup at Your Office</div><div class="stat-sub">No travel for your team</div></div>
-  <div class="stat"><div class="stat-num">$0</div><div class="stat-title">Hidden Fees</div><div class="stat-sub">Transparent per-person pricing</div></div>
+  <div class="stat"><div class="stat-num">$150</div><div class="stat-title">Starting Price</div><div class="stat-sub">Business headshots from $150</div></div>
+  <div class="stat"><div class="stat-num">4</div><div class="stat-title">Edited Digital Images</div><div class="stat-sub">Included with business package</div></div>
+  <div class="stat"><div class="stat-num">7-day</div><div class="stat-title">Turnaround</div><div class="stat-sub">Corporate package delivery</div></div>
+  <div class="stat"><div class="stat-num">$75</div><div class="stat-title">Per Person (30+)</div><div class="stat-sub">Volume pricing for large teams</div></div>
 </section>
-<section class="services" id="services">
-  <div class="section-tag">What We Offer</div>
-  <h2>Every format. One photographer.</h2>
-  <div class="services-grid">
-    <div class="scard"><div class="scard-num">01 · Individual</div><h3>Personal Headshot Session</h3><p>One-on-one portrait session. LinkedIn-ready results in under an hour. Ideal for executives, consultants, and professionals.</p></div>
-    <div class="scard"><div class="scard-num">02 · Team</div><h3>Corporate Team Shoot</h3><p>Consistent headshots for your entire team in one session. Same quality, same style — cohesive across your whole brand.</p></div>
-    <div class="scard"><div class="scard-num">03 · On-Site</div><h3>We Come to Your Office</h3><p>Full studio setup at your Charlotte-area office. No travel coordination for your team. We arrive, set up, and work around your schedule.</p></div>
-    <div class="scard"><div class="scard-num">04 · Delivery</div><h3>Fast Gallery Turnaround</h3><p>Edited gallery delivered to every team member within 3–5 business days. Rush delivery within 24–48 hours available.</p></div>
+
+<section class="pricing-section" id="pricing">
+  <div class="section-tag">Pricing</div>
+  <h2>Choose the package that fits your needs.</h2>
+  <div class="pricing-grid">
+    <div class="pcard">
+      <div class="pcard-label">Individual</div>
+      <div class="pcard-price">From $150</div>
+      <div class="pcard-tagline">Business headshots · In studio</div>
+      <div class="pcard-divider"></div>
+      <ul>
+        <li>In-studio session</li>
+        <li>4 professionally edited digital images</li>
+        <li>Reproduction release included</li>
+        <li>Online image gallery</li>
+        <li>Private print-on-demand website</li>
+      </ul>
+      <a href="https://clients.nathanbinglephotography.com/contact/42388e" class="pcard-cta" target="_blank">Book Today</a>
+    </div>
+    <div class="pcard">
+      <div class="pcard-label">Corporate Teams</div>
+      <div class="pcard-price">$75–$150 <span>/ person</span></div>
+      <div class="pcard-tagline">On-location or in-studio · 7-day turnaround</div>
+      <div class="pcard-divider"></div>
+      <ul>
+        <li><strong style="color:var(--dark)">1–5 people:</strong> $150 per person</li>
+        <li><strong style="color:var(--dark)">6–20 people:</strong> $100 per person</li>
+        <li><strong style="color:var(--dark)">30+ people:</strong> $75 per person</li>
+        <li>Travel fee: $200</li>
+        <li>1 edited digital image per person</li>
+        <li>1 outfit, 1 background, 7-day turnaround</li>
+      </ul>
+      <a href="https://clients.nathanbinglephotography.com/contact/42388e" class="pcard-cta" target="_blank">Book Today</a>
+    </div>
+    <div class="pcard event">
+      <div>
+        <div class="pcard-label">Corporate Events</div>
+        <div class="pcard-price">From $450</div>
+        <div class="pcard-tagline">Events, conferences, and company gatherings</div>
+        <div class="pcard-divider"></div>
+        <p style="font-size:15px;color:var(--gray);line-height:1.7;margin-bottom:24px">Perfect for corporate events, conferences, and team gatherings. We've photographed events for companies throughout the Charlotte metro area. Pricing varies based on event size and duration — contact us to discuss a custom package.</p>
+        <a href="https://clients.nathanbinglephotography.com/contact/42388e" class="pcard-cta" style="display:inline-block;width:auto;padding:13px 28px" target="_blank">Get a Quote</a>
+      </div>
+      <div class="about-imgs" style="margin:0">
+        <div class="aimg aimg-sq"><img src="images/ch-5.jpg" alt="Corporate event"></div>
+        <div class="aimg aimg-sq"><img src="images/ch-6.jpg" alt="Corporate event"></div>
+      </div>
+    </div>
   </div>
 </section>
+
+<section class="testimonial-block">
+  <div class="testimonial-inner">
+    <div class="section-tag" style="margin-bottom:32px">What Clients Are Saying</div>
+    <p class="tquote">He did such a fabulous job with my profile photoshoot. Very happy with the shots and will definitely be booking him again!</p>
+    <p class="tattrib">— MBoone Umbina</p>
+  </div>
+</section>
+
 <section class="gallery" id="gallery">
   <div class="section-tag">Our Work</div>
   <h2>Headshots that work as hard as you do.</h2>
@@ -67,12 +146,13 @@
     <div class="gitem g-tall"><img src="images/ch-3.jpg" alt="Headshot"></div>
   </div>
 </section>
+
 <section id="contact" class="contact">
   <div class="contact-inner">
     <div>
       <div class="section-tag">Book a Session</div>
       <h2>Let's get your team sorted.</h2>
-      <p>Fill out the form and we'll follow up within one business day with availability, pricing, and everything you need to get scheduled.</p>
+      <p>Fill out the form and we'll follow up within one business day. Or book directly at the link above. If you're envisioning something different, let's start a conversation.</p>
     </div>
     <form action="https://formspree.io/f/xeepaory" method="POST">
       <input type="hidden" name="_subject" value="Corporate Headshots Inquiry">
@@ -80,9 +160,9 @@
       <input type="email" name="email" placeholder="Work Email" required>
       <input type="tel" name="phone" placeholder="Phone Number">
       <input type="text" name="company" placeholder="Company Name">
-      <select name="session_type"><option value="" disabled selected>Session Type</option><option>Individual Headshot</option><option>Small Team (2–10)</option><option>Large Team (10+)</option><option>Not Sure Yet</option></select>
+      <select name="package"><option value="" disabled selected>Package Interest</option><option>Business Headshots (Individual, from $150)</option><option>Corporate Team (1–5 people, $150/person)</option><option>Corporate Team (6–20 people, $100/person)</option><option>Corporate Team (30+ people, $75/person)</option><option>Corporate Event (from $450)</option><option>Not Sure Yet</option></select>
       <select name="timing"><option value="" disabled selected>Preferred Timing</option><option>Within 2 Weeks</option><option>Within a Month</option><option>1–3 Months Out</option><option>Just Exploring</option></select>
-      <textarea name="message" placeholder="Questions or details..."></textarea>
+      <textarea name="message" placeholder="Any details about your project..."></textarea>
       <button type="submit" class="submit">Request a Session →</button>
     </form>
   </div>

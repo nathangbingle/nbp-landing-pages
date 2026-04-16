@@ -1,178 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>School Photography Charlotte | Nathan Bingle Photography</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School Photography Charlotte NC | Nathan Bingle Photography</title>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--dark:#101014;--white:#fff;--off:#fafafa;--border:#e9ecf2;--gray:#6b6b6b;--font:'Manrope',sans-serif}
-html{scroll-behavior:smooth}
-body{font-family:var(--font);background:var(--white);color:var(--dark);overflow-x:hidden}
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 60px;background:rgba(16,16,20,0.88);backdrop-filter:blur(16px)}
-.nav-logo{font-size:18px;font-weight:700;color:#fff;letter-spacing:-0.3px}
-.nav-links{display:flex;gap:32px}
-.nav-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:14px;font-weight:500;transition:color 0.2s}
-.nav-links a:hover{color:#fff}
-.nav-cta{background:rgba(255,255,255,0.12);color:#fff;text-decoration:none;font-size:14px;font-weight:500;padding:9px 22px;border-radius:50px;border:1px solid rgba(255,255,255,0.2);transition:all 0.2s}
-.nav-cta:hover{background:rgba(255,255,255,0.2)}
-
-/* HERO */
-.hero{min-height:100vh;background:var(--dark);position:relative;display:flex;align-items:flex-end;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background-image:url('images/cs-hero.jpg');background-size:cover;background-position:center;opacity:0.55}
-.hero-inner{position:relative;z-index:2;padding:0 60px 80px;max-width:800px}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:50px;padding:7px 16px;margin-bottom:28px}
-.hero-dot{width:8px;height:8px;background:#4ade80;border-radius:50%;flex-shrink:0}
-.hero-badge p{font-size:13px;font-weight:500;color:rgba(255,255,255,0.85)}
-.hero h1{font-size:clamp(44px,5.5vw,72px);font-weight:500;color:#fff;line-height:1.08;letter-spacing:-1.5px;margin-bottom:20px}
-.hero-sub{font-size:18px;color:rgba(255,255,255,0.65);line-height:1.6;max-width:520px;margin-bottom:36px}
-.btn-hero{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.1);color:#fff;text-decoration:none;font-size:15px;font-weight:500;padding:12px 12px 13px 24px;border-radius:50px;border:1px solid rgba(255,255,255,0.2);transition:background 0.2s}
-.btn-hero:hover{background:rgba(255,255,255,0.18)}
-.btn-icon{width:28px;height:28px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--dark);font-size:13px;flex-shrink:0}
-
-/* SCROLLING STRIP */
-.scroll-strip{overflow:hidden;padding:0;background:var(--off);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.scroll-track{display:flex;gap:0;animation:stripScroll 28s linear infinite;width:max-content}
-.scroll-track:hover{animation-play-state:paused}
-.strip-img{width:320px;height:220px;object-fit:cover;flex-shrink:0;display:block}
-@keyframes stripScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-
-/* ABOUT */
-.about{padding:120px 60px}
-.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
-.section-tag{display:inline-block;background:#efefef;border-radius:50px;font-size:13px;font-weight:600;padding:6px 14px;margin-bottom:20px;color:var(--gray)}
-.about h2{font-size:clamp(32px,3.5vw,48px);font-weight:500;line-height:1.1;letter-spacing:-0.8px;margin-bottom:24px}
-.about p{font-size:16px;color:var(--gray);line-height:1.75}
-.about-imgs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.aimg{border-radius:12px;overflow:hidden;background:#eee}
-.aimg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s}
-.aimg:hover img{transform:scale(1.04)}
-.aimg-tall{aspect-ratio:3/4;grid-row:span 2}
-.aimg-sq{aspect-ratio:1/1}
-
-/* STATS */
-.stats{background:var(--off);border-top:1px solid var(--border);border-bottom:1px solid var(--border);display:grid;grid-template-columns:repeat(4,1fr)}
-.stat{padding:48px 40px;border-right:1px solid var(--border)}
-.stat:last-child{border-right:none}
-.stat-num{font-size:52px;font-weight:500;letter-spacing:-2px;line-height:1;margin-bottom:12px}
-.stat-title{font-size:15px;font-weight:600;margin-bottom:6px}
-.stat-sub{font-size:13px;color:var(--gray);line-height:1.5}
-
-/* SERVICES */
-.services{background:var(--off);padding:100px 60px}
-.services h2{font-size:clamp(32px,3.5vw,48px);font-weight:500;letter-spacing:-0.8px;line-height:1.1;margin-top:16px;margin-bottom:56px}
-.services-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.scard{background:var(--white);border-radius:16px;padding:36px;border:1px solid var(--border)}
-.scard-num{font-size:13px;font-weight:600;color:var(--gray);margin-bottom:20px;letter-spacing:0.02em}
-.scard h3{font-size:20px;font-weight:600;letter-spacing:-0.3px;margin-bottom:10px}
-.scard p{font-size:15px;color:var(--gray);line-height:1.65}
-
-/* GALLERY */
-.gallery{padding:100px 60px}
-.gallery h2{font-size:clamp(32px,3.5vw,48px);font-weight:500;letter-spacing:-0.8px;margin-top:16px;margin-bottom:48px}
-.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.gitem{border-radius:12px;overflow:hidden;background:#eee}
-.gitem img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s}
-.gitem:hover img{transform:scale(1.04)}
-.g-tall{aspect-ratio:3/4}
-.g-wide{grid-column:span 2;aspect-ratio:16/9}
-
-/* CONTACT */
-.contact{background:var(--dark);padding:100px 60px}
-.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
-.contact .section-tag{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.45)}
-.contact h2{font-size:clamp(32px,3.5vw,48px);font-weight:500;color:#fff;letter-spacing:-0.8px;margin-top:16px;margin-bottom:20px}
-.contact p{font-size:16px;color:rgba(255,255,255,0.5);line-height:1.7}
-form{display:flex;flex-direction:column;gap:10px}
-.frow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-input,select,textarea{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#fff;font-family:var(--font);font-size:15px;padding:14px 16px;border-radius:8px;outline:none;-webkit-appearance:none;width:100%;transition:border-color 0.2s}
-input::placeholder,textarea::placeholder{color:rgba(255,255,255,0.3)}
-input:focus,select:focus,textarea:focus{border-color:rgba(255,255,255,0.4)}
-select{cursor:pointer}
-select option{background:#1a1a1e}
-textarea{resize:vertical;min-height:120px}
-.submit{background:#fff;color:var(--dark);font-family:var(--font);font-size:15px;font-weight:600;padding:14px 24px;border:none;border-radius:50px;cursor:pointer;transition:background 0.2s;margin-top:4px}
-.submit:hover{background:#e5e5e5}
-
-footer{background:var(--dark);border-top:1px solid rgba(255,255,255,0.07);padding:32px 60px;display:flex;justify-content:space-between;align-items:center}
-footer p,footer a{font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none}
-
-@media(max-width:1024px){
-  .nav{padding:20px 32px}.nav-links{display:none}
-  .hero-inner,.about,.services,.gallery,.contact{padding-left:32px;padding-right:32px}
-  .hero-inner{padding-bottom:60px}
-  .stats{grid-template-columns:1fr 1fr}
-  .stat{border-bottom:1px solid var(--border)}
-  .about-inner,.contact-inner{grid-template-columns:1fr;gap:48px}
-  .gallery-grid{grid-template-columns:1fr 1fr}
-  footer{padding:24px 32px}
-}
-@media(max-width:640px){
-  .nav{padding:16px 20px}
-  .hero-inner,.about,.services,.gallery,.contact{padding-left:20px;padding-right:20px}
-  .hero-inner{padding-bottom:48px}
-  .about{padding-top:60px;padding-bottom:60px}
-  .services{padding-top:60px;padding-bottom:60px}
-  .gallery{padding-top:60px;padding-bottom:60px}
-  .contact{padding-top:60px;padding-bottom:60px}
-  .stats{grid-template-columns:1fr 1fr}
-  .services-grid{grid-template-columns:1fr}
-  .gallery-grid{grid-template-columns:1fr 1fr}
-  .g-wide{grid-column:span 2}
-  .frow{grid-template-columns:1fr}
-  footer{padding:20px;flex-direction:column;align-items:flex-start;gap:8px}
-}
+.benefits{background:var(--off);padding:100px 60px}
+.benefits h2{font-size:clamp(32px,3.5vw,48px);font-weight:500;letter-spacing:-0.8px;margin-top:16px;margin-bottom:56px}
+.benefits-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.bcard{background:var(--white);border-radius:16px;padding:36px;border:1px solid var(--border)}
+.bcard h3{font-size:17px;font-weight:700;margin-bottom:20px;letter-spacing:-0.2px}
+.bcard ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.bcard ul li{font-size:14px;color:var(--gray);display:flex;gap:10px;line-height:1.5}
+.bcard ul li::before{content:'✓';color:var(--dark);font-weight:700;flex-shrink:0}
+.testimonial-block{padding:80px 60px;background:var(--white)}
+.testimonial-inner{max-width:860px;margin:0 auto;text-align:center}
+.tquote{font-size:clamp(20px,2.5vw,28px);font-weight:500;letter-spacing:-0.4px;line-height:1.4;margin-bottom:24px;color:var(--dark)}
+.tquote::before{content:'\201C'}
+.tquote::after{content:'\201D'}
+.tattrib{font-size:14px;color:var(--gray);font-weight:500}
+.pricing-note{background:var(--dark);padding:60px;border-radius:16px;margin-top:56px}
+.pricing-note h3{font-size:22px;font-weight:500;color:#fff;letter-spacing:-0.3px;margin-bottom:12px}
+.pricing-note p{font-size:15px;color:rgba(255,255,255,0.55);line-height:1.7;margin-bottom:24px}
+.btn-white-outline{display:inline-flex;align-items:center;gap:10px;background:transparent;color:#fff;text-decoration:none;font-size:14px;font-weight:600;padding:12px 12px 12px 24px;border-radius:50px;border:1px solid rgba(255,255,255,0.3);transition:background 0.2s}
+.btn-white-outline:hover{background:rgba(255,255,255,0.08)}
+.btn-icon-sm{width:26px;height:26px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--dark);font-size:12px;flex-shrink:0}
+@media(max-width:1024px){.benefits{padding-left:32px;padding-right:32px}.benefits-grid{grid-template-columns:1fr}.testimonial-block{padding:60px 32px}.pricing-note{padding:40px}}
+@media(max-width:640px){.benefits{padding-left:20px;padding-right:20px;padding-top:60px;padding-bottom:60px}.testimonial-block{padding:60px 20px}}
 </style>
 </head>
 <body>
-
 <nav class="nav">
   <div class="nav-logo">Nathan Bingle Photography</div>
-  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#services">How It Works</a>
-    <a href="#gallery">Our Work</a>
-    <a href="#contact">Contact</a>
-  </div>
-  <a href="#contact" class="nav-cta">Schedule Picture Day</a>
+  <div class="nav-links"><a href="#about">About</a><a href="#process">How It Works</a><a href="#gallery">Our Work</a><a href="#contact">Contact</a></div>
+  <a href="https://clients.nathanbinglephotography.com/contact/023f90" class="nav-cta" target="_blank">Book Today</a>
 </nav>
 
 <section class="hero">
-  <div class="hero-bg"></div>
+  <div class="hero-bg" style="background-image:url('images/cs-hero.jpg')"></div>
   <div class="hero-inner">
-    <div class="hero-badge"><div class="hero-dot"></div><p>Now Booking Charlotte-Area Schools</p></div>
+    <div class="hero-badge"><div class="hero-dot"></div><p>School Portrait Photographer · Charlotte, NC</p></div>
     <h1>Picture Day<br>Done Right.</h1>
-    <p class="hero-sub">Professional school photography for Charlotte-area schools — seamless process, high parent participation, and zero chaos on picture day.</p>
-    <a href="#contact" class="btn-hero">Schedule Picture Day <span class="btn-icon">↗</span></a>
+    <p class="hero-sub">Professional school photography serving Charlotte-area schools. We don't charge to come out — and we reward you with a percentage of sales.</p>
+    <a href="https://clients.nathanbinglephotography.com/contact/023f90" class="btn-hero" target="_blank">Book Today <span class="btn-icon">↗</span></a>
   </div>
 </section>
 
-<!-- SCROLLING IMAGE STRIP -->
-<div class="scroll-strip">
-  <div class="scroll-track">
-    <img class="strip-img" src="images/cs-1.jpg" alt="">
-    <img class="strip-img" src="images/cs-2.jpg" alt="">
-    <img class="strip-img" src="images/cs-3.jpg" alt="">
-    <img class="strip-img" src="images/cs-4.jpg" alt="">
-    <img class="strip-img" src="images/cs-5.jpg" alt="">
-    <img class="strip-img" src="images/cs-hero.jpg" alt="">
-    <!-- duplicate for seamless loop -->
-    <img class="strip-img" src="images/cs-1.jpg" alt="">
-    <img class="strip-img" src="images/cs-2.jpg" alt="">
-    <img class="strip-img" src="images/cs-3.jpg" alt="">
-    <img class="strip-img" src="images/cs-4.jpg" alt="">
-    <img class="strip-img" src="images/cs-5.jpg" alt="">
-    <img class="strip-img" src="images/cs-hero.jpg" alt="">
-  </div>
-</div>
+<div class="scroll-strip"><div class="scroll-track">
+  <img class="strip-img" src="images/cs-1.jpg" alt=""><img class="strip-img" src="images/cs-2.jpg" alt=""><img class="strip-img" src="images/cs-3.jpg" alt=""><img class="strip-img" src="images/cs-4.jpg" alt=""><img class="strip-img" src="images/cs-5.jpg" alt=""><img class="strip-img" src="images/cs-hero.jpg" alt="">
+  <img class="strip-img" src="images/cs-1.jpg" alt=""><img class="strip-img" src="images/cs-2.jpg" alt=""><img class="strip-img" src="images/cs-3.jpg" alt=""><img class="strip-img" src="images/cs-4.jpg" alt=""><img class="strip-img" src="images/cs-5.jpg" alt=""><img class="strip-img" src="images/cs-hero.jpg" alt="">
+</div></div>
 
 <section class="about" id="about">
   <div class="about-inner">
     <div>
       <div class="section-tag">About Us</div>
       <h2>School photography specialists.</h2>
-      <p>Nathan Bingle Photography is a high-volume school photography operation serving Charlotte-area schools and the greater Carolinas. We specialize in building photo programs that perform — high participation, fast delivery, and portraits students and families are proud of. We handle everything from pre-day communication to online gallery delivery.</p>
+      <p>At Nathan Bingle Photography, we specialize in capturing cherished moments that last a lifetime. We've photographed daycares, pre-schools, elementary and K-12 schools throughout the Charlotte area — and we bring the same dedication to quality to every single session.</p>
+      <p style="margin-top:16px;font-size:16px;color:var(--gray);line-height:1.75">We don't charge to come out for picture day. In fact, we reward your school with a percentage of sales. Our goal is to make the process effortless for your staff and the results extraordinary for your families.</p>
     </div>
     <div class="about-imgs">
       <div class="aimg aimg-tall"><img src="images/cs-1.jpg" alt="Student portrait"></div>
@@ -183,20 +69,67 @@ footer p,footer a{font-size:13px;color:rgba(255,255,255,0.35);text-decoration:no
 </section>
 
 <section class="stats">
-  <div class="stat"><div class="stat-num">100+</div><div class="stat-title">Schools Served</div><div class="stat-sub">Across the Carolinas</div></div>
-  <div class="stat"><div class="stat-num">95%</div><div class="stat-title">Avg. Parent Participation</div><div class="stat-sub">Across our school partners</div></div>
-  <div class="stat"><div class="stat-num">48hr</div><div class="stat-title">Gallery Turnaround</div><div class="stat-sub">After picture day</div></div>
-  <div class="stat"><div class="stat-num">$0</div><div class="stat-title">Hidden Fees</div><div class="stat-sub">Transparent pricing always</div></div>
+  <div class="stat"><div class="stat-num">$0</div><div class="stat-title">Cost to Your School</div><div class="stat-sub">We reward you with a % of sales</div></div>
+  <div class="stat"><div class="stat-num">K-12</div><div class="stat-title">All School Types</div><div class="stat-sub">Daycare through senior portraits</div></div>
+  <div class="stat"><div class="stat-num">2wk</div><div class="stat-title">Gallery Purchase Window</div><div class="stat-sub">Parents order online at their own pace</div></div>
+  <div class="stat"><div class="stat-num">100%</div><div class="stat-title">Parent Customer Service</div><div class="stat-sub">We handle it — not your staff</div></div>
 </section>
 
-<section class="services" id="services">
+<section class="benefits" id="process">
   <div class="section-tag">How It Works</div>
-  <h2>Four steps. One smooth day.</h2>
-  <div class="services-grid">
-    <div class="scard"><div class="scard-num">01</div><h3>We Plan Together</h3><p>We work with your office to build a schedule that fits your student count and class flow. No surprises, no disruptions.</p></div>
-    <div class="scard"><div class="scard-num">02</div><h3>Families Are Notified</h3><p>We provide ready-to-send communication assets so parents know exactly how to order before picture day arrives.</p></div>
-    <div class="scard"><div class="scard-num">03</div><h3>Picture Day Runs Smoothly</h3><p>We arrive early, set up fast, and move students through efficiently — minimal disruption to your school day.</p></div>
-    <div class="scard"><div class="scard-num">04</div><h3>Galleries Delivered Fast</h3><p>Parents order online — no paper forms, no cash. High-quality portraits delivered within 48 hours of picture day.</p></div>
+  <h2>Simple for your school.<br>Seamless for families.</h2>
+  <div class="benefits-grid">
+    <div class="bcard">
+      <h3>01 · Before Picture Day</h3>
+      <ul>
+        <li>Set up date(s) and times with your account specialist</li>
+        <li>Send class contact data to your account specialist</li>
+        <li>Tell parents — we'll email them too</li>
+      </ul>
+    </div>
+    <div class="bcard">
+      <h3>02 · Actual Picture Day</h3>
+      <ul>
+        <li>Our photographer sets up and is ready to receive students</li>
+        <li>Students receive individual, class, and sibling pictures</li>
+        <li>Each student gets a handout with their customized gallery link</li>
+      </ul>
+    </div>
+    <div class="bcard">
+      <h3>03 · After Picture Day</h3>
+      <ul>
+        <li>Parents receive text/email when gallery is available</li>
+        <li>Gallery is available to purchase for 2 weeks before being archived</li>
+        <li>All customer service is handled between NBP and the parent</li>
+        <li>School chooses: ship to org or to student's home</li>
+        <li>Commissions and product given to your school</li>
+      </ul>
+    </div>
+    <div class="bcard">
+      <h3>Benefits for Schools</h3>
+      <ul>
+        <li>Sales commission opportunity</li>
+        <li>Complimentary class photos opportunity</li>
+        <li>Staff discount on pictures</li>
+        <li>100% customer service between parents and NBP — not your staff</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial-block">
+  <div class="testimonial-inner">
+    <div class="section-tag" style="margin-bottom:32px">What Schools Are Saying</div>
+    <p class="tquote">The photos are absolutely amazing! Thank you! You guys are so talented! Just amazing! I'm not sure I have the words to express just how in awe I am!</p>
+    <p class="tattrib">— Heather Conn, Assistant Principal · Endhaven Elementary</p>
+    <div class="pricing-note" style="margin-top:48px;text-align:left">
+      <h3>Pricing</h3>
+      <p>We do not charge to come out for picture day. We reward your school with a percentage of sales and customize the program specifically to fit your needs — for example, some schools like to provide free class photos for each student. Let's start a conversation.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="https://clients.nathanbinglephotography.com/contact/023f90" class="btn-white-outline" target="_blank">Book Today <span class="btn-icon-sm">↗</span></a>
+        <a href="https://www.nathanbinglephotography.com/find-your-school" class="btn-white-outline" target="_blank">Find Your School <span class="btn-icon-sm">↗</span></a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -217,18 +150,16 @@ footer p,footer a{font-size:13px;color:rgba(255,255,255,0.35);text-decoration:no
   <div class="contact-inner">
     <div>
       <div class="section-tag">Get Started</div>
-      <h2>Get a free quote for your school.</h2>
-      <p>Fill out the form and we'll follow up within one business day with availability and pricing. No obligation.</p>
+      <h2>Let's talk about your school.</h2>
+      <p>Fill out the form or call us at (440) 749-7798. We'll follow up within one business day with availability and a program customized to fit your school's needs.</p>
     </div>
     <form action="https://formspree.io/f/xeepaory" method="POST">
       <input type="hidden" name="_subject" value="Charlotte School Photography Inquiry">
-      <div class="frow">
-        <input type="text" name="first_name" placeholder="First Name" required>
-        <input type="text" name="last_name" placeholder="Last Name" required>
-      </div>
+      <div class="frow"><input type="text" name="first_name" placeholder="First Name" required><input type="text" name="last_name" placeholder="Last Name" required></div>
       <input type="email" name="email" placeholder="Email Address" required>
       <input type="tel" name="phone" placeholder="Phone Number">
       <input type="text" name="school" placeholder="School Name" required>
+      <select name="school_type"><option value="" disabled selected>School Type</option><option>Daycare / Pre-School</option><option>Elementary (K-5)</option><option>Middle School</option><option>High School</option><option>K-12</option></select>
       <select name="student_count"><option value="" disabled selected>Approx. Student Count</option><option>Under 300</option><option>300–600</option><option>600–1,000</option><option>1,000+</option></select>
       <select name="timing"><option value="" disabled selected>When Is Picture Day?</option><option>Fall 2025</option><option>Spring 2026</option><option>Fall 2026</option><option>Not Sure Yet</option></select>
       <textarea name="message" placeholder="Anything else we should know?"></textarea>
@@ -236,10 +167,5 @@ footer p,footer a{font-size:13px;color:rgba(255,255,255,0.35);text-decoration:no
     </form>
   </div>
 </section>
-
-<footer>
-  <p>© 2026 Nathan Bingle Photography · Fort Mill, SC</p>
-  <a href="https://nathanbinglephotography.com">nathanbinglephotography.com</a>
-</footer>
-</body>
-</html>
+<footer><p>© 2026 Nathan Bingle Photography · Fort Mill, SC · (440) 749-7798</p><a href="https://nathanbinglephotography.com">nathanbinglephotography.com</a></footer>
+</body></html>

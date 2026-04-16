@@ -2,78 +2,166 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Youth Sports Photography Charlotte | Nathan Bingle Photography</title>
+<title>Youth Sports Photography Charlotte NC | Nathan Bingle Photography</title>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
 <style>
-.hero-stats{display:flex;gap:48px;margin-top:48px;padding-top:36px;border-top:1px solid rgba(255,255,255,0.12);flex-wrap:wrap}
-.hstat-num{font-size:40px;font-weight:500;color:#fff;letter-spacing:-1.5px;line-height:1}
-.hstat-label{font-size:12px;color:rgba(255,255,255,0.45);font-weight:500;letter-spacing:0.04em;text-transform:uppercase;margin-top:6px}
+.service-types{padding:100px 60px}
+.service-types h2{font-size:clamp(32px,3.5vw,48px);font-weight:500;letter-spacing:-0.8px;margin-top:16px;margin-bottom:56px}
+.stypes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.stype{background:var(--off);border-radius:16px;overflow:hidden;border:1px solid var(--border)}
+.stype-img{height:200px;background-size:cover;background-position:center}
+.stype-body{padding:28px}
+.stype-label{font-size:12px;font-weight:700;color:var(--gray);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:10px}
+.stype h3{font-size:20px;font-weight:600;letter-spacing:-0.3px;margin-bottom:10px}
+.stype p{font-size:14px;color:var(--gray);line-height:1.65}
+.benefits{background:var(--off);padding:100px 60px}
+.benefits h2{font-size:clamp(32px,3.5vw,48px);font-weight:500;letter-spacing:-0.8px;margin-top:16px;margin-bottom:56px}
+.benefits-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.bcard{background:var(--white);border-radius:16px;padding:36px;border:1px solid var(--border)}
+.bcard h3{font-size:17px;font-weight:700;margin-bottom:20px}
+.bcard ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.bcard ul li{font-size:14px;color:var(--gray);display:flex;gap:10px;line-height:1.5}
+.bcard ul li::before{content:'✓';color:var(--dark);font-weight:700;flex-shrink:0}
+.testimonial-block{padding:80px 60px}
+.testimonial-inner{max-width:860px;margin:0 auto;text-align:center}
+.tquote{font-size:clamp(20px,2.5vw,28px);font-weight:500;letter-spacing:-0.4px;line-height:1.4;margin-bottom:24px}
+.tquote::before{content:'\201C'}.tquote::after{content:'\201D'}
+.tattrib{font-size:14px;color:var(--gray);font-weight:500}
+.clients-bar{background:var(--off);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:40px 60px}
+.clients-label{font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray);margin-bottom:20px;text-align:center}
+.clients-list{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.client-tag{background:var(--white);border:1px solid var(--border);border-radius:50px;padding:8px 16px;font-size:13px;font-weight:500;color:var(--dark)}
+.sports-grid-section{padding:100px 60px;background:var(--off)}
 .sports-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-top:48px}
 .sport-item{padding:24px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
-.sport-item:nth-child(4n){border-right:none}
-.sport-item:nth-last-child(-n+4){border-bottom:none}
-.sport-name{font-size:17px;font-weight:600;margin-bottom:4px}
-.sport-sub{font-size:13px;color:var(--gray)}
-@media(max-width:1024px){.sports-grid{grid-template-columns:repeat(2,1fr)}.sport-item:nth-child(4n){border-right:1px solid var(--border)}.sport-item:nth-child(2n){border-right:none}}
-@media(max-width:640px){.sports-grid{grid-template-columns:1fr 1fr}}
+.sport-item:nth-child(4n){border-right:none}.sport-item:nth-last-child(-n+4){border-bottom:none}
+.sport-name{font-size:17px;font-weight:600;margin-bottom:4px}.sport-sub{font-size:13px;color:var(--gray)}
+@media(max-width:1024px){.service-types,.benefits,.sports-grid-section,.testimonial-block,.clients-bar{padding-left:32px;padding-right:32px}.stypes-grid{grid-template-columns:1fr}.benefits-grid{grid-template-columns:1fr}.sports-grid{grid-template-columns:1fr 1fr}.sport-item:nth-child(4n){border-right:1px solid var(--border)}.sport-item:nth-child(2n){border-right:none}}
+@media(max-width:640px){.service-types,.benefits,.sports-grid-section,.testimonial-block,.clients-bar{padding-left:20px;padding-right:20px;padding-top:60px;padding-bottom:60px}.sports-grid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
 <nav class="nav">
   <div class="nav-logo">Nathan Bingle Photography</div>
-  <div class="nav-links"><a href="#about">About</a><a href="#services">How It Works</a><a href="#gallery">Our Work</a><a href="#contact">Contact</a></div>
-  <a href="#contact" class="nav-cta">Get a Quote</a>
+  <div class="nav-links"><a href="#services">Services</a><a href="#process">How It Works</a><a href="#gallery">Our Work</a><a href="#contact">Contact</a></div>
+  <a href="https://clients.nathanbinglephotography.com/contact/313f79" class="nav-cta" target="_blank">Book Now</a>
 </nav>
+
 <section class="hero">
   <div class="hero-bg" style="background-image:url('images/sl-hero.jpg')"></div>
   <div class="hero-inner">
-    <div class="hero-badge"><div class="hero-dot"></div><p>Youth Sports · Charlotte Area · 75mi Radius</p></div>
-    <h1>Great Photos.<br>Zero Hassle.</h1>
-    <p class="hero-sub">Professional team and individual sports photography for youth leagues across the greater Charlotte area. Exceptional quality, fast delivery, seamless process.</p>
-    <a href="#contact" class="btn-hero">Get a Quote <span class="btn-icon">↗</span></a>
-    <div class="hero-stats">
-      <div><div class="hstat-num">500+</div><div class="hstat-label">Teams Photographed</div></div>
-      <div><div class="hstat-num">48hr</div><div class="hstat-label">Gallery Turnaround</div></div>
-      <div><div class="hstat-num">75mi</div><div class="hstat-label">Service Radius</div></div>
-    </div>
+    <div class="hero-badge"><div class="hero-dot"></div><p>Youth Sports Photography · Charlotte, NC</p></div>
+    <h1>Let Our Fort Mill Team<br>Photograph Your Team.</h1>
+    <p class="hero-sub">Good sports photos mean happy parents, happy commissioners, and beautiful memories of their time at your league. That's why you need professionals who know the camera — and know how to interact with a crowd of athletes.</p>
+    <a href="https://clients.nathanbinglephotography.com/contact/313f79" class="btn-hero" target="_blank">Book Now <span class="btn-icon">↗</span></a>
   </div>
 </section>
+
 <div class="scroll-strip"><div class="scroll-track">
   <img class="strip-img" src="images/sl-1.jpg" alt=""><img class="strip-img" src="images/sl-2.jpg" alt=""><img class="strip-img" src="images/sl-3.jpg" alt=""><img class="strip-img" src="images/sl-4.jpg" alt=""><img class="strip-img" src="images/sl-5.jpg" alt=""><img class="strip-img" src="images/sl-6.jpg" alt=""><img class="strip-img" src="images/sl-7.jpg" alt="">
   <img class="strip-img" src="images/sl-1.jpg" alt=""><img class="strip-img" src="images/sl-2.jpg" alt=""><img class="strip-img" src="images/sl-3.jpg" alt=""><img class="strip-img" src="images/sl-4.jpg" alt=""><img class="strip-img" src="images/sl-5.jpg" alt=""><img class="strip-img" src="images/sl-6.jpg" alt=""><img class="strip-img" src="images/sl-7.jpg" alt="">
 </div></div>
+
 <section class="about" id="about">
   <div class="about-inner">
     <div>
       <div class="section-tag">About Us</div>
-      <h2>Youth sports photography specialists.</h2>
-      <p>NBP has photographed over 500 teams across the greater Charlotte area. We've built a process that moves fast without cutting corners — team group shots, individual portraits, and online galleries delivered within 48 hours. No upfront cost to your league. Just great photos your families will love.</p>
+      <h2>Picture day is easier than ever.</h2>
+      <p>As a parent of an athlete, Nathan brings a personal touch when working with sports players. He knows how fast these years go by — and enjoys capturing the personality of each player. Whether your league has 50 players or 1,000+, we have a process built for you.</p>
+      <p style="margin-top:16px;font-size:16px;color:var(--gray);line-height:1.75">We customize our approach to fit the type of photos your team wants — traditional on-location, custom composite designs with your team colors and logo, or a full Digital Media Day experience.</p>
     </div>
     <div class="about-imgs">
-      <div class="aimg aimg-tall"><img src="images/sl-1.jpg" alt="Athlete"></div>
-      <div class="aimg aimg-sq"><img src="images/sl-2.jpg" alt="Team"></div>
-      <div class="aimg aimg-sq"><img src="images/sl-3.jpg" alt="Athlete"></div>
+      <div class="aimg aimg-tall"><img src="images/sl-1.jpg" alt="Athlete portrait"></div>
+      <div class="aimg aimg-sq"><img src="images/sl-2.jpg" alt="Team photo"></div>
+      <div class="aimg aimg-sq"><img src="images/sl-3.jpg" alt="Athlete portrait"></div>
     </div>
   </div>
 </section>
+
 <section class="stats">
-  <div class="stat"><div class="stat-num">500+</div><div class="stat-title">Teams Photographed</div><div class="stat-sub">Across greater Charlotte</div></div>
-  <div class="stat"><div class="stat-num">48hr</div><div class="stat-title">Gallery Turnaround</div><div class="stat-sub">After photo day</div></div>
-  <div class="stat"><div class="stat-num">75mi</div><div class="stat-title">Service Radius</div><div class="stat-sub">From Charlotte, NC</div></div>
-  <div class="stat"><div class="stat-num">$0</div><div class="stat-title">Upfront Cost</div><div class="stat-sub">No charge to your league</div></div>
+  <div class="stat"><div class="stat-num">1,000+</div><div class="stat-title">Players Per Event</div><div class="stat-sub">High-volume capability</div></div>
+  <div class="stat"><div class="stat-num">2wk</div><div class="stat-title">Gallery Purchase Window</div><div class="stat-sub">Parents order online easily</div></div>
+  <div class="stat"><div class="stat-num">$0</div><div class="stat-title">Upfront Cost</div><div class="stat-sub">League earns a commission</div></div>
+  <div class="stat"><div class="stat-num">100%</div><div class="stat-title">Parent Customer Service</div><div class="stat-sub">We handle it — not your staff</div></div>
 </section>
-<section class="services" id="services">
-  <div class="section-tag">How It Works</div>
-  <h2>Built for game day speed.</h2>
-  <div class="services-grid">
-    <div class="scard"><div class="scard-num">01</div><h3>Schedule Photo Day</h3><p>Reach out and we'll lock in a date around your league's existing schedule. Flexible timing, no conflict with game days.</p></div>
-    <div class="scard"><div class="scard-num">02</div><h3>We Handle Pre-Day Comms</h3><p>We provide ready-to-share materials for coaches so families know exactly how to order before photo day arrives.</p></div>
-    <div class="scard"><div class="scard-num">03</div><h3>Smooth On-Site Execution</h3><p>We arrive early, set up fast, and move teams through efficiently. Team shots and individual portraits without the logjam.</p></div>
-    <div class="scard"><div class="scard-num">04</div><h3>Gallery Live in 48hrs</h3><p>Private online gallery delivered within 48 hours. Families order from any device, on their own time. No paper forms.</p></div>
+
+<section class="service-types" id="services">
+  <div class="section-tag">Our Services</div>
+  <h2>Three ways to photograph your league.</h2>
+  <div class="stypes-grid">
+    <div class="stype">
+      <div class="stype-img" style="background-image:url('images/sl-2.jpg')"></div>
+      <div class="stype-body">
+        <div class="stype-label">Option 01</div>
+        <h3>Traditional</h3>
+        <p>Traditional rec league photos done on the court or in the field. Our team can handle groups of 1,000+ players with a fast, efficient process.</p>
+      </div>
+    </div>
+    <div class="stype">
+      <div class="stype-img" style="background-image:url('images/sl-4.jpg')"></div>
+      <div class="stype-body">
+        <div class="stype-label">Option 02 · Most Popular</div>
+        <h3>Composite</h3>
+        <p>Composites are our most popular option. We custom-design the image with your team's logo and colors in mind. Stunning results every time.</p>
+      </div>
+    </div>
+    <div class="stype">
+      <div class="stype-img" style="background-image:url('images/md-hero.jpg')"></div>
+      <div class="stype-body">
+        <div class="stype-label">Option 03</div>
+        <h3>Digital Media Day</h3>
+        <p>We bring the big lights, fog machine, and any props you can think of to make this a fun, memorable experience for every player.</p>
+      </div>
+    </div>
   </div>
 </section>
-<section class="about" style="background:var(--off);padding-top:80px;padding-bottom:80px">
+
+<section class="benefits" id="process">
+  <div class="section-tag">How It Works</div>
+  <h2>Built for leagues of every size.</h2>
+  <div class="benefits-grid">
+    <div class="bcard">
+      <h3>The Process — Your League</h3>
+      <ul>
+        <li>Set up date(s) and times with your account specialist</li>
+        <li>Send team rosters to your account specialist</li>
+        <li>Tell parents — we'll email them too</li>
+        <li>Our photographer arrives set up and ready to receive players</li>
+        <li>Each player receives a handout with their customized gallery link</li>
+        <li>Commissions and product given to your organization after the sale</li>
+      </ul>
+    </div>
+    <div class="bcard">
+      <h3>Benefits for Your League</h3>
+      <ul>
+        <li>Sales commission opportunity</li>
+        <li>Complimentary team photos opportunity</li>
+        <li>Coach discount on pictures</li>
+        <li>100% customer service handled between NBP and parents — not your staff</li>
+        <li>Choose: ship to org or directly to player's home</li>
+        <li>Digital and print package options for families</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial-block">
+  <div class="testimonial-inner">
+    <div class="section-tag" style="margin-bottom:32px">What Leagues Are Saying</div>
+    <p class="tquote">Thank you again for everything! Everyone I have talked to really loves how these pictures came out!</p>
+    <p class="tattrib">— Ashley Phillips · Lake Wylie Athletic Association</p>
+  </div>
+</section>
+
+<div class="clients-bar">
+  <p class="clients-label">Leagues & Organizations We've Served</p>
+  <div class="clients-list">
+    <span class="client-tag">YMCA</span><span class="client-tag">AAU</span><span class="client-tag">Jr. Olympics</span><span class="client-tag">USA Rugby</span><span class="client-tag">Lake Wylie Athletic Association</span><span class="client-tag">Mill Town Baseball</span><span class="client-tag">RCX Sports</span><span class="client-tag">Lancaster County Athletic Association</span><span class="client-tag">NFL Flag</span>
+  </div>
+</div>
+
+<section class="sports-grid-section">
   <div class="section-tag">Who We Serve</div>
   <h2 style="font-size:clamp(32px,3.5vw,48px);font-weight:500;letter-spacing:-0.8px;margin-top:16px;margin-bottom:0">Every sport. Any age group.</h2>
   <div class="sports-grid">
@@ -87,24 +175,26 @@
     <div class="sport-item"><div class="sport-name">Any Sport</div><div class="sport-sub">You name it</div></div>
   </div>
 </section>
+
 <section class="gallery" id="gallery">
   <div class="section-tag">Our Work</div>
   <h2>Photos worth keeping.</h2>
   <div class="gallery-grid">
     <div class="gitem g-tall"><img src="images/sl-1.jpg" alt="Athlete portrait"></div>
     <div class="gitem g-wide"><img src="images/sl-2.jpg" alt="Team photo"></div>
-    <div class="gitem g-tall"><img src="images/sl-7.jpg" alt="Athlete"></div>
-    <div class="gitem g-tall"><img src="images/sl-3.jpg" alt="Athlete"></div>
+    <div class="gitem g-tall"><img src="images/sl-7.jpg" alt="Athlete portrait"></div>
+    <div class="gitem g-tall"><img src="images/sl-3.jpg" alt="Athlete portrait"></div>
     <div class="gitem g-wide"><img src="images/sl-4.jpg" alt="Team banner"></div>
-    <div class="gitem g-tall"><img src="images/sl-5.jpg" alt="Athlete"></div>
+    <div class="gitem g-tall"><img src="images/sl-5.jpg" alt="Athlete portrait"></div>
   </div>
 </section>
+
 <section id="contact" class="contact">
   <div class="contact-inner">
     <div>
-      <div class="section-tag">Get a Quote</div>
-      <h2>Book your league's photo day.</h2>
-      <p>Fill out the form and we'll follow up within one business day with availability, pricing, and next steps for your league.</p>
+      <div class="section-tag">Book Your League</div>
+      <h2>Let's start a conversation.</h2>
+      <p>Fill out the form or call us at (704) 558-6566. We'll follow up within one business day with availability and a program customized to fit your league's needs.</p>
     </div>
     <form action="https://formspree.io/f/xeepaory" method="POST">
       <input type="hidden" name="_subject" value="Sports League Photography Inquiry">
@@ -113,11 +203,12 @@
       <input type="tel" name="phone" placeholder="Phone Number">
       <input type="text" name="league" placeholder="League / Organization Name" required>
       <select name="sport"><option value="" disabled selected>Sport</option><option>Baseball / Softball</option><option>Soccer</option><option>Football</option><option>Basketball</option><option>Lacrosse</option><option>Wrestling</option><option>Volleyball</option><option>Other</option></select>
-      <select name="teams"><option value="" disabled selected>Number of Teams</option><option>1–3</option><option>4–10</option><option>10–20</option><option>20+</option></select>
+      <select name="service_type"><option value="" disabled selected>Service Interest</option><option>Traditional (On-Location)</option><option>Composite Design</option><option>Digital Media Day</option><option>Not Sure Yet</option></select>
+      <select name="player_count"><option value="" disabled selected>Approx. Number of Players</option><option>Under 100</option><option>100–300</option><option>300–600</option><option>600–1,000</option><option>1,000+</option></select>
       <textarea name="message" placeholder="Tell us about your league..."></textarea>
       <button type="submit" class="submit">Get My Quote →</button>
     </form>
   </div>
 </section>
-<footer><p>© 2026 Nathan Bingle Photography · Fort Mill, SC</p><a href="https://nathanbinglephotography.com">nathanbinglephotography.com</a></footer>
+<footer><p>© 2026 Nathan Bingle Photography · Fort Mill, SC · (704) 558-6566</p><a href="https://nathanbinglephotography.com">nathanbinglephotography.com</a></footer>
 </body></html>
