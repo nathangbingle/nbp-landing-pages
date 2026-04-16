@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Athlete Media Day Experience | Nathan Bingle Photography</title>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Barlow+Condensed:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--gold:#C5A55A;--gold-light:#D4BA7A;--gold-dim:rgba(197,165,90,0.15);--dark:#0C0C0E;--dark-2:#131315;--dark-3:#1B1B1E;--dark-4:#222225;--white:#EEECEA;--gray:#858380}
+  html{scroll-behavior:smooth}
+  body{background:var(--dark);color:var(--white);font-family:'Josefin Sans',sans-serif;overflow-x:hidden}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 2.5rem;border-bottom:1px solid rgba(197,165,90,0.1)}
+  .nav-logo{font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold)}
+  .nav-cta{background:var(--gold);color:var(--dark);font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;padding:0.65rem 1.5rem;text-decoration:none;transition:background 0.2s}
+  .nav-cta:hover{background:var(--gold-light)}
+  .hero{position:relative;min-height:92vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 100% 80% at 100% 50%,rgba(197,165,90,0.05) 0%,transparent 60%),linear-gradient(170deg,var(--dark) 0%,#100F0D 100%)}
+  .hero-bg-text{position:absolute;right:-0.05em;top:50%;transform:translateY(-50%);font-family:'Barlow Condensed',sans-serif;font-size:22vw;font-weight:900;text-transform:uppercase;color:rgba(197,165,90,0.04);line-height:1;pointer-events:none;white-space:nowrap;letter-spacing:-0.02em}
+  .hero-content{position:relative;z-index:2;padding:5rem 2.5rem;max-width:700px}
+  .hero-eyebrow{font-size:0.6rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:flex;align-items:center;gap:1rem}
+  .hero-eyebrow::before{content:'';width:3rem;height:1px;background:var(--gold)}
+  .hero h1{font-family:'Josefin Sans',sans-serif;font-size:clamp(2.8rem,6.5vw,5.5rem);font-weight:700;line-height:1.05;letter-spacing:-0.01em;margin-bottom:1.75rem}
+  .hero h1 .gold{color:var(--gold)}
+  .hero-sub{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gray);line-height:1.75;max-width:480px;margin-bottom:3rem}
+  .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+  .btn-primary{background:var(--gold);color:var(--dark);font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:700;padding:1rem 2.5rem;text-decoration:none;display:inline-block;transition:all 0.2s;border:none;cursor:pointer}
+  .btn-primary:hover{background:var(--gold-light);transform:translateY(-2px)}
+  .btn-ghost{border:1px solid rgba(197,165,90,0.35);color:var(--gold);font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;padding:1rem 2.5rem;text-decoration:none;display:inline-block;transition:all 0.2s}
+  .btn-ghost:hover{background:var(--gold-dim)}
+  section{padding:5.5rem 2.5rem}
+  .section-label{font-size:0.6rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem}
+  .section-title{font-size:clamp(1.9rem,4vw,3rem);font-weight:700;line-height:1.1;margin-bottom:1.5rem}
+  .section-body{font-family:'Cormorant Garamond',serif;color:var(--gray);line-height:1.8;font-size:1.1rem;max-width:560px}
+  .what{background:var(--dark-2)}
+  .what-wrap{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+  .what-features{display:flex;flex-direction:column;gap:1.25rem;margin-top:2.5rem}
+  .what-feature{display:flex;gap:1.25rem;padding:1.25rem;background:var(--dark-3);border-left:2px solid var(--gold)}
+  .what-feature .icon{font-size:1.25rem;flex-shrink:0}
+  .what-feature h3{font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.35rem;font-weight:700}
+  .what-feature p{font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--gray);line-height:1.55}
+  .what-visual{background:var(--dark-3);border:1px solid rgba(197,165,90,0.1);padding:2.5rem}
+  .what-visual h3{font-family:'Barlow Condensed',sans-serif;font-size:1.25rem;font-weight:800;text-transform:uppercase;color:var(--gold);letter-spacing:0.05em;margin-bottom:1.25rem}
+  .timeline-item{display:flex;gap:1rem;padding:0.9rem 0;border-bottom:1px solid rgba(197,165,90,0.08)}
+  .timeline-item:last-child{border-bottom:none}
+  .timeline-time{font-size:0.65rem;letter-spacing:0.15em;color:var(--gold);flex-shrink:0;padding-top:0.1rem;min-width:50px}
+  .timeline-item p{font-size:0.8rem;letter-spacing:0.04em;color:var(--white)}
+  .tiers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;margin-top:3.5rem}
+  .tier-card{background:var(--dark-2);padding:2.5rem 2rem;border-top:3px solid transparent;transition:all 0.3s}
+  .tier-card.featured{background:var(--dark-3);border-top-color:var(--gold)}
+  .tier-card:hover{background:var(--dark-4)}
+  .tier-badge{font-size:0.55rem;letter-spacing:0.25em;text-transform:uppercase;background:var(--gold);color:var(--dark);padding:0.2rem 0.6rem;display:inline-block;margin-bottom:1.25rem;font-weight:700}
+  .tier-name{font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:900;text-transform:uppercase;margin-bottom:0.35rem;letter-spacing:0.02em}
+  .tier-tagline{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--gray);margin-bottom:2rem;font-style:italic}
+  .tier-divider{height:1px;background:rgba(197,165,90,0.15);margin-bottom:1.75rem}
+  .tier-features{list-style:none;display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2rem}
+  .tier-features li{font-size:0.8rem;letter-spacing:0.04em;color:var(--white);display:flex;gap:0.75rem;align-items:flex-start;line-height:1.45}
+  .tier-features li::before{content:'✓';color:var(--gold);flex-shrink:0;font-weight:700}
+  .tier-features li.dim{color:var(--gray)}
+  .tier-features li.dim::before{color:var(--gray);content:'—'}
+  .tier-cta{display:block;text-align:center;border:1px solid rgba(197,165,90,0.3);color:var(--gold);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:600;padding:0.85rem;text-decoration:none;transition:all 0.2s}
+  .tier-cta:hover{background:var(--gold);color:var(--dark);border-color:var(--gold)}
+  .tier-card.featured .tier-cta{background:var(--gold);color:var(--dark);border-color:var(--gold)}
+  .tier-card.featured .tier-cta:hover{background:var(--gold-light)}
+  .who{background:var(--dark-2)}
+  .who-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:3rem}
+  .who-card{padding:2rem;border:1px solid rgba(197,165,90,0.1);transition:border-color 0.3s}
+  .who-card:hover{border-color:rgba(197,165,90,0.3)}
+  .who-card h3{font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;font-weight:700}
+  .who-card p{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--gray);line-height:1.6}
+  .form-section{background:var(--dark-3)}
+  .form-wrap{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:start}
+  .form-intro ul{list-style:none;margin-top:2rem;display:flex;flex-direction:column;gap:0.7rem}
+  .form-intro ul li{font-size:0.8rem;letter-spacing:0.04em;color:var(--gray);display:flex;gap:0.75rem}
+  .form-intro ul li::before{content:'→';color:var(--gold);flex-shrink:0}
+  form{display:flex;flex-direction:column;gap:0.9rem}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:0.9rem}
+  input,select,textarea{background:var(--dark-2);border:1px solid rgba(197,165,90,0.18);color:var(--white);font-family:'Josefin Sans',sans-serif;font-size:0.8rem;letter-spacing:0.05em;padding:0.9rem 1rem;width:100%;outline:none;transition:border-color 0.2s}
+  input::placeholder,textarea::placeholder{color:var(--gray)}
+  input:focus,select:focus,textarea:focus{border-color:var(--gold)}
+  select{appearance:none;cursor:pointer}
+  select option{background:var(--dark-2)}
+  textarea{resize:vertical;min-height:100px}
+  .submit-btn{background:var(--gold);color:var(--dark);font-family:'Josefin Sans',sans-serif;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:700;padding:1.1rem;border:none;cursor:pointer;transition:all 0.2s;margin-top:0.25rem}
+  .submit-btn:hover{background:var(--gold-light)}
+  .form-note{font-size:0.65rem;color:var(--gray);text-align:center;letter-spacing:0.08em}
+  footer{padding:2rem 2.5rem;border-top:1px solid rgba(197,165,90,0.1);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+  footer p{font-size:0.65rem;letter-spacing:0.1em;color:var(--gray)}
+  footer a{color:var(--gold);text-decoration:none;font-size:0.65rem}
+  @media(max-width:900px){.what-wrap{grid-template-columns:1fr;gap:3rem}.what-visual{display:none}.tiers-grid{grid-template-columns:1fr}.tier-card.featured{order:-1}.form-wrap{grid-template-columns:1fr;gap:3rem}}
+  @media(max-width:640px){.nav{padding:1rem 1.25rem}section{padding:4rem 1.25rem}.hero-content{padding:4rem 1.25rem}.form-row{grid-template-columns:1fr}footer{padding:1.5rem 1.25rem;flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-logo">Nathan Bingle Photography</div>
+  <a href="#contact" class="nav-cta">Book a Consult</a>
+</nav>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-bg-text">MEDIA DAY</div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">The NBP Media Day Experience</div>
+    <h1>Give Your Athletes<br>the <span class="gold">Pro Treatment.</span></h1>
+    <p class="hero-sub">High-energy, high-quality athlete portrait sessions that make your program look elite — and give your athletes images they'll actually use.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Book a Consult</a>
+      <a href="#tiers" class="btn-ghost">See Packages</a>
+    </div>
+  </div>
+</section>
+<section class="what">
+  <div class="what-wrap">
+    <div>
+      <div class="section-label">What Is Media Day</div>
+      <div class="section-title">More Than Photos.<br>A Full Experience.</div>
+      <p class="section-body">NBP Media Day is a structured, high-energy shoot day built specifically for athletic programs. Your athletes get treated like pros — and the photos look like it.</p>
+      <div class="what-features">
+        <div class="what-feature"><div class="icon">🎯</div><div><h3>Individual Athlete Portraits</h3><p>Pro-lighting, dynamic poses, social-ready crops. Every athlete leaves with images worth posting.</p></div></div>
+        <div class="what-feature"><div class="icon">⚡</div><div><h3>Fast, Efficient Process</h3><p>We move athletes through quickly without sacrificing quality — designed to work within your practice schedule.</p></div></div>
+        <div class="what-feature"><div class="icon">📱</div><div><h3>Digital-First Delivery</h3><p>High-res digital downloads delivered fast. Easy for athletes and families to share, print, and post.</p></div></div>
+      </div>
+    </div>
+    <div class="what-visual">
+      <h3>Sample Day Timeline</h3>
+      <div class="timeline-item"><div class="timeline-time">8:00AM</div><p>Setup & equipment check</p></div>
+      <div class="timeline-item"><div class="timeline-time">8:30AM</div><p>Team photo (full roster)</p></div>
+      <div class="timeline-item"><div class="timeline-time">9:00AM</div><p>Individual athlete portraits begin</p></div>
+      <div class="timeline-item"><div class="timeline-time">9:00–12PM</div><p>Athletes rotate through 5–8 min each</p></div>
+      <div class="timeline-item"><div class="timeline-time">12:00PM</div><p>Breakdown and wrap</p></div>
+      <div class="timeline-item"><div class="timeline-time">48–72hrs</div><p>Gallery delivered online</p></div>
+    </div>
+  </div>
+</section>
+<section id="tiers">
+  <div class="section-label">Packages</div>
+  <div class="section-title">Choose Your<br>Experience Level.</div>
+  <p class="section-body">Every program is different. We built three tiers so you get exactly what fits your team size, budget, and goals.</p>
+  <div class="tiers-grid">
+    <div class="tier-card">
+      <div class="tier-badge">Starter</div>
+      <div class="tier-name">Starter</div>
+      <div class="tier-tagline">Great photos, simple process</div>
+      <div class="tier-divider"></div>
+      <ul class="tier-features">
+        <li>Team group photo</li>
+        <li>Individual portraits for all athletes</li>
+        <li>Online gallery with digital downloads</li>
+        <li>Up to 30 athletes</li>
+        <li class="dim">Action / lifestyle shots</li>
+        <li class="dim">Social media graphics pack</li>
+        <li class="dim">Same-day preview images</li>
+      </ul>
+      <a href="#contact" class="tier-cta">Get a Quote</a>
+    </div>
+    <div class="tier-card featured">
+      <div class="tier-badge">Most Popular</div>
+      <div class="tier-name">Premier</div>
+      <div class="tier-tagline">The full media day experience</div>
+      <div class="tier-divider"></div>
+      <ul class="tier-features">
+        <li>Team group photo</li>
+        <li>Individual portraits for all athletes</li>
+        <li>Online gallery with digital downloads</li>
+        <li>Up to 60 athletes</li>
+        <li>Action / lifestyle shots</li>
+        <li>Social media graphics pack</li>
+        <li class="dim">Same-day preview images</li>
+      </ul>
+      <a href="#contact" class="tier-cta">Get a Quote</a>
+    </div>
+    <div class="tier-card">
+      <div class="tier-badge">Program Partner</div>
+      <div class="tier-name">Partner</div>
+      <div class="tier-tagline">Built for serious programs</div>
+      <div class="tier-divider"></div>
+      <ul class="tier-features">
+        <li>Team group photo</li>
+        <li>Individual portraits — unlimited athletes</li>
+        <li>Online gallery with digital downloads</li>
+        <li>Unlimited athletes</li>
+        <li>Action / lifestyle shots</li>
+        <li>Social media graphics pack</li>
+        <li>Same-day preview images</li>
+      </ul>
+      <a href="#contact" class="tier-cta">Get a Quote</a>
+    </div>
+  </div>
+</section>
+<section class="who">
+  <div class="section-label">Who It's For</div>
+  <div class="section-title">Any Program.<br>Any Sport.</div>
+  <div class="who-grid">
+    <div class="who-card"><h3>High School Athletics</h3><p>Give your varsity programs a professional media presence. Football, basketball, soccer, lacrosse — we handle them all.</p></div>
+    <div class="who-card"><h3>Club & Travel Teams</h3><p>Stand out when recruiting athletes. Professional media day images signal that your program is serious.</p></div>
+    <div class="who-card"><h3>College Programs</h3><p>Roster photos, recruiting materials, social content — all produced in one efficient shoot day.</p></div>
+    <div class="who-card"><h3>Youth Leagues</h3><p>Give young athletes a pro experience. Great keepsake photos that families actually want to buy.</p></div>
+  </div>
+</section>
+<section id="contact" class="form-section">
+  <div class="form-wrap">
+    <div class="form-intro">
+      <div class="section-label">Book a Consult</div>
+      <div class="section-title">Let's Build Your<br>Media Day.</div>
+      <p class="section-body">Fill out the form and we'll reach out within one business day to discuss your program, timing, and the right package for your team.</p>
+      <ul>
+        <li>Starter, Premier, and Program Partner tiers available</li>
+        <li>Charlotte area and within 75 miles</li>
+        <li>We work around your practice and game schedule</li>
+        <li>No obligation — just a conversation</li>
+      </ul>
+    </div>
+    <form action="https://formspree.io/f/xeepaory" method="POST">
+      <input type="hidden" name="_subject" value="Media Day Experience Inquiry">
+      <div class="form-row">
+        <input type="text" name="first_name" placeholder="First Name" required>
+        <input type="text" name="last_name" placeholder="Last Name" required>
+      </div>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number">
+      <input type="text" name="school_org" placeholder="School / Organization" required>
+      <select name="sport">
+        <option value="" disabled selected>Sport / Program</option>
+        <option>Football</option>
+        <option>Basketball</option>
+        <option>Baseball / Softball</option>
+        <option>Soccer</option>
+        <option>Lacrosse</option>
+        <option>Wrestling</option>
+        <option>Volleyball</option>
+        <option>Multiple Sports</option>
+        <option>Other</option>
+      </select>
+      <select name="athlete_count">
+        <option value="" disabled selected>Approx. Number of Athletes</option>
+        <option>Under 20</option>
+        <option>20–40</option>
+        <option>40–80</option>
+        <option>80+</option>
+      </select>
+      <select name="tier_interest">
+        <option value="" disabled selected>Package Interest</option>
+        <option>Starter</option>
+        <option>Premier</option>
+        <option>Program Partner</option>
+        <option>Not Sure Yet</option>
+      </select>
+      <textarea name="message" placeholder="Tell us about your program or ask any questions..."></textarea>
+      <button type="submit" class="submit-btn">Book My Consult</button>
+      <p class="form-note">We'll respond within 1 business day.</p>
+    </form>
+  </div>
+</section>
+<footer>
+  <p>© 2026 Nathan Bingle Photography · Fort Mill, SC · Serving Greater Charlotte</p>
+  <a href="https://nathanbinglephotography.com">nathanbinglephotography.com</a>
+</footer>
+</body>
+</html>
