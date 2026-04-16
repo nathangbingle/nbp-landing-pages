@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School Photography for Charlotte-Area Schools | Nathan Bingle Photography</title>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: #C5A55A;
+    --gold-light: #D4BA7A;
+    --dark: #111214;
+    --dark-2: #1A1C20;
+    --dark-3: #232528;
+    --white: #F5F3EE;
+    --gray: #9A9890;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--dark); color: var(--white); font-family: 'Josefin Sans', sans-serif; overflow-x: hidden; }
+
+  /* NAV STRIP */
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 2.5rem; border-bottom: 1px solid rgba(197,165,90,0.15); }
+  .nav-logo { font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+  .nav-cta { background: var(--gold); color: var(--dark); font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; padding: 0.6rem 1.4rem; border: none; cursor: pointer; text-decoration: none; transition: background 0.2s; }
+  .nav-cta:hover { background: var(--gold-light); }
+
+  /* HERO */
+  .hero { min-height: 88vh; display: flex; flex-direction: column; justify-content: center; padding: 5rem 2.5rem 4rem; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(197,165,90,0.07) 0%, transparent 70%); pointer-events: none; }
+  .hero-eyebrow { font-size: 0.65rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+  .hero-eyebrow::before { content: ''; display: block; width: 2rem; height: 1px; background: var(--gold); }
+  .hero h1 { font-family: 'Josefin Sans', sans-serif; font-size: clamp(2.6rem, 6vw, 5rem); font-weight: 700; line-height: 1.05; letter-spacing: -0.01em; max-width: 700px; margin-bottom: 1.75rem; }
+  .hero h1 em { font-style: normal; color: var(--gold); }
+  .hero-sub { font-family: 'Lora', serif; font-size: 1.15rem; color: var(--gray); max-width: 520px; line-height: 1.7; margin-bottom: 2.5rem; }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary { background: var(--gold); color: var(--dark); font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; padding: 1rem 2.25rem; border: none; cursor: pointer; text-decoration: none; transition: all 0.2s; display: inline-block; }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .btn-ghost { border: 1px solid rgba(197,165,90,0.4); color: var(--gold); font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; padding: 1rem 2.25rem; cursor: pointer; text-decoration: none; transition: all 0.2s; display: inline-block; }
+  .btn-ghost:hover { border-color: var(--gold); background: rgba(197,165,90,0.08); }
+
+  /* TRUST BAR */
+  .trust-bar { border-top: 1px solid rgba(197,165,90,0.12); border-bottom: 1px solid rgba(197,165,90,0.12); padding: 1.25rem 2.5rem; display: flex; gap: 3rem; flex-wrap: wrap; align-items: center; }
+  .trust-item { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gray); display: flex; align-items: center; gap: 0.6rem; }
+  .trust-item span { color: var(--gold); font-weight: 700; font-size: 0.8rem; }
+
+  /* SECTION BASE */
+  section { padding: 5rem 2.5rem; }
+  .section-label { font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+  .section-title { font-size: clamp(1.8rem, 3.5vw, 2.75rem); font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem; }
+  .section-body { font-family: 'Lora', serif; color: var(--gray); line-height: 1.8; font-size: 1.05rem; max-width: 560px; }
+
+  /* PROBLEMS */
+  .problems { background: var(--dark-2); }
+  .problems-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5px; margin-top: 3rem; }
+  .problem-card { background: var(--dark-3); padding: 2rem 1.75rem; }
+  .problem-icon { font-size: 1.5rem; margin-bottom: 1rem; }
+  .problem-card h3 { font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.6rem; color: var(--white); }
+  .problem-card p { font-family: 'Lora', serif; font-size: 0.9rem; color: var(--gray); line-height: 1.6; }
+
+  /* HOW IT WORKS */
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3rem; }
+  .step { position: relative; padding-left: 1.5rem; border-left: 2px solid rgba(197,165,90,0.25); }
+  .step-num { font-size: 0.65rem; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 0.5rem; text-transform: uppercase; }
+  .step h3 { font-size: 1rem; margin-bottom: 0.5rem; font-weight: 600; }
+  .step p { font-family: 'Lora', serif; font-size: 0.9rem; color: var(--gray); line-height: 1.6; }
+
+  /* WHY NBP */
+  .why { background: var(--dark-2); }
+  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; }
+  .why-stat { border-top: 1px solid rgba(197,165,90,0.2); padding-top: 1.5rem; }
+  .why-stat .number { font-size: 3rem; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 0.5rem; }
+  .why-stat p { font-family: 'Lora', serif; font-size: 0.9rem; color: var(--gray); line-height: 1.5; }
+
+  /* FORM */
+  .form-section { background: var(--dark-3); }
+  .form-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .form-intro .section-body { margin-bottom: 2rem; }
+  .form-intro ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+  .form-intro ul li { font-size: 0.8rem; letter-spacing: 0.05em; color: var(--gray); display: flex; gap: 0.75rem; align-items: flex-start; }
+  .form-intro ul li::before { content: '→'; color: var(--gold); flex-shrink: 0; }
+  form { display: flex; flex-direction: column; gap: 1rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  input, select, textarea { background: var(--dark-2); border: 1px solid rgba(197,165,90,0.2); color: var(--white); font-family: 'Josefin Sans', sans-serif; font-size: 0.85rem; padding: 0.85rem 1rem; width: 100%; outline: none; transition: border-color 0.2s; }
+  input::placeholder, textarea::placeholder { color: var(--gray); }
+  input:focus, select:focus, textarea:focus { border-color: var(--gold); }
+  select { appearance: none; cursor: pointer; }
+  select option { background: var(--dark-2); }
+  textarea { resize: vertical; min-height: 100px; }
+  .submit-btn { background: var(--gold); color: var(--dark); font-family: 'Josefin Sans', sans-serif; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; padding: 1rem; border: none; cursor: pointer; transition: all 0.2s; margin-top: 0.5rem; }
+  .submit-btn:hover { background: var(--gold-light); }
+  .form-note { font-size: 0.7rem; color: var(--gray); text-align: center; letter-spacing: 0.05em; }
+
+  /* FOOTER */
+  footer { padding: 2rem 2.5rem; border-top: 1px solid rgba(197,165,90,0.12); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  footer p { font-size: 0.7rem; letter-spacing: 0.1em; color: var(--gray); }
+  footer a { color: var(--gold); text-decoration: none; font-size: 0.7rem; }
+
+  @media (max-width: 768px) {
+    .nav { padding: 1rem 1.25rem; }
+    .hero { padding: 4rem 1.25rem 3rem; min-height: auto; }
+    section { padding: 3.5rem 1.25rem; }
+    .trust-bar { padding: 1rem 1.25rem; gap: 1.5rem; }
+    .form-wrap { grid-template-columns: 1fr; gap: 2.5rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    footer { padding: 1.5rem 1.25rem; flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo">Nathan Bingle Photography</div>
+  <a href="#contact" class="nav-cta">Get a Free Quote</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-eyebrow">Charlotte-Area School Photography</div>
+  <h1>Picture Day Done<br><em>Right.</em></h1>
+  <p class="hero-sub">Professional, high-volume school photography built for Charlotte-area schools — clean process, high parent participation, and zero chaos on picture day.</p>
+  <div class="hero-actions">
+    <a href="#contact" class="btn-primary">Schedule Picture Day</a>
+    <a href="#how-it-works" class="btn-ghost">See How It Works</a>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="trust-item"><span>100+</span> Schools Served Across the Carolinas</div>
+  <div class="trust-item"><span>Same-Day</span> Online Ordering Available</div>
+  <div class="trust-item"><span>Zero</span> Chaos Guarantee</div>
+  <div class="trust-item"><span>CMS</span> Approved Vendor</div>
+</div>
+
+<section class="problems">
+  <div class="section-label">The Problem</div>
+  <div class="section-title">Picture Day Shouldn't<br>Be a Headache</div>
+  <div class="problems-grid">
+    <div class="problem-card">
+      <div class="problem-icon">📋</div>
+      <h3>Disorganized Scheduling</h3>
+      <p>Long lines, confused students, and disrupted class time make picture day a logistical nightmare for staff.</p>
+    </div>
+    <div class="problem-card">
+      <div class="problem-icon">📉</div>
+      <h3>Low Parent Participation</h3>
+      <p>Complicated ordering systems and poor communication lead to missed purchases and frustrated families.</p>
+    </div>
+    <div class="problem-card">
+      <div class="problem-icon">📸</div>
+      <h3>Inconsistent Photo Quality</h3>
+      <p>Generic photographers with unpredictable results that don't represent your school's standard.</p>
+    </div>
+    <div class="problem-card">
+      <div class="problem-icon">🔄</div>
+      <h3>Retake Day Chaos</h3>
+      <p>Poor first-day execution means retake days that pull staff resources twice every year.</p>
+    </div>
+  </div>
+</section>
+
+<section id="how-it-works">
+  <div class="section-label">Our Process</div>
+  <div class="section-title">Streamlined From<br>Start to Finish</div>
+  <p class="section-body">We handle everything. From pre-day communication to families, to on-site coordination, to online gallery delivery — our system is built for volume without sacrificing quality.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">Step 01</div>
+      <h3>We Plan Together</h3>
+      <p>We work with your office to build a schedule that fits your student count and class flow — no surprises.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">Step 02</div>
+      <h3>Families Are Notified</h3>
+      <p>We provide pre-day communication assets so parents know exactly how to order before picture day arrives.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">Step 03</div>
+      <h3>Picture Day Runs Smoothly</h3>
+      <p>Our team arrives early, sets up fast, and moves students through efficiently — minimal disruption to your day.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">Step 04</div>
+      <h3>Online Galleries Delivered</h3>
+      <p>Parents order easily online. No paper forms. No cash. No headaches. High-quality portraits delivered fast.</p>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="section-label">Why NBP</div>
+  <div class="section-title">Built for Schools.<br>Built for Scale.</div>
+  <p class="section-body">We're not a general photography studio that occasionally shoots schools. School and youth sports photography is all we do — which means our systems, speed, and quality are built specifically for your environment.</p>
+  <div class="why-grid">
+    <div class="why-stat">
+      <div class="number">2–4</div>
+      <p>Days average turnaround on online galleries after picture day</p>
+    </div>
+    <div class="why-stat">
+      <div class="number">95%</div>
+      <p>Average parent participation rate across our school partners</p>
+    </div>
+    <div class="why-stat">
+      <div class="number">0</div>
+      <p>Surprise fees or complicated contracts — straightforward from day one</p>
+    </div>
+    <div class="why-stat">
+      <div class="number">CMS</div>
+      <p>Approved vendor serving Charlotte-Mecklenburg Schools and surrounding districts</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="form-section">
+  <div class="form-wrap">
+    <div class="form-intro">
+      <div class="section-label">Get Started</div>
+      <div class="section-title">Get a Free Quote<br>for Your School</div>
+      <p class="section-body">Fill out the form and we'll follow up within one business day with availability and pricing for your school.</p>
+      <ul>
+        <li>No obligation, no pressure</li>
+        <li>We serve all Charlotte-area districts</li>
+        <li>Custom scheduling for your student count</li>
+        <li>Transparent, straightforward pricing</li>
+      </ul>
+    </div>
+    <form action="https://formspree.io/f/xeepaory" method="POST">
+      <input type="hidden" name="_subject" value="Charlotte School Photography Inquiry">
+      <div class="form-row">
+        <input type="text" name="first_name" placeholder="First Name" required>
+        <input type="text" name="last_name" placeholder="Last Name" required>
+      </div>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number">
+      <input type="text" name="school_name" placeholder="School Name" required>
+      <select name="student_count">
+        <option value="" disabled selected>Approx. Student Count</option>
+        <option>Under 300</option>
+        <option>300–600</option>
+        <option>600–1,000</option>
+        <option>1,000+</option>
+      </select>
+      <select name="picture_day_timing">
+        <option value="" disabled selected>When Is Picture Day?</option>
+        <option>Fall 2025</option>
+        <option>Spring 2026</option>
+        <option>Fall 2026</option>
+        <option>Not Sure Yet</option>
+      </select>
+      <textarea name="message" placeholder="Anything else we should know?"></textarea>
+      <button type="submit" class="submit-btn">Send My Request →</button>
+      <p class="form-note">We'll respond within 1 business day.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Nathan Bingle Photography · Fort Mill, SC · Serving Greater Charlotte</p>
+  <a href="https://nathanbinglephotography.com">nathanbinglephotography.com</a>
+</footer>
+
+</body>
+</html>
